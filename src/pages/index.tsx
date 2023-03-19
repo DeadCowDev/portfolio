@@ -92,7 +92,7 @@ export default function Home() {
               </h3>
               <span></span>
               <h1>
-                Requirements Gathering: Understanding the client's business
+                Requirements Gathering: Understanding the client&apos;s business
                 goals and requirements to determine the scope of the project.
               </h1>
               <h1>
@@ -105,11 +105,11 @@ export default function Home() {
               </h1>
               <h1>
                 Testing: Ensuring the website or application works as expected
-                and meets all of the client's requirements.
+                and meets all of the client&apos;s requirements.
               </h1>
               <h1>
                 Deployment: Publishing the website or application to the
-                client's hosting environment or a public server.
+                client&apos;s hosting environment or a public server.
               </h1>
               <h1>
                 Maintenance: Ongoing support to ensure the website or
