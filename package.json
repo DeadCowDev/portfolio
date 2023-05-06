@@ -30,9 +30,11 @@
     "@storybook/addon-links": "^7.0.9",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/blocks": "^7.0.9",
+    "@storybook/manager-api": "^7.0.9",
     "@storybook/nextjs": "^7.0.9",
     "@storybook/react": "^7.0.9",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/theming": "^7.0.9",
     "eslint-plugin-storybook": "^0.6.12",
     "storybook": "^7.0.9",
     "tsconfig-paths-webpack-plugin": "^4.0.1"
