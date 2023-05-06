@@ -73,9 +73,13 @@ export const Header: FC = () => {
       <Typography variant="smallTextLBold" className="text-white">
         {t("header_title")}
       </Typography>
-      <Button color="blue" buttonSize="xSmall" className="ml-auto">
-        {t("header_services")}
-      </Button>
+
+      <Link href={`/${locale}/services`} className="ml-auto">
+        <Button color="blue" buttonSize="xSmall">
+          {t("header_services")}
+        </Button>
+      </Link>
+
       <div
         style={{
           height: open ? "calc(100dvh - 60px)" : "0",
