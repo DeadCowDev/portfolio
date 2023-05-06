@@ -24,7 +24,11 @@ export const Card: Story = {
         similique magnam id est, repellendus itaque ea velit qui nisi,
         consequuntur ad.
       </Typography>
-      <Button className="w-full max-w-[293px] bg-blue-4 text-white" small>
+      <Button
+        className="w-full max-w-[293px] bg-blue-4 text-white"
+        buttonSize="small"
+        color="blue"
+      >
         Lorem Lipsum
       </Button>
     </CardComponent>
