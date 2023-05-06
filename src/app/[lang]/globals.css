@@ -8,3 +8,8 @@
 *::after {
   box-sizing: border-box;
 }
+
+html {
+  --ios-safe-area: env(safe-area-inset-bottom);
+  --area-bottom-ios: var(--ios-safe-area, 0);
+}

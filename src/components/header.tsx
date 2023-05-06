@@ -82,7 +82,7 @@ export const Header: FC = () => {
           open ? "h-[calc(100vh-60px)]" : ""
         )}
       >
-        <div className="overflow-y-scroll h-full flex flex-col justify-start items-center gap-10 pt-16 pb-12">
+        <div className="overflow-y-scroll h-full flex flex-col justify-start items-center gap-10 pt-16 pb-[calc(48px+var(--area-bottom-ios))]">
           {links.map(({ href, label }) => (
             <Link
               href={href}
