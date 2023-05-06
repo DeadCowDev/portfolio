@@ -8,11 +8,3 @@
 *::after {
   box-sizing: border-box;
 }
-
-html {
-  --device-height: 100vh;
-
-  @supports (height: 100dvh) {
-    --device-height: 100dvh;
-  }
-}
