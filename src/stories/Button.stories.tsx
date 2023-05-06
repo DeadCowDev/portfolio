@@ -13,17 +13,24 @@ type Story = StoryObj<typeof ButtonComponent>;
 // This is the only named export in the file, and it matches the component name
 export const Button: Story = {
   args: {
-    small: false,
-    className: "bg-blue-4 text-white",
     children: "Lorem Lipsum",
+    color: "blue",
   },
 };
 
 // This is the only named export in the file, and it matches the component name
 export const Small: Story = {
   args: {
-    small: true,
-    className: "bg-blue-4 text-white",
+    buttonSize: "small",
     children: "Lorem Lipsum",
+    color: "blue",
+  },
+};
+
+export const ExtraSmall: Story = {
+  args: {
+    buttonSize: "xSmall",
+    children: "Lorem Lipsum",
+    color: "blue",
   },
 };
