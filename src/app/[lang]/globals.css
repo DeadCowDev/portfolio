@@ -10,6 +10,9 @@
 }
 
 html {
-  --ios-safe-area: env(safe-area-inset-bottom);
-  --area-bottom-ios: var(--ios-safe-area, 0);
+  --device-height: 100vh;
+
+  @supports (height: 100dvh) {
+    --device-height: 100dvh;
+  }
 }
