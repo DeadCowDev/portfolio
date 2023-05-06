@@ -51,6 +51,11 @@ module.exports = {
       "gradient-1": "linear-gradient(90deg, #FF4066 3.99%, #FFF16A 95.74%)",
       "gradient-2": "linear-gradient(90deg, #103CE7 3.99%, #64E9FF 95.74%)",
       "gradient-3": "linear-gradient(90deg, #001177 3.99%, #E44AFD 95.74%)",
+
+      "button-blue":
+        "linear-gradient(90deg, #4D4DFF 0%, #4D4DFF 50%, #F3659C 50%, #F3659C 100%)",
+      "button-pink":
+        "linear-gradient(90deg, #F3659C 0%, #F3659C 50%, #4D4DFF 49.82%, #4D4DFF 100%)",
     },
     boxShadow: {
       card: "0px 2px 8px 0px #00000040",

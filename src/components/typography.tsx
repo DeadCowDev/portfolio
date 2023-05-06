@@ -27,6 +27,8 @@ export const typographyVariants = {
   smallTextLMedium: "font-public font-medium text-[16px]/[24px]",
   smallTextLRegular: "font-public font-normal text-[16px]/[24px]",
 
+  xSmallTextLMedium: "font-public font-medium text-[14px]/[24px]",
+
   inputLabel: "font-public font-normal text-[14px]/[22px]",
 
   inputContent: "font-public font-medium text-[16px]/[24px]",
