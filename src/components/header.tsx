@@ -5,6 +5,8 @@ import { Typography } from "./typography";
 import { useI18n } from "@/i18n";
 import { Button } from "./button";
 import { usePreventScrollOnFlag } from "@/hooks";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const MenuIcon: FC<{
   open: boolean;
@@ -41,8 +43,24 @@ const MenuIcon: FC<{
 
 export const Header: FC = () => {
   const [open, setOpen] = useState(false);
-  const { t } = useI18n();
+  const { t, locale, locales } = useI18n();
   usePreventScrollOnFlag(open, "lg");
+  const path = usePathname();
+
+  const links = [
+    {
+      href: `/${locale}`,
+      label: t("header_link_home"),
+    },
+    {
+      href: `/${locale}/about`,
+      label: t("header_link_about"),
+    },
+    {
+      href: `/${locale}/about`,
+      label: t("header_link_contact"),
+    },
+  ];
 
   return (
     <div className="h-[60px] bg-grey-1 sticky top-0 flex justify-start items-center px-[16px] gap-4">
@@ -60,10 +78,55 @@ export const Header: FC = () => {
       </Button>
       <div
         className={htmlClass(
-          "absolute bottom-0 bg-grey-1 translate-y-[100%] w-full left-0 h-0 transition-[height] ease-[cubic-bezier(0.69,0.01,0.38,1.38)] duration-300 lg:hidden",
+          "overflow-hidden absolute bottom-0 bg-grey-1 translate-y-[100%] w-full left-0 h-0 transition-[height] ease-[cubic-bezier(0.69,0.01,0.38,1.38)] duration-300",
           open ? "h-[calc(100vh-60px)]" : ""
         )}
-      ></div>
+      >
+        <div className="overflow-y-scroll h-full flex flex-col justify-start items-center gap-10 pt-16 pb-12">
+          {links.map(({ href, label }) => (
+            <Link
+              href={href}
+              aria-disabled={!open}
+              key={label}
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <Typography
+                variant="titleLMedium"
+                className={htmlClass(
+                  "text-white",
+                  path === href ? "opacity-30" : ""
+                )}
+              >
+                {label}
+              </Typography>
+            </Link>
+          ))}
+          <div className="mt-auto flex justify-center items-center gap-6">
+            {locales.map((l) => (
+              <Link
+                href={path.replace(locale, l)}
+                aria-disabled={!open}
+                key={l}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <Typography
+                  variant="longTextMedium"
+                  className={htmlClass(
+                    "text-white uppercase",
+                    l === locale ? "opacity-30" : ""
+                  )}
+                >
+                  {l}
+                </Typography>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
