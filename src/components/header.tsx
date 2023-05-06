@@ -77,10 +77,10 @@ export const Header: FC = () => {
         {t("header_services")}
       </Button>
       <div
-        className={htmlClass(
-          "overflow-hidden absolute bottom-0 bg-grey-1 translate-y-[100%] w-full left-0 h-0 transition-[height] ease-[cubic-bezier(0.69,0.01,0.38,1.38)] duration-300",
-          open ? "h-[calc(100dvh - 60px)]" : ""
-        )}
+        style={{
+          height: open ? "calc(100dvh - 60px)" : "0",
+        }}
+        className="overflow-hidden absolute bottom-0 bg-grey-1 translate-y-[100%] w-full left-0 transition-[height] ease-[cubic-bezier(0.69,0.01,0.38,1.38)] duration-300"
       >
         <div className="overflow-y-scroll h-full flex flex-col justify-start items-center gap-10 pt-16 pb-12">
           {links.map(({ href, label }) => (
