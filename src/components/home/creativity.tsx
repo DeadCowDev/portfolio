@@ -109,6 +109,7 @@ export const HomeCreativity: FC = () => {
             document.querySelector("#technical")?.scrollIntoView({
               behavior: "smooth",
             });
+            setState((s) => ({ ...s, showScrollBubble: false }));
           }}
           className={htmlClass(
             "w-10 aspect-square rounded-full bg-grey-3 opacity-40 transition-all duration-700 delay-500 ease-[cubic-bezier(0.29,0.21,0.68,1.49)]",
