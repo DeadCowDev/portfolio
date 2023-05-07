@@ -5,6 +5,17 @@ const en = {
   header_link_home: "Homepage",
   header_link_about: "About",
   header_link_contact: "Contacts",
+  home_section_welcome_title: "We bring your ideas to life",
+  home_section_welcome_subtitle:
+    "Need help to succeed in the digital age? We offer tailored solutions to enhance your business, including website, app, security, and back-end development. Our expert team will deliver customized results for your specific needs",
+  home_section_welcome_image_alt: "Application development image",
+  home_section_welcome_button: "Learn more",
+  home_section_creativity_title1: "Creativity",
+  home_section_creativity_title2: "Technical Expertise",
+  home_section_creativity_title3: "Communication",
+  home_section_creativity_description:
+    "With a track record of delivering exceptional results to our clients, we are here to help bring your ideas to life and those are the key values that best define us",
+  home_section_creativity_button: "Go To Technical Expertise",
 };
 
 export default en;

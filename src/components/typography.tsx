@@ -39,13 +39,18 @@ export const typographyVariants = {
 };
 
 export const Typography: FC<
-  {
-    variant: keyof typeof typographyVariants;
-  } & React.HTMLProps<HTMLSpanElement>
-> = ({ variant, className, ...props }) => {
+  Omit<
+    {
+      variant: keyof typeof typographyVariants;
+      innerRef?: React.Ref<HTMLElement>;
+    } & React.HTMLProps<HTMLSpanElement>,
+    "ref"
+  >
+> = ({ variant, innerRef, className, ...props }) => {
   return (
     <span
       {...props}
+      ref={innerRef}
       className={htmlClass(className ?? "", typographyVariants[variant])}
     />
   );

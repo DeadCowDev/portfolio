@@ -63,7 +63,7 @@ export const Header: FC = () => {
   ];
 
   return (
-    <div className="h-[60px] bg-grey-1 sticky top-0 flex justify-start items-center px-[16px] gap-4">
+    <div className="z-10 h-[60px] bg-grey-1 sticky top-0 flex justify-start items-center px-[16px] gap-4">
       <MenuIcon
         open={open}
         onClick={() => {

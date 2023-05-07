@@ -7,6 +7,7 @@ type ButtonSizeType = "normal" | "small" | "xSmall";
 type ButtonProps = {
   buttonSize: ButtonSizeType;
   color: "blue" | "pink";
+  innerRef?: React.Ref<HTMLButtonElement>;
 } & React.HTMLProps<HTMLButtonElement> &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
