@@ -16,6 +16,9 @@ const en = {
   home_section_creativity_description:
     "With a track record of delivering exceptional results to our clients, we are here to help bring your ideas to life and those are the key values that best define us",
   home_section_creativity_button: "Go To Technical Expertise",
+  home_section_technical_expertise_title: "Technical Expertise",
+  home_section_technical_expertise_subtitle:
+    "We're experts in the latest technologies and can help bring your goals to life with maximum security. We understand that every project is different, which is why we offer tailored solutions that can adapt to your specific budget without compromising quality",
 };
 
 export default en;
