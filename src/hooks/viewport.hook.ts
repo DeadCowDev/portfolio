@@ -1,6 +1,6 @@
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config.js";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export type MediaQueries = "2xl" | "xl" | "lg" | "md" | "sm" | undefined;
 
@@ -40,4 +40,31 @@ export function useInMediaQuery(value: MediaQueries) {
   }, [sizes, value]);
 
   return active;
+}
+
+export function useInView() {
+  const elem = useRef<HTMLDivElement>(null);
+
+  const [inView, setInView] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (elem.current) {
+        const rect = elem.current.getBoundingClientRect();
+        const elemTop = rect.top;
+        const elemBottom = rect.bottom;
+
+        const isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+
+        setInView(isVisible);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return { inView, ref: elem };
 }
