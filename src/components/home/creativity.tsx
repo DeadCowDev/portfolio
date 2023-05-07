@@ -38,6 +38,9 @@ export const HomeCreativity: FC = () => {
       }
       return;
     }
+    if (movementStarted) {
+      return;
+    }
     setTimeout(() => {
       setNext();
     }, 500);
@@ -46,9 +49,6 @@ export const HomeCreativity: FC = () => {
   return (
     <Content
       innerRef={containerRef}
-      onClick={() => {
-        setNext();
-      }}
       className={htmlClass(
         "h-24 py-14 px-4 flex flex-col relative transition-all duration-[4.5s] delay-300",
         movementStarted ? "bg-green-2" : "bg-blue-2"

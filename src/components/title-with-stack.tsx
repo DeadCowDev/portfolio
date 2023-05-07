@@ -49,7 +49,6 @@ export const TitleWithStack: FC<TitleWithStackProps> = ({
           variant="headlineL"
           className="text-center absolute transition-all duration-1000 delay-500 w-[max-content] max-w-[calc(100vw-32px)]"
           onTransitionEnd={(e) => {
-            console.log("transition end");
             textRef.current!.style.visibility = "visible";
             const target = e.target as HTMLElement;
             target.parentElement?.removeChild(target);
