@@ -1,5 +1,10 @@
 "use client";
-import { Header, HomeCreativity, HomeWelcome } from "@/components";
+import {
+  Header,
+  HomeCreativity,
+  HomeTechnical,
+  HomeWelcome,
+} from "@/components";
 import { Content } from "@/components/content";
 
 export default function Home() {
@@ -8,8 +13,7 @@ export default function Home() {
       <Header />
       <HomeWelcome />
       <HomeCreativity />
-      <Content className="bg-orange-1" id="technical"></Content>
-      <Content className="bg-yellow-1" id="members"></Content>
+      <HomeTechnical />
     </main>
   );
 }
