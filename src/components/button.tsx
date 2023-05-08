@@ -5,7 +5,7 @@ import { typographyVariants } from "./typography";
 type ButtonSizeType = "normal" | "small" | "xSmall";
 
 type ButtonProps = {
-  buttonSize?: ButtonSizeType;
+  buttonSize: ButtonSizeType;
   color: "blue" | "pink";
   innerRef?: React.Ref<HTMLButtonElement>;
 } & React.HTMLProps<HTMLButtonElement> &
