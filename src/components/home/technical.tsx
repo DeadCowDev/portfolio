@@ -99,7 +99,7 @@ export const HomeTechnical: FC = () => {
     <Content
       id="technical"
       hug
-      className="pt-44 flex flex-col justify-start items-center gap-14 bg-grey-4"
+      className="pt-10 flex flex-col justify-start items-center gap-14 bg-grey-4"
     >
       <div className="mx-4 flex flex-col justify-start items-center gap-4">
         <Typography variant="titleXlBold" className="text-center text-grey-1">
