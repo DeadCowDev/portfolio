@@ -19,6 +19,14 @@ const en = {
   home_section_technical_expertise_title: "Technical Expertise",
   home_section_technical_expertise_subtitle:
     "We're experts in the latest technologies and can help bring your goals to life with maximum security. We understand that every project is different, which is why we offer tailored solutions that can adapt to your specific budget without compromising quality",
+  home_section_members_title: "Our Team",
+  home_section_members_dviana_imageAlt: "Diogo Viana profile image",
+  home_section_members_dviana_description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  home_section_members_pgracio_imageAlt: "Pedro Grácio profile image",
+  home_section_members_pgracio_description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  home_section_members_contactButton: "Let's make magic",
 };
 
 export default en;

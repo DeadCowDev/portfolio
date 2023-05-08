@@ -5,7 +5,6 @@ import { useI18n } from "@/i18n";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
-import "swiper/css";
 import { Keyboard, Mousewheel, Navigation, Scrollbar } from "swiper";
 import { htmlClass } from "@/utils";
 
@@ -100,7 +99,7 @@ export const HomeTechnical: FC = () => {
     <Content
       id="technical"
       hug
-      className="pt-44 pb-24 flex flex-col justify-start items-center gap-14 bg-grey-4"
+      className="pt-44 flex flex-col justify-start items-center gap-14 bg-grey-4"
     >
       <div className="mx-4 flex flex-col justify-start items-center gap-4">
         <Typography variant="titleXlBold" className="text-center text-grey-1">
@@ -118,11 +117,12 @@ export const HomeTechnical: FC = () => {
         slidesPerView="auto"
         className="w-full"
         grabCursor
-        modules={[Navigation, Mousewheel, Scrollbar, Keyboard]}
+        modules={[Navigation, Mousewheel, Keyboard]}
         navigation
         mousewheel
-        keyboard
-        scrollbar
+        keyboard={{
+          onlyInViewport: false,
+        }}
       >
         {slides.map((props, i) => (
           <SwiperSlide

@@ -2,10 +2,12 @@
 import {
   Header,
   HomeCreativity,
+  HomeMembers,
   HomeTechnical,
   HomeWelcome,
 } from "@/components";
-import { Content } from "@/components/content";
+
+import "swiper/css";
 
 export default function Home() {
   return (
@@ -14,6 +16,7 @@ export default function Home() {
       <HomeWelcome />
       <HomeCreativity />
       <HomeTechnical />
+      <HomeMembers />
     </main>
   );
 }
