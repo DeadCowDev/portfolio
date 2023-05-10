@@ -57,7 +57,7 @@ export default function Services() {
             </Typography>
 
             <Link
-              href={`/${locale}/services/application`}
+              href={`/${locale}/services/application-development`}
               className="mt-4 w-full"
             >
               <Button buttonSize="small" color="blue" className="w-full">
@@ -83,7 +83,10 @@ export default function Services() {
               {t("services_card_backend_description")}
             </Typography>
 
-            <Link href={`/${locale}/services/backend`} className="mt-4 w-full">
+            <Link
+              href={`/${locale}/services/backend-development`}
+              className="mt-4 w-full"
+            >
               <Button buttonSize="small" color="blue" className="w-full">
                 {t("services_card_backend_button")}
               </Button>

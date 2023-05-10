@@ -3,12 +3,12 @@ import pt from "./pt";
 
 import { useLocale } from "@/hooks";
 
-type translationKeys = keyof typeof en | keyof typeof pt;
+export type TranslationKeys = keyof typeof en | keyof typeof pt;
 
-export type Translation = Record<translationKeys, string>;
+export type Translation = Record<TranslationKeys, string>;
 
 export type I18nResult = {
-  t: (key: translationKeys, params?: { [key: string]: any }) => string;
+  t: (key: TranslationKeys, params?: { [key: string]: any }) => string;
   locale: string;
   locales: string[];
   defaultLocale?: string;
@@ -26,7 +26,7 @@ const translations: I18nResult["translations"] = {
 export function useI18n() {
   const { defaultLocale, locale, locales } = useLocale();
 
-  const t = (key: translationKeys, params?: { [key: string]: any }) => {
+  const t = (key: TranslationKeys, params?: { [key: string]: any }) => {
     if (!locale) {
       return key;
     }

@@ -40,6 +40,18 @@ const en = {
   services_card_backend_description:
     "Ideal for someone that is looking to create, improve, maintain, the security and back-end services of a project",
   services_card_backend_button: "Learn more",
+
+  services_frontend_title: "Elevate your digital presence",
+  services_frontend_subtitle:
+    "Maximize your business potential with our tailored web application solutions. Our expert team specializes in cross-platform development to keep you ahead of the competition. Let's take your business to the next level together!",
+  services_frontend_image_alt: "Web and Mobile App Development Image",
+  services_frontend_button: "Learn more",
+
+  services_backend_title: "Boost your product’s security and services",
+  services_backend_subtitle:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  services_backend_image_alt: "Security and Back-End Image",
+  services_backend_button: "Learn more",
 };
 
 export default en;

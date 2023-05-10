@@ -38,6 +38,7 @@ module.exports = {
       },
       purple: {
         1: "#6F3485",
+        2: "#9B51E0",
       },
       red: {
         1: "#EB5757",
