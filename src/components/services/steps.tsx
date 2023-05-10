@@ -17,7 +17,7 @@ const Connector: FC<{ direction: "left" | "right"; color: string }> = ({
         <div className="relative">
           <div
             className={htmlClass(
-              "absolute w-2/3 h-[calc(50%+48px)] top-1/2 right-0 border-t-2 border-l-2 rounded-tl-3xl border-dashed",
+              "absolute w-[calc(100%-24px)] h-[calc(50%+48px)] top-1/2 right-0 border-t-4 border-l-4 rounded-tl-3xl border-dashed",
               color
             )}
           ></div>
@@ -28,7 +28,7 @@ const Connector: FC<{ direction: "left" | "right"; color: string }> = ({
         <div className="relative">
           <div
             className={htmlClass(
-              "absolute w-2/3 h-[calc(50%+48px)] top-1/2 left-0 border-t-2 border-r-2 rounded-tr-3xl border-dashed",
+              "absolute w-[calc(100%-24px)] h-[calc(50%+48px)] top-1/2 left-0 border-t-4 border-r-4 rounded-tr-3xl border-dashed",
               color
             )}
           ></div>
