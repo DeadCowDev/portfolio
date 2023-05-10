@@ -27,6 +27,19 @@ const pt = {
   home_section_members_pgracio_description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   home_section_members_contactButton: "Let's make magic",
+
+  services_header_title: "Our services",
+  services_header_title_button: "Close",
+  services_card_frontend_image_alt: "Web and Mobile App Development Image",
+  services_card_frontend_title: "Web and Mobile Applications",
+  services_card_frontend_description:
+    "Ideal for someone that is looking to create a mobile app or website from zero or wants to make improvements to an existing project",
+  services_card_frontend_button: "Learn more",
+  services_card_backend_image_alt: "Security and Back-End Image",
+  services_card_backend_title: "Security and Back-End Services",
+  services_card_backend_description:
+    "Ideal for someone that is looking to create, improve, maintain, the security and back-end services of a project",
+  services_card_backend_button: "Learn more",
 };
 
 export default pt;
