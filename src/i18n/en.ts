@@ -47,11 +47,79 @@ const en = {
   services_frontend_image_alt: "Web and Mobile App Development Image",
   services_frontend_button: "Learn more",
 
+  services_frontend_steps_title: "How we like to get things done",
+  services_frontend_steps_footer: "Let’s build something amazing together",
+  services_frontend_steps_button: "Contact us",
+  services_frontend_steps_subtitle:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+
+  services_frontend_steps_1_title: "Understand your idea",
+  services_frontend_steps_1_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_frontend_steps_2_title: "Understand your idea",
+  services_frontend_steps_2_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_frontend_steps_3_title: "Understand your idea",
+  services_frontend_steps_3_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_frontend_steps_4_title: "Understand your idea",
+  services_frontend_steps_4_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_frontend_steps_5_title: "Understand your idea",
+  services_frontend_steps_5_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_frontend_steps_6_title: "Understand your idea",
+  services_frontend_steps_6_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_frontend_steps_7_title: "Understand your idea",
+  services_frontend_steps_7_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
   services_backend_title: "Boost your product’s security and services",
   services_backend_subtitle:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
   services_backend_image_alt: "Security and Back-End Image",
   services_backend_button: "Learn more",
+
+  services_backend_steps_title: "How we like to get things done",
+  services_backend_steps_footer: "How we like to get things done",
+  services_backend_steps_button: "How we like to get things done",
+  services_backend_steps_subtitle:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+
+  services_backend_steps_1_title: "Understand your idea",
+  services_backend_steps_1_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_backend_steps_2_title: "Understand your idea",
+  services_backend_steps_2_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_backend_steps_3_title: "Understand your idea",
+  services_backend_steps_3_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_backend_steps_4_title: "Understand your idea",
+  services_backend_steps_4_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_backend_steps_5_title: "Understand your idea",
+  services_backend_steps_5_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_backend_steps_6_title: "Understand your idea",
+  services_backend_steps_6_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  services_backend_steps_7_title: "Understand your idea",
+  services_backend_steps_7_subtitle:
+    "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
 };
 
 export default en;
