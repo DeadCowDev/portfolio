@@ -4,7 +4,7 @@ import { FC, useEffect, useState } from "react";
 import { Typography } from "./typography";
 import { useI18n } from "@/i18n";
 import { Button } from "./button";
-import { usePreventScrollOnFlag } from "@/hooks";
+import { useLocale, usePreventScrollOnFlag } from "@/hooks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

@@ -1,15 +1,14 @@
-import { usePathname } from "next/navigation";
 import en from "./en";
 import pt from "./pt";
 
-import i18nConfig from "../i18n-config";
+import { useLocale } from "@/hooks";
 
-type translationKeys = keyof typeof en | keyof typeof pt;
+export type TranslationKeys = keyof typeof en | keyof typeof pt;
 
-export type Translation = Record<translationKeys, string>;
+export type Translation = Record<TranslationKeys, string>;
 
 export type I18nResult = {
-  t: (key: translationKeys, params?: { [key: string]: any }) => string;
+  t: (key: TranslationKeys, params?: { [key: string]: any }) => string;
   locale: string;
   locales: string[];
   defaultLocale?: string;
@@ -25,14 +24,9 @@ const translations: I18nResult["translations"] = {
 };
 
 export function useI18n() {
-  const path = usePathname();
+  const { defaultLocale, locale, locales } = useLocale();
 
-  const locales = i18nConfig.locales;
-  const locale =
-    locales.find((l) => path.startsWith(`/${l}`)) ?? i18nConfig.defaultLocale;
-  const defaultLocale = i18nConfig.defaultLocale;
-
-  const t = (key: translationKeys, params?: { [key: string]: any }) => {
+  const t = (key: TranslationKeys, params?: { [key: string]: any }) => {
     if (!locale) {
       return key;
     }

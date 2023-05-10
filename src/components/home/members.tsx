@@ -32,7 +32,7 @@ const members = [
 ];
 
 export const HomeMembers: FC = () => {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   return (
     <Content
       hug
@@ -62,9 +62,11 @@ export const HomeMembers: FC = () => {
         ))}
       </Swiper>
 
-      <Button color="pink" buttonSize="small">
-        {t("home_section_members_contactButton")}
-      </Button>
+      <Link href={`/${locale}/services`}>
+        <Button color="pink" buttonSize="small">
+          {t("home_section_members_contactButton")}
+        </Button>
+      </Link>
     </Content>
   );
 };
