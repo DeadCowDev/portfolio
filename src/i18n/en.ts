@@ -88,8 +88,8 @@ const en = {
   services_backend_button: "Learn more",
 
   services_backend_steps_title: "How we like to get things done",
-  services_backend_steps_footer: "How we like to get things done",
-  services_backend_steps_button: "How we like to get things done",
+  services_backend_steps_footer: "Let’s build something amazing together",
+  services_backend_steps_button: "Contact us",
   services_backend_steps_subtitle:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
 

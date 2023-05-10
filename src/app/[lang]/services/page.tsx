@@ -46,7 +46,10 @@ export default function Services() {
               height={160}
               className="mb-4"
             />
-            <Typography variant="titleLBold" className="text-grey-1">
+            <Typography
+              variant="titleLBold"
+              className="text-grey-1 text-center"
+            >
               {t("services_card_frontend_title")}
             </Typography>
             <Typography
@@ -73,7 +76,10 @@ export default function Services() {
               height={160}
               className="mb-4"
             />
-            <Typography variant="titleLBold" className="text-grey-1">
+            <Typography
+              variant="titleLBold"
+              className="text-grey-1 text-center"
+            >
               {t("services_card_backend_title")}
             </Typography>
             <Typography
