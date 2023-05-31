@@ -1,8 +1,11 @@
 "use client";
 
 import { Header, ServiceMainSection, ServicesSteps } from "@/components";
+import ContactUs from "@/components/form";
+import { useHashAsKV } from "@/hooks";
 
 const BackendDevelopment = () => {
+  const { contact } = useHashAsKV();
   return (
     <main>
       <Header />
@@ -58,6 +61,7 @@ const BackendDevelopment = () => {
         footer="services_backend_steps_footer"
         button="services_backend_steps_button"
       />
+      {contact && <ContactUs />}
     </main>
   );
 };

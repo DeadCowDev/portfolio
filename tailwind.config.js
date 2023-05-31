@@ -11,6 +11,7 @@ module.exports = {
       public: ["Public Sans", "sans-serif"],
     },
     colors: {
+      transparent: "transparent",
       white: "#FFFFFF",
       grey: {
         1: "#191A1F",
