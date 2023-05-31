@@ -37,6 +37,7 @@ export const HomeMembers: FC = () => {
     <Content
       hug
       className="pt-14 pb-4 px-4 bg-grey-4 flex flex-col justify-start items-center gap-10"
+      id="about"
     >
       <Typography variant="titleXlBold">
         {t("home_section_members_title")}

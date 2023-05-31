@@ -53,7 +53,7 @@ export const Header: FC = () => {
       label: t("header_link_home"),
     },
     {
-      href: `/${locale}/about`,
+      href: `/${locale}#about`,
       label: t("header_link_about"),
     },
     {
