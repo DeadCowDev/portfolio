@@ -6,7 +6,7 @@ import { create } from "@storybook/theming/create";
 addons.setConfig({
   theme: create({
     base: "light",
-    brandTitle: "Caravelle",
+    brandTitle: "Caravel",
     brandUrl: "https://example.com",
     brandImage: "/logo.png",
     brandTarget: "_blank",

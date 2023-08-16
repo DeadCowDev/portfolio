@@ -1,5 +1,5 @@
 const pt = {
-  header_title: "Caravelle",
+  header_title: "Caravel",
   header_burger_alt: "Menu",
   header_services: "Services",
   header_link_home: "Homepage",
