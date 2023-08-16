@@ -88,7 +88,14 @@ export const Header: FC = () => {
       >
         <div className="overflow-y-scroll h-full flex flex-col justify-start items-center gap-10 pt-16 pb-12">
           {links.map(({ href, label }) => (
-            <Link href={href} aria-disabled={!open} key={label}>
+            <Link
+              href={href}
+              aria-disabled={!open}
+              key={label}
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
               <Typography
                 variant="titleLMedium"
                 className={htmlClass(

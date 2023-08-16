@@ -43,7 +43,7 @@ export const HomeMembers: FC = () => {
       <Swiper
         className="w-full"
         grabCursor
-        modules={[Pagination, Navigation, Keyboard, Mousewheel]}
+        modules={[Pagination, Navigation, Keyboard]}
         mousewheel
         keyboard
         centeredSlides
