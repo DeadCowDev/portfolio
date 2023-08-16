@@ -120,6 +120,18 @@ const pt = {
   services_backend_steps_7_title: "Understand your idea",
   services_backend_steps_7_subtitle:
     "First, let's meet to discuss your idea and budget. This will help us understand your goals and provide tailored services that fit your needs",
+
+  contact_header: "Contact us",
+  contact_title: "Tell us more about what you are looking for",
+  contact_subtitle:
+    "This information will help us have a better understanding of your goals before we set up a formal meeting",
+  contact_name: "Name",
+  contact_email: "Email",
+  contact_project_name: "Project Name",
+  contact_project_type: "What type of product are you looking for?",
+  contact_about: "Tell us about your project (optional)",
+  contact_time: "When will you be available for a formal meeting? (optional)",
+  contact_submit: "Send details",
 };
 
 export default pt;

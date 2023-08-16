@@ -13,8 +13,7 @@ import { Button } from "../button";
 const members = [
   {
     name: "Diogo Viana",
-    image:
-      "https://media.licdn.com/dms/image/C4D03AQEbKSh8QlRxjw/profile-displayphoto-shrink_400_400/0/1582745236694?e=1689206400&v=beta&t=rVOUOd422kP1UvAEOi9R112AmeQJBYdM20opALgHaGU",
+    image: "/images/dv-img.jpg",
     alt: "home_section_members_dviana_imageAlt",
     role: "Frontend Developer",
     linkedinLink: "https://www.linkedin.com/in/diogo-viana-7a973390",
@@ -22,8 +21,7 @@ const members = [
   },
   {
     name: "Pedro Grácio",
-    image:
-      "https://media.licdn.com/dms/image/D4E35AQGx7M5YKfTtCA/profile-framedphoto-shrink_400_400/0/1656941186124?e=1684173600&v=beta&t=STJWh3Jpe6fcVslX7ZGx6TAIPuXPkPYNnLG6VkDsmv8",
+    image: "/images/pg-img.jpg",
     alt: "home_section_members_pgracio_imageAlt",
     role: "Backend Developer",
     linkedinLink: "https://www.linkedin.com/in/pedro-gr%C3%A1cio-8ab572120",

@@ -2,10 +2,10 @@
 
 import { Header, ServiceMainSection, ServicesSteps } from "@/components";
 import ContactUs from "@/components/form";
-import { useHashAsKV } from "@/hooks";
+import { useI18n } from "@/i18n";
 
 const FrontendDevelopment = () => {
-  const { contact } = useHashAsKV();
+  const { locale } = useI18n();
   return (
     <main>
       <Header />
@@ -19,6 +19,7 @@ const FrontendDevelopment = () => {
         button="services_frontend_button"
       />
       <ServicesSteps
+        lang={locale}
         title="services_frontend_steps_title"
         subtitle="services_frontend_steps_subtitle"
         steps={[
@@ -61,7 +62,6 @@ const FrontendDevelopment = () => {
         footer="services_frontend_steps_footer"
         button="services_frontend_steps_button"
       />
-      {contact && <ContactUs />}
     </main>
   );
 };

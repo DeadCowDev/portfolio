@@ -4,7 +4,7 @@ import { FC, useEffect, useState } from "react";
 import { Typography } from "./typography";
 import { useI18n } from "@/i18n";
 import { Button } from "./button";
-import { useHash, useLocale, usePreventScrollOnFlag } from "@/hooks";
+import { useLocale, usePreventScrollOnFlag } from "@/hooks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -47,8 +47,6 @@ export const Header: FC = () => {
   usePreventScrollOnFlag(open, "lg");
   const path = usePathname();
 
-  const { set } = useHash();
-
   const links = [
     {
       href: `/${locale}`,
@@ -59,7 +57,7 @@ export const Header: FC = () => {
       label: t("header_link_about"),
     },
     {
-      href: () => set("contact=true"),
+      href: `/${locale}/contact`,
       label: t("header_link_contact"),
     },
   ];
@@ -90,18 +88,7 @@ export const Header: FC = () => {
       >
         <div className="overflow-y-scroll h-full flex flex-col justify-start items-center gap-10 pt-16 pb-12">
           {links.map(({ href, label }) => (
-            <Link
-              href={href instanceof Function ? "" : href}
-              aria-disabled={!open}
-              key={label}
-              onClick={(e) => {
-                if (href instanceof Function) {
-                  e.preventDefault();
-                  href();
-                }
-                setOpen(false);
-              }}
-            >
+            <Link href={href} aria-disabled={!open} key={label}>
               <Typography
                 variant="titleLMedium"
                 className={htmlClass(

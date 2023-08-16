@@ -6,7 +6,6 @@ import { Typography } from "../typography";
 import { Card } from "../card";
 import Image from "next/image";
 import { htmlClass } from "@/utils";
-import { useHash } from "@/hooks";
 
 const Connector: FC<{ direction: "left" | "right"; color: string }> = ({
   color,
@@ -48,9 +47,9 @@ export const ServicesSteps: FC<{
   subtitle: TranslationKeys;
   footer: TranslationKeys;
   button: TranslationKeys;
-}> = ({ button, footer, steps, subtitle, title }) => {
+  lang: string;
+}> = ({ button, footer, steps, subtitle, title, lang }) => {
   const { t } = useI18n();
-  const { set } = useHash();
   return (
     <Content
       className="bg-grey-4 flex flex-col items-stretch pt-10 px-4 pb-8 gap-6"
@@ -110,7 +109,7 @@ export const ServicesSteps: FC<{
         color="blue"
         buttonSize="small"
         className="max-w-[255px] w-full mx-auto"
-        onClick={() => set("contact=true")}
+        href={`/${lang}/contact`}
       >
         {t(button)}
       </Button>
