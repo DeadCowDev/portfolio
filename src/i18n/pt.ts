@@ -43,7 +43,7 @@ const pt = {
 
   services_frontend_title: "Elevate your digital presence",
   services_frontend_subtitle:
-    "Maximize your business potential with our tailored web application solutions. Our expert team specializes in cross-platform development to keep you ahead of the competition. Let's take your business to the next level together!",
+    "Our team specializes in creating intricate and versatile web applications that are tailored to meet the specific requirements of businesses. We possess extensive expertise in fulfilling all the cross-platform development needs and are dedicated to keeping up with the changing demands of contemporary enterprises",
   services_frontend_image_alt: "Web and Mobile App Development Image",
   services_frontend_button: "Learn more",
 
