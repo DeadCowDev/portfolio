@@ -14,7 +14,7 @@ function isValidEmail(email: string) {
   return email.match(mailformat);
 }
 
-type services = "webApp" | "Backend";
+type services = "web" | "mobile" | "web+mobile" | "other";
 
 const ContactUs: FC = () => {
   const { t } = useI18n();
@@ -22,12 +22,20 @@ const ContactUs: FC = () => {
 
   const projectTypes: { value: services; text: string }[] = [
     {
-      text: "Web App",
-      value: "webApp",
+      text: t("contact_project_type_option_1"),
+      value: "web",
     },
     {
-      text: "Backend",
-      value: "Backend",
+      text: t("contact_project_type_option_2"),
+      value: "mobile",
+    },
+    {
+      text: t("contact_project_type_option_3"),
+      value: "web+mobile",
+    },
+    {
+      text: t("contact_project_type_option_4"),
+      value: "other",
     },
   ];
 
@@ -115,7 +123,15 @@ const ContactUs: FC = () => {
   function onSubmit(e: any) {
     e.preventDefault();
     if (!isValid()) return;
-    alert("Form submitted");
+    const formResul = {
+      name: form.name.value,
+      email: form.email.value,
+      project: form.project.value,
+      type: projectTypes.find((t) => t.text === form.type.value)!.value,
+      about: form.about.value,
+      date: form.date.value,
+    };
+    alert(JSON.stringify(formResul));
   }
 
   return (

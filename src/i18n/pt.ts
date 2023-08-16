@@ -132,6 +132,10 @@ const pt = {
   contact_about: "Tell us about your project (optional)",
   contact_time: "When will you be available for a formal meeting? (optional)",
   contact_submit: "Send details",
+  contact_project_type_option_1: "Website",
+  contact_project_type_option_2: "Mobile Application",
+  contact_project_type_option_3: "Website and Mobile Application",
+  contact_project_type_option_4: "Other",
 };
 
 export default pt;
