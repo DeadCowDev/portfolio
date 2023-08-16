@@ -131,7 +131,7 @@ const ContactUs: FC = () => {
       about: form.about.value,
       date: form.date.value,
     };
-    alert(JSON.stringify(formResul));
+    console.log(formResul);
   }
 
   return (
