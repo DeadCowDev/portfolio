@@ -88,8 +88,8 @@ const pt = {
   services_backend_button: "Learn more",
 
   services_backend_steps_title: "How we like to get things done",
-  services_backend_steps_footer: "How we like to get things done",
-  services_backend_steps_button: "How we like to get things done",
+  services_backend_steps_footer: "Let’s build something amazing together",
+  services_backend_steps_button: "Contact us",
   services_backend_steps_subtitle:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
 
@@ -129,7 +129,7 @@ const pt = {
   contact_email: "Email",
   contact_project_name: "Project Name",
   contact_project_type: "What type of product are you looking for?",
-  contact_about: "Tell us about your project (optional)",
+  contact_about: "Tell us about your project",
   contact_time: "When will you be available for a formal meeting? (optional)",
   contact_submit: "Send details",
   contact_project_type_option_1: "Website",
