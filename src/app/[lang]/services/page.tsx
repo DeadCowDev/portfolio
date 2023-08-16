@@ -6,33 +6,17 @@ import Link from "next/link";
 import { FC } from "react";
 import Image from "next/image";
 import { Content } from "@/components/content";
-
-const ServiceHeader: FC = () => {
-  const { t, locale } = useI18n();
-  return (
-    <div className="z-10 h-[60px] bg-grey-1 sticky top-0 flex justify-start items-center px-4 gap-4">
-      <Link href={`/${locale}`} className="w-6 h-6">
-        <button className="w-6 h-6">
-          <Image
-            src="/icons/close.svg"
-            width={24}
-            height={24}
-            alt={t("services_header_title_button")}
-          />
-        </button>
-      </Link>
-      <Typography variant="smallTextLBold" className="text-white">
-        {t("services_header_title")}
-      </Typography>
-    </div>
-  );
-};
+import { HeaderSmall } from "@/components/header-small";
 
 export default function Services() {
   const { t, locale } = useI18n();
   return (
     <main>
-      <ServiceHeader />
+      <HeaderSmall
+        closeAltText={t("services_header_title_button")}
+        closeLink={`/${locale}`}
+        text={t("services_header_title")}
+      />
       <Content className="bg-grey-4 py-9 px-6 flex flex-col justify-start items-center gap-8">
         <Typography variant="headlineS" className="text-grey-1">
           {t("services_header_title")}

@@ -36,20 +36,20 @@ export const Button: FC<ButtonProps> = ({
       "h-[28px] rounded-[12px] px-[8px]",
     ],
   };
-  return (
-    <button
-      style={{
-        ...(style ?? {}),
-        backgroundSize: "200%",
-      }}
-      className={htmlClass(
-        className ?? "",
-        ...buttonSizeMap[buttonSize],
-        "text-white",
-        colorBg[color],
-        "hover:bg-[-100%] active:bg-[-100%] focus:bg-[-100%] transition-[background-position] duration-[.3s]"
-      )}
-      {...props}
-    />
+  const klass = htmlClass(
+    className ?? "",
+    ...buttonSizeMap[buttonSize],
+    "text-white",
+    colorBg[color],
+    "flex justify-center items-center",
+    "hover:bg-[-100%] active:bg-[-100%] focus:bg-[-100%] transition-[background-position] duration-[.3s] focus:outline-none"
   );
+  const elemStyle = {
+    ...(style ?? {}),
+    backgroundSize: "200%",
+  };
+  if (props.href) {
+    return <a style={elemStyle} className={klass} {...(props as any)} />;
+  }
+  return <button style={elemStyle} className={klass} {...props} />;
 };

@@ -1,8 +1,11 @@
 "use client";
 
 import { Header, ServiceMainSection, ServicesSteps } from "@/components";
+import ContactUs from "@/components/form";
+import { useI18n } from "@/i18n";
 
 const FrontendDevelopment = () => {
+  const { locale } = useI18n();
   return (
     <main>
       <Header />
@@ -16,6 +19,7 @@ const FrontendDevelopment = () => {
         button="services_frontend_button"
       />
       <ServicesSteps
+        lang={locale}
         title="services_frontend_steps_title"
         subtitle="services_frontend_steps_subtitle"
         steps={[

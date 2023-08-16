@@ -53,11 +53,11 @@ export const Header: FC = () => {
       label: t("header_link_home"),
     },
     {
-      href: `/${locale}/about`,
+      href: `/${locale}#about`,
       label: t("header_link_about"),
     },
     {
-      href: `/${locale}/about`,
+      href: `/${locale}/contact`,
       label: t("header_link_contact"),
     },
   ];
@@ -88,14 +88,7 @@ export const Header: FC = () => {
       >
         <div className="overflow-y-scroll h-full flex flex-col justify-start items-center gap-10 pt-16 pb-12">
           {links.map(({ href, label }) => (
-            <Link
-              href={href}
-              aria-disabled={!open}
-              key={label}
-              onClick={() => {
-                setOpen(false);
-              }}
-            >
+            <Link href={href} aria-disabled={!open} key={label}>
               <Typography
                 variant="titleLMedium"
                 className={htmlClass(

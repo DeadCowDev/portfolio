@@ -6,6 +6,7 @@ import {
   HomeTechnical,
   HomeWelcome,
 } from "@/components";
+import ContactUs from "@/components/form";
 
 import "swiper/css";
 
