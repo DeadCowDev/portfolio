@@ -19,8 +19,8 @@ export const Content: FC<ContentProps> = ({
     <div
       className={htmlClass(
         className ?? "",
-        hug ? "" : "min-h-[calc(100dvh-60px)]",
-        "scroll-m-[60px]"
+        hug ? "" : "min-h-[calc(100dvh-60px)] xl:min-h-[100dvh]",
+        "scroll-m-[60px] xl:scroll-m-0"
       )}
       {...props}
       ref={innerRef}

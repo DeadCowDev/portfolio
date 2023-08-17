@@ -10,7 +10,7 @@ const BackendDevelopment = () => {
     <main>
       <Header />
       <ServiceMainSection
-        gradient="bg-purple-2"
+        gradient="bg-purple-2 xl:bg-gradient-3"
         image="/images/backend.svg"
         link="#steps-section"
         title="services_backend_title"

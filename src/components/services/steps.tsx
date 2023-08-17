@@ -60,11 +60,11 @@ export const ServicesSteps: FC<{
       </Typography>
       <Typography
         variant="mediumTextRegular"
-        className="text-center text-grey-1"
+        className="text-center text-grey-1 xl:max-w-2xl xl:mx-auto"
       >
         {t(subtitle)}
       </Typography>
-      <div className="flex flex-col gap-12 items-start mt-4 mb-8">
+      <div className="flex flex-col gap-12 items-start mt-4 mb-8 xl:max-w-[min(60%,1368px)] xl:w-full xl:mx-auto">
         {steps.map((step, i) => (
           <div
             className={htmlClass(
@@ -108,7 +108,7 @@ export const ServicesSteps: FC<{
       <Button
         color="blue"
         buttonSize="small"
-        className="max-w-[255px] w-full mx-auto"
+        className="max-w-[255px] w-full mx-auto xl:mt-16"
         href={`/${lang}/contact`}
       >
         {t(button)}

@@ -12,25 +12,29 @@ export function useInMediaQuery(value: MediaQueries) {
   );
   const [active, setActive] = useState<boolean>(false);
 
+  const handleSizeChange = () => {
+    const width = window.innerWidth;
+    const width2Xl = parseInt(sizes?.["2xl"]!.replace("px", ""));
+    const widthXl = parseInt(sizes?.["xl"]!.replace("px", ""));
+    const widthLg = parseInt(sizes?.["lg"]!.replace("px", ""));
+    const widthMd = parseInt(sizes?.["md"]!.replace("px", ""));
+    const widthSm = parseInt(sizes?.["sm"]!.replace("px", ""));
+
+    let active = [];
+
+    if (width >= width2Xl) active.push("2xl");
+    if (width >= widthXl) active.push("xl");
+    if (width >= widthLg) active.push("lg");
+    if (width >= widthMd) active.push("md");
+    if (width >= widthSm) active.push("sm");
+
+    setActive(active.includes(value ?? ""));
+  };
+
   useEffect(() => {
     // check size of the screen on resize
     const handleResize = () => {
-      const width = window.innerWidth;
-      const width2Xl = parseInt(sizes?.["2xl"]!.replace("px", ""));
-      const widthXl = parseInt(sizes?.["xl"]!.replace("px", ""));
-      const widthLg = parseInt(sizes?.["lg"]!.replace("px", ""));
-      const widthMd = parseInt(sizes?.["md"]!.replace("px", ""));
-      const widthSm = parseInt(sizes?.["sm"]!.replace("px", ""));
-
-      let curr = "";
-
-      if (width >= width2Xl) curr = "2xl";
-      else if (width >= widthXl) curr = "xl";
-      else if (width >= widthLg) curr = "lg";
-      else if (width >= widthMd) curr = "md";
-      else if (width >= widthSm) curr = "sm";
-
-      setActive(curr === value);
+      handleSizeChange();
     };
 
     window.addEventListener("resize", handleResize);
@@ -38,6 +42,10 @@ export function useInMediaQuery(value: MediaQueries) {
       window.removeEventListener("resize", handleResize);
     };
   }, [sizes, value]);
+
+  useEffect(() => {
+    handleSizeChange();
+  }, []);
 
   return active;
 }
