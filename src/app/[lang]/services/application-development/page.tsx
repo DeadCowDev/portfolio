@@ -22,6 +22,7 @@ const FrontendDevelopment = () => {
         lang={locale}
         title="services_frontend_steps_title"
         subtitle="services_frontend_steps_subtitle"
+        cb={`/${locale}/services/application-development`}
         steps={[
           {
             title: "services_frontend_steps_1_title",
