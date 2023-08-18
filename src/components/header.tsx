@@ -41,8 +41,9 @@ const MenuIcon: FC<{
   );
 };
 
-export const Header: FC<{ lightOnDesktop?: boolean }> = ({
+export const Header: FC<{ lightOnDesktop?: boolean; cb: string }> = ({
   lightOnDesktop,
+  cb,
 }) => {
   const [open, setOpen] = useState(false);
   const { t, locale, locales } = useI18n();
@@ -61,7 +62,7 @@ export const Header: FC<{ lightOnDesktop?: boolean }> = ({
       label: t("header_link_about"),
     },
     {
-      href: `/${locale}/contact`,
+      href: `/${locale}/contact?cb=${cb}`,
       label: t("header_link_contact"),
     },
   ];
@@ -76,7 +77,7 @@ export const Header: FC<{ lightOnDesktop?: boolean }> = ({
       label: t("header_services"),
     },
     {
-      href: `/${locale}/contact`,
+      href: `/${locale}/contact?cb=${cb}`,
       label: t("header_link_contact"),
     },
   ];

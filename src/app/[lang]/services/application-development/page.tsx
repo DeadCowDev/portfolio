@@ -8,7 +8,7 @@ const FrontendDevelopment = () => {
   const { locale } = useI18n();
   return (
     <main>
-      <Header />
+      <Header cb={`/${locale}/services/application-development`} />
       <ServiceMainSection
         gradient="bg-gradient-2"
         image="/images/web-app.svg"
