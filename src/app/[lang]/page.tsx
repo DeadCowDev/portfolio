@@ -13,7 +13,7 @@ import "swiper/css";
 export default function Home() {
   return (
     <main>
-      <Header />
+      <Header lightOnDesktop />
       <HomeWelcome />
       <HomeCreativity />
       <HomeTechnical />

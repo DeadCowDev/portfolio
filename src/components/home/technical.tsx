@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import { Keyboard, Mousewheel, Navigation, Scrollbar } from "swiper";
 import { htmlClass } from "@/utils";
+import { useInMediaQuery } from "@/hooks";
 
 const SwiperElement = ({
   img,
@@ -95,18 +96,22 @@ const slides: { text: string; img: string; imgAlt: string }[] = [
 
 export const HomeTechnical: FC = () => {
   const { t } = useI18n();
+  const isXl = useInMediaQuery("xl");
   return (
     <Content
       id="technical"
       hug
-      className="pt-10 flex flex-col justify-start items-center gap-14 bg-grey-4"
+      className="pt-10 flex flex-col justify-start items-center gap-14 bg-grey-4 xl:gap-40"
     >
-      <div className="mx-4 flex flex-col justify-start items-center gap-4">
-        <Typography variant="titleXlBold" className="text-center text-grey-1">
+      <div className="mx-4 flex flex-col justify-start items-center gap-4 xl:max-w-4xl">
+        <Typography
+          variant={isXl ? "headlineL" : "titleXlBold"}
+          className="text-center text-grey-1"
+        >
           {t("home_section_technical_expertise_title")}
         </Typography>
         <Typography
-          variant="mobileLongTextRegular"
+          variant={isXl ? "longTextRegular" : "mobileLongTextRegular"}
           className="text-center text-grey-1"
         >
           {t("home_section_technical_expertise_subtitle")}
@@ -115,7 +120,7 @@ export const HomeTechnical: FC = () => {
       <Swiper
         spaceBetween={16}
         slidesPerView="auto"
-        className="w-full"
+        className="w-full xl:max-w-[calc(100dvw-192px-192px)]"
         grabCursor
         modules={[Navigation, Mousewheel, Keyboard]}
         navigation

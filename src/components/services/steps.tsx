@@ -69,14 +69,16 @@ export const ServicesSteps: FC<{
           <div
             className={htmlClass(
               "grid w-full",
-              i % 2 === 0 ? "grid-cols-[255px,1fr]" : "grid-cols-[1fr,255px]"
+              i % 2 === 0
+                ? "grid-cols-[255px,1fr] xl:grid-cols-[594px,1fr]"
+                : "grid-cols-[1fr,255px] xl:grid-cols-[1fr,594px]"
             )}
             key={i}
           >
             {i % 2 !== 0 && i !== steps.length - 1 && (
               <Connector color={step.connectorBorderClass} direction="left" />
             )}
-            <Card className={htmlClass("gap-4 max-w-[255px]")}>
+            <Card className={htmlClass("gap-4 max-w-[255px] xl:max-w-[594px]")}>
               <Image
                 src={`/icons/numbers/${i + 1}.svg`}
                 alt={t(step.title)}

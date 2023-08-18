@@ -41,7 +41,9 @@ const MenuIcon: FC<{
   );
 };
 
-export const Header: FC = () => {
+export const Header: FC<{ lightOnDesktop?: boolean }> = ({
+  lightOnDesktop,
+}) => {
   const [open, setOpen] = useState(false);
   const { t, locale, locales } = useI18n();
   usePreventScrollOnFlag(open, "lg");
@@ -80,7 +82,12 @@ export const Header: FC = () => {
   ];
 
   return (
-    <div className="z-10 h-[60px] bg-grey-1 sticky top-0 flex justify-start items-center px-[16px] gap-4 xl:sticky xl:h-[unset] xl:w-full xl:py-6 xl:px-10 xl:justify-between">
+    <div
+      className={htmlClass(
+        "z-10 h-[60px] bg-grey-1 sticky top-0 flex justify-start items-center px-[16px] gap-4 xl:sticky xl:h-[unset] xl:w-full xl:py-6 xl:px-10 xl:justify-between",
+        lightOnDesktop ? "xl:bg-grey-4 xl:shadow-card" : ""
+      )}
+    >
       <MenuIcon
         open={open}
         onClick={() => {
@@ -90,7 +97,10 @@ export const Header: FC = () => {
       <Link href={`/${locale}`}>
         <Typography
           variant={isXl ? "titleLBold" : "smallTextLBold"}
-          className="text-white xl:mix-blend-difference"
+          className={htmlClass(
+            "text-white",
+            lightOnDesktop ? "xl:text-grey-1" : ""
+          )}
         >
           {t("header_title")}
         </Typography>
@@ -109,7 +119,7 @@ export const Header: FC = () => {
               <Typography
                 variant="mediumTextMedium"
                 className={htmlClass(
-                  "text-white",
+                  lightOnDesktop ? "text-blue-5" : "text-white",
                   path === href ? "opacity-30" : ""
                 )}
               >
@@ -124,7 +134,8 @@ export const Header: FC = () => {
               <Typography
                 variant="smallTextLMedium"
                 className={htmlClass(
-                  "text-white uppercase",
+                  "uppercase",
+                  lightOnDesktop ? "text-blue-5" : "text-white",
                   l === locale ? "opacity-30" : ""
                 )}
               >

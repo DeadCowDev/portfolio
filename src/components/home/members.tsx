@@ -9,6 +9,7 @@ import { Typography } from "../typography";
 
 import "swiper/css/pagination";
 import { Button } from "../button";
+import { useInMediaQuery } from "@/hooks";
 
 const members = [
   {
@@ -31,13 +32,15 @@ const members = [
 
 export const HomeMembers: FC = () => {
   const { t, locale } = useI18n();
+
+  const isXl = useInMediaQuery("xl");
   return (
     <Content
       hug
-      className="pt-14 pb-4 px-4 bg-grey-4 flex flex-col justify-start items-center gap-10"
+      className="pt-14 pb-4 px-4 bg-grey-4 flex flex-col justify-start items-center gap-10 xl:items-start xl:px-48 xl:relative xl:pb-14 xl:pt-44"
       id="about"
     >
-      <Typography variant="titleXlBold">
+      <Typography variant={isXl ? "headlineS" : "titleXlBold"}>
         {t("home_section_members_title")}
       </Typography>
       <Swiper
@@ -61,8 +64,11 @@ export const HomeMembers: FC = () => {
         ))}
       </Swiper>
 
-      <Link href={`/${locale}/services`}>
-        <Button color="pink" buttonSize="small">
+      <Link
+        href={`/${locale}/services`}
+        className="xl:absolute xl:bottom-10 xl:right-10"
+      >
+        <Button color="pink" buttonSize={isXl ? "normal" : "small"}>
           {t("home_section_members_contactButton")}
         </Button>
       </Link>
@@ -72,32 +78,49 @@ export const HomeMembers: FC = () => {
 
 const Member = ({ member }: { member: (typeof members)[0] }) => {
   const { t } = useI18n();
+  const isXl = useInMediaQuery("xl");
   return (
-    <div className="flex flex-col justify-start items-center gap-4">
+    <div className="flex flex-col justify-start items-center gap-4 xl:flex-row xl:gap-20">
       <Image
         src={member.image}
         alt={t(member.alt as any)}
-        width={167}
-        height={167}
+        width={isXl ? 400 : 167}
+        height={isXl ? 400 : 167}
         className="rounded-full mb-2 shrink-0"
       />
-      <div className="flex flex-col items-center justify-start shrink-0">
-        <Typography variant="smallTextXlBold">{member.name}</Typography>
-        <Typography variant="smallTextLRegular">{member.role}</Typography>
-      </div>
+      <div>
+        <div className="flex flex-col items-center justify-start shrink-0 xl:items-start">
+          <Typography variant={isXl ? "titleLBold" : "smallTextXlBold"}>
+            {member.name}
+          </Typography>
+          <Typography variant="smallTextLRegular">{member.role}</Typography>
+        </div>
 
-      <Link href={member.linkedinLink}>
-        <Image
-          src="/icons/linkedin.svg"
-          alt="linkedin"
-          width={32}
-          height={32}
-          className=""
-        />
-      </Link>
-      <Typography variant="mobileLongTextRegular" className="text-center">
-        {t(member.description as any)}
-      </Typography>
+        <Link href={member.linkedinLink} className="mt-4 xl:hidden">
+          <Image
+            src="/icons/linkedin.svg"
+            alt="linkedin"
+            width={32}
+            height={32}
+            className=""
+          />
+        </Link>
+        <Typography
+          variant={isXl ? "mediumTextRegular" : "mobileLongTextRegular"}
+          className="text-center 2xl:w-[700px] xl:block mt-4 xl:text-left"
+        >
+          {t(member.description as any)}
+        </Typography>
+        <Link href={member.linkedinLink} className="mt-4 hidden xl:block">
+          <Image
+            src="/icons/linkedin.svg"
+            alt="linkedin"
+            width={32}
+            height={32}
+            className=""
+          />
+        </Link>
+      </div>
     </div>
   );
 };

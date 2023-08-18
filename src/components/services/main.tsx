@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../button";
 import { htmlClass } from "@/utils";
-import { useScrollLinkSmooth } from "@/hooks";
+import { useInMediaQuery, useScrollLinkSmooth } from "@/hooks";
 
 interface ServiceMainSectionProps {
   image: string;
@@ -30,14 +30,19 @@ export const ServiceMainSection: FC<ServiceMainSectionProps> = ({
   const { t } = useI18n();
   const btnRef = useScrollLinkSmooth();
   const btnRefDesktop = useScrollLinkSmooth();
+
+  const isXl = useInMediaQuery("xl");
   return (
     <Content className="bg-grey-1 pt-4 flex flex-col justify-start items-center gap-4 xl:flex-row xl:pt-0 xl:items-stretch">
       <div className="bg-grey-1 pt-4 flex flex-col justify-start items-center gap-4 xl:my-auto xl:flex-[3] xl:items-start xl:pl-20">
-        <Typography variant="headlineS" className="text-white px-4 text-center">
+        <Typography
+          variant={isXl ? "headlineXl" : "headlineS"}
+          className="text-white px-4 text-center"
+        >
           {t(title)}
         </Typography>
         <Typography
-          variant="mobileLongTextRegular"
+          variant={isXl ? "longTextRegular" : "mobileLongTextRegular"}
           className="text-grey-6 text-center px-4 xl:text-left max-w-3xl"
         >
           {t(subtitle)}
@@ -50,14 +55,14 @@ export const ServiceMainSection: FC<ServiceMainSectionProps> = ({
         >
           <Button
             color="blue"
-            buttonSize="small"
+            buttonSize="normal"
             className="w-full max-w-[293px]"
           >
             {t(button)}
           </Button>
         </Link>
       </div>
-      <div className="relative mt-auto p-[68px_16px_24px] flex flex-col justify-start items-center gap-6 isolate w-full xl:m-0 xl:flex-[1] xl:justify-center">
+      <div className="relative mt-auto p-[68px_16px_24px] flex flex-col justify-start items-center gap-6 isolate w-full xl:m-0 xl:flex-[2] xl:justify-center">
         <div
           className={htmlClass(
             "absolute top-0 right-0 w-full h-full -z-[1]",
@@ -86,7 +91,7 @@ export const ServiceMainSection: FC<ServiceMainSectionProps> = ({
           alt={t(imageAlt)}
           width={237}
           height={207}
-          className="ml-auto xl:ml-0 2xl:scale-150"
+          className="ml-auto xl:ml-0 xl:scale-[1.6] 2xl:scale-[2.3]"
         />
         <Link
           href={link}
