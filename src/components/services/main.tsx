@@ -37,7 +37,7 @@ export const ServiceMainSection: FC<ServiceMainSectionProps> = ({
       <div className="bg-grey-1 pt-4 flex flex-col justify-start items-center gap-4 xl:my-auto xl:flex-[3] xl:items-start xl:pl-20">
         <Typography
           variant={isXl ? "headlineXl" : "headlineS"}
-          className="text-white px-4 text-center"
+          className="text-white px-4 text-center xl:text-left"
         >
           {t(title)}
         </Typography>
