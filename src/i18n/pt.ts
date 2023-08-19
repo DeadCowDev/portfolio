@@ -7,7 +7,7 @@ const pt = {
   header_link_contact: "Contacts",
   home_meta_title: "Caravel: Navigating Your IT Journey",
   home_meta_description:
-    "Caravel: Navigating Your IT Journey. Your trusted partner for comprehensive IT consulting solutions. From strategy to implementation, we guide your business with expertise in technology, innovation, and efficiency. Discover smoother seas in the digital world with Caravela.",
+    "Caravel: Navigating Your IT Journey. Your trusted partner for comprehensive IT consulting solutions. From strategy to implementation, we guide your business with expertise in technology, innovation, and efficiency. Discover smoother seas in the digital world with Caravel.",
   home_section_welcome_title: "We bring your ideas to life",
   home_section_welcome_subtitle:
     "Need help to succeed in the digital age? We offer tailored solutions to enhance your business, including website, app, security, and back-end development. Our expert team will deliver customized results for your specific needs",
