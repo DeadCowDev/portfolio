@@ -2,14 +2,14 @@ import { useI18n } from "@/i18n";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Content } from "../content";
 import { Typography } from "../typography";
 
+import { useInMediaQuery } from "@/hooks";
 import "swiper/css/pagination";
 import { Button } from "../button";
-import { useInMediaQuery } from "@/hooks";
 
 const members = [
   {
@@ -37,16 +37,16 @@ export const HomeMembers: FC = () => {
   return (
     <Content
       hug
-      className="pt-14 pb-4 px-4 bg-grey-4 flex flex-col justify-start items-center gap-10 xl:items-start xl:px-48 xl:relative xl:pb-14 xl:pt-44"
+      className="pt-14 pb-4 px-4 bg-grey-4 flex flex-col justify-start items-center gap-10 xl:px-48 xl:relative xl:pb-14 xl:pt-44"
       id="about"
     >
       <Typography variant={isXl ? "headlineS" : "titleXlBold"}>
         {t("home_section_members_title")}
       </Typography>
       <Swiper
-        className="w-full"
+        className="w-full xl:w-[60%]"
         grabCursor
-        modules={[Pagination, Navigation, Keyboard]}
+        modules={[Pagination, Navigation]}
         mousewheel
         keyboard
         centeredSlides
@@ -96,13 +96,15 @@ const Member = ({ member }: { member: (typeof members)[0] }) => {
           <Typography variant="smallTextLRegular">{member.role}</Typography>
         </div>
 
-        <Link href={member.linkedinLink} className="mt-4 xl:hidden">
+        <Link
+          href={member.linkedinLink}
+          className="my-4 xl:hidden flex justify-center"
+        >
           <Image
             src="/icons/linkedin.svg"
             alt="linkedin"
             width={32}
             height={32}
-            className=""
           />
         </Link>
         <Typography
@@ -117,7 +119,6 @@ const Member = ({ member }: { member: (typeof members)[0] }) => {
             alt="linkedin"
             width={32}
             height={32}
-            className=""
           />
         </Link>
       </div>
