@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://portfolio-git-main-deadcowdev.vercel.app/
+
+sitemap: https://portfolio-git-main-deadcowdev.vercel.app/sitemap-en.xml
+sitemap: https://portfolio-git-main-deadcowdev.vercel.app/sitemap-pt.xml
