@@ -8,6 +8,8 @@ import { Input } from "../input";
 import { Button } from "../button";
 import Link from "next/link";
 import Image from "next/image";
+import { sendEmail } from "@/actions/send-email";
+import { Toast } from "../toast";
 
 var mailformat =
   /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
@@ -20,9 +22,15 @@ type services = "web" | "mobile" | "web+mobile" | "other";
 
 const ContactUs: FC<{ link: string }> = ({ link }) => {
   const { t } = useI18n();
-  usePreventScrollOnFlag(true);
-
   const isXl = useInMediaQuery("xl");
+
+  const [sending, setSending] = useState(false);
+
+  const [toastState, setToastState] = useState({
+    visible: false,
+    text: "",
+    type: "success" as "success" | "error",
+  });
 
   const projectTypes: { value: services; text: string }[] = [
     {
@@ -124,17 +132,28 @@ const ContactUs: FC<{ link: string }> = ({ link }) => {
     return !nameInvalid && !emailInvalid && !projectInvalid && !aboutInvalid;
   }
 
-  function onSubmit(e: any) {
+  async function onSubmit(e: any) {
     e.preventDefault();
-    if (!isValid()) return;
-    const formResul = {
+    if (sending || !isValid()) return;
+
+    setSending(true);
+
+    const res = await sendEmail({
       name: form.name.value,
       email: form.email.value,
       project: form.project.value,
       type: projectTypes.find((t) => t.text === form.type.value)!.value,
       about: form.about.value,
       date: form.date.value,
-    };
+    });
+
+    setSending(false);
+
+    setToastState({
+      visible: true,
+      text: t(res ? "contact_toastSuccess" : "contact_toastError"),
+      type: res ? "success" : "error",
+    });
   }
 
   return (
@@ -219,16 +238,40 @@ const ContactUs: FC<{ link: string }> = ({ link }) => {
           <div className="hidden xl:block"></div>
           <div className="w-full px-6 mt-6 ">
             <Button
+              disabled={sending}
               buttonSize="small"
               color="blue"
               type="submit"
               className="w-full"
             >
-              {t("contact_submit")}
+              {sending ? (
+                <div
+                  className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                  role="status"
+                >
+                  <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+                    Loading...
+                  </span>
+                </div>
+              ) : (
+                t("contact_submit")
+              )}
             </Button>
           </div>
         </form>
       </Content>
+      {toastState.visible && (
+        <Toast
+          type={toastState.type}
+          text={toastState.text}
+          close={() => {
+            setToastState((prev) => ({
+              ...prev,
+              visible: false,
+            }));
+          }}
+        />
+      )}
     </main>
   );
 };

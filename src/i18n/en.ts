@@ -136,6 +136,8 @@ const en = {
   contact_project_type_option_2: "Mobile Application",
   contact_project_type_option_3: "Website and Mobile Application",
   contact_project_type_option_4: "Other",
+  contact_toastSuccess: "Your message was sent",
+  contact_toastError: "Something went wrong, please try again",
 };
 
 export default en;
