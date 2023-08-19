@@ -1,6 +1,8 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /*?*
+
 
 # Host
 Host: https://portfolio-git-main-deadcowdev.vercel.app/
