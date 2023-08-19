@@ -8,9 +8,9 @@ const BackendDevelopment = () => {
   const { locale } = useI18n();
   return (
     <main>
-      <Header />
+      <Header cb={`/${locale}/services/backend-development`} />
       <ServiceMainSection
-        gradient="bg-purple-2"
+        gradient="bg-purple-2 xl:bg-gradient-3"
         image="/images/backend.svg"
         link="#steps-section"
         title="services_backend_title"
@@ -22,6 +22,7 @@ const BackendDevelopment = () => {
         title="services_backend_steps_title"
         subtitle="services_backend_steps_subtitle"
         lang={locale}
+        cb={`/${locale}/services/backend-development`}
         steps={[
           {
             title: "services_backend_steps_1_title",

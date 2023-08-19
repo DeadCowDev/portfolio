@@ -1,11 +1,13 @@
 import { useI18n } from "@/i18n";
 import { FC, useState } from "react";
 import { HeaderSmall } from "../header-small";
-import { usePreventScrollOnFlag } from "@/hooks";
+import { useInMediaQuery, usePreventScrollOnFlag } from "@/hooks";
 import { Content } from "../content";
 import { Typography } from "../typography";
 import { Input } from "../input";
 import { Button } from "../button";
+import Link from "next/link";
+import Image from "next/image";
 
 var mailformat =
   /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
@@ -16,9 +18,11 @@ function isValidEmail(email: string) {
 
 type services = "web" | "mobile" | "web+mobile" | "other";
 
-const ContactUs: FC = () => {
+const ContactUs: FC<{ link: string }> = ({ link }) => {
   const { t } = useI18n();
   usePreventScrollOnFlag(true);
+
+  const isXl = useInMediaQuery("xl");
 
   const projectTypes: { value: services; text: string }[] = [
     {
@@ -131,17 +135,26 @@ const ContactUs: FC = () => {
       about: form.about.value,
       date: form.date.value,
     };
-    console.log(formResul);
   }
 
   return (
-    <main className="fixed top-0 left-0 w-full bottom-0 overflow-y-scroll z-30">
-      <HeaderSmall
-        closeAltText={t("contact_header")}
-        closeLink="/"
-        text="Contact us"
-      />
-      <Content className="bg-grey-4 pt-6 pb-10 px-4 flex flex-col justify-start items-center">
+    <main className="w-full h-[100dvh] xl:flex xl:justify-center xl:items-center xl:p-8 xl:bg-grey-1 xl:relative">
+      {!isXl && (
+        <HeaderSmall
+          closeAltText={t("contact_header")}
+          closeLink={link}
+          text="Contact us"
+        />
+      )}
+      {isXl && (
+        <Link
+          className="w-10 aspect-square flex items-center justify-center rounded-full bg-white shadow-card absolute top-8 right-12 z-10"
+          href={link}
+        >
+          <Image src="/icons/close-dark.svg" width={24} height={24} alt="" />
+        </Link>
+      )}
+      <Content className="bg-grey-4 pt-6 pb-10 px-4 flex flex-col justify-start items-center xl:shadow-card xl:rounded-xl xl:bg-white xl:min-h-[unset]">
         <Typography variant="titleLBold" className="text-grey-1 text-center">
           {t("contact_title")}
         </Typography>
@@ -153,7 +166,7 @@ const ContactUs: FC = () => {
           {t("contact_subtitle")}
         </Typography>
         <form
-          className="flex flex-col justify-start items-center w-full gap-4 mt-8"
+          className="flex flex-col justify-start items-center w-full gap-4 mt-8 xl:grid xl:grid-cols-2"
           onSubmit={onSubmit}
         >
           <Input
@@ -187,6 +200,7 @@ const ContactUs: FC = () => {
             options={projectTypes.map((x) => x.text)}
           ></Input>
           <Input
+            className="xl:col-span-2"
             value={form.about.value}
             onChange={onChangeAbout}
             id="about"
@@ -195,13 +209,15 @@ const ContactUs: FC = () => {
             hasError={form.about.invalid}
           ></Input>
           <Input
+            className="xl:col-span-2"
             value={form.date.value}
             onChange={onChangeDate}
             id="date"
             label={t("contact_time")}
             type="datetime-local"
           ></Input>
-          <div className="w-full px-6 mt-6">
+          <div className="hidden xl:block"></div>
+          <div className="w-full px-6 mt-6 ">
             <Button
               buttonSize="small"
               color="blue"

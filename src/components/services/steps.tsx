@@ -48,7 +48,8 @@ export const ServicesSteps: FC<{
   footer: TranslationKeys;
   button: TranslationKeys;
   lang: string;
-}> = ({ button, footer, steps, subtitle, title, lang }) => {
+  cb: string;
+}> = ({ button, footer, steps, subtitle, title, lang, cb }) => {
   const { t } = useI18n();
   return (
     <Content
@@ -60,23 +61,25 @@ export const ServicesSteps: FC<{
       </Typography>
       <Typography
         variant="mediumTextRegular"
-        className="text-center text-grey-1"
+        className="text-center text-grey-1 xl:max-w-2xl xl:mx-auto"
       >
         {t(subtitle)}
       </Typography>
-      <div className="flex flex-col gap-12 items-start mt-4 mb-8">
+      <div className="flex flex-col gap-12 items-start mt-4 mb-8 xl:max-w-[min(60%,1368px)] xl:w-full xl:mx-auto">
         {steps.map((step, i) => (
           <div
             className={htmlClass(
               "grid w-full",
-              i % 2 === 0 ? "grid-cols-[255px,1fr]" : "grid-cols-[1fr,255px]"
+              i % 2 === 0
+                ? "grid-cols-[255px,1fr] xl:grid-cols-[594px,1fr]"
+                : "grid-cols-[1fr,255px] xl:grid-cols-[1fr,594px]"
             )}
             key={i}
           >
             {i % 2 !== 0 && i !== steps.length - 1 && (
               <Connector color={step.connectorBorderClass} direction="left" />
             )}
-            <Card className={htmlClass("gap-4 max-w-[255px]")}>
+            <Card className={htmlClass("gap-4 max-w-[255px] xl:max-w-[594px]")}>
               <Image
                 src={`/icons/numbers/${i + 1}.svg`}
                 alt={t(step.title)}
@@ -108,8 +111,8 @@ export const ServicesSteps: FC<{
       <Button
         color="blue"
         buttonSize="small"
-        className="max-w-[255px] w-full mx-auto"
-        href={`/${lang}/contact`}
+        className="max-w-[255px] w-full mx-auto xl:mt-16"
+        href={`/${lang}/contact?cb=${cb}`}
       >
         {t(button)}
       </Button>

@@ -4,7 +4,7 @@ import { Typography } from "../typography";
 import { htmlClass } from "@/utils";
 import { TitleWithStack } from "../title-with-stack";
 import { useI18n } from "@/i18n";
-import { useInView } from "@/hooks";
+import { useInMediaQuery, useInView } from "@/hooks";
 
 export const HomeCreativity: FC = () => {
   const { t } = useI18n();
@@ -16,6 +16,8 @@ export const HomeCreativity: FC = () => {
     showScrollBubble: false,
   });
   const movementStarted = useMemo(() => state.titleIndex >= 0, [state]);
+
+  const isXl = useInMediaQuery("xl");
 
   const setNext = (switchText?: boolean) => {
     setState((s) => ({
@@ -50,12 +52,12 @@ export const HomeCreativity: FC = () => {
     <Content
       innerRef={containerRef}
       className={htmlClass(
-        "h-24 py-14 px-4 flex flex-col relative transition-all duration-[4.5s] delay-300",
+        "h-24 py-14 px-4 flex flex-col relative transition-all duration-[4.5s] delay-300 xl:justify-center xl:items-center",
         movementStarted ? "bg-green-2" : "bg-blue-2"
       )}
       id="creative-section"
     >
-      <div className="flex flex-col justify-start items-center gap-6">
+      <div className="flex flex-col justify-start items-center gap-6 xl:flex-row xl:justify-center">
         <TitleWithStack
           on={state.animate}
           active
@@ -68,6 +70,15 @@ export const HomeCreativity: FC = () => {
           {t("home_section_creativity_title1")}
         </TitleWithStack>
 
+        {isXl && (
+          <div
+            className={htmlClass(
+              "w-7 aspect-square rounded-full bg-grey-3 transition-all duration-700 delay-500",
+              state.finished ? "opacity-40" : "opacity-0"
+            )}
+          ></div>
+        )}
+
         <TitleWithStack
           on={state.animate}
           active={state.titleIndex >= 1}
@@ -79,6 +90,15 @@ export const HomeCreativity: FC = () => {
         >
           {t("home_section_creativity_title2")}
         </TitleWithStack>
+
+        {isXl && (
+          <div
+            className={htmlClass(
+              "w-7 aspect-square rounded-full bg-grey-3 transition-all duration-700 delay-500",
+              state.finished ? "opacity-40" : "opacity-0"
+            )}
+          ></div>
+        )}
 
         <TitleWithStack
           on={state.animate}
@@ -93,7 +113,7 @@ export const HomeCreativity: FC = () => {
       <Typography
         variant="mediumTextMedium"
         className={htmlClass(
-          "mt-[70px] text-center transition-all duration-1000 text-grey-1",
+          "mt-[70px] text-center transition-all duration-1000 text-grey-1 xl:max-w-3xl xl:mt-32",
           state.finished ? "opacity-100" : "opacity-0"
         )}
         onTransitionEnd={() => {

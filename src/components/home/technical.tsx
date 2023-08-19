@@ -1,36 +1,22 @@
+import { useInMediaQuery } from "@/hooks";
+import { useI18n } from "@/i18n";
+import { htmlClass } from "@/utils";
+import Image from "next/image";
 import { FC } from "react";
+import { Keyboard, Mousewheel, Navigation } from "swiper";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Content } from "../content";
 import { Typography } from "../typography";
-import { useI18n } from "@/i18n";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 
-import { Keyboard, Mousewheel, Navigation, Scrollbar } from "swiper";
-import { htmlClass } from "@/utils";
-
-const SwiperElement = ({
-  img,
-  text,
-  imgAlt,
-}: {
+type SlideType = {
   text: string;
   img: string;
   imgAlt: string;
-}) => {
-  return (
-    <div className="w-[132px] aspect-square bg-white border-grey-6 rounded-[12px] border-[1px] py-2 px-6 flex flex-col justify-start items-center gap-6">
-      <Image alt={imgAlt} src={img} width={85} height={85} />
-      <Typography
-        variant="smallTextXlMedium"
-        className="text-grey-1 text-center"
-      >
-        {text}
-      </Typography>
-    </div>
-  );
+  centerImage?: boolean;
 };
 
-const slides: { text: string; img: string; imgAlt: string }[] = [
+const slides: SlideType[] = [
   {
     img: "/icons/react.svg",
     text: "React",
@@ -91,22 +77,63 @@ const slides: { text: string; img: string; imgAlt: string }[] = [
     text: "SQL",
     imgAlt: "SQL logo",
   },
+  {
+    img: "/icons/aws.svg",
+    text: "AWS",
+    imgAlt: "AWS logo",
+    centerImage: true,
+  },
+  {
+    img: "/icons/docker.svg",
+    text: "Docker",
+    imgAlt: "Docker logo",
+    centerImage: true,
+  },
+  {
+    img: "/icons/k8s.svg",
+    text: "K8S",
+    imgAlt: "Kubernetes logo",
+  },
 ];
+
+const SwiperElement = ({ img, text, imgAlt, centerImage }: SlideType) => {
+  return (
+    <div className="w-[132px] h-[148px] bg-white border-grey-6 rounded-[12px] border-[1px] py-2 px-6 flex flex-col justify-between items-center gap-6">
+      <Image
+        alt={imgAlt}
+        src={img}
+        width={85}
+        height={85}
+        className={centerImage ? "my-auto" : ""}
+      />
+      <Typography
+        variant="smallTextXlMedium"
+        className="text-grey-1 text-center"
+      >
+        {text}
+      </Typography>
+    </div>
+  );
+};
 
 export const HomeTechnical: FC = () => {
   const { t } = useI18n();
+  const isXl = useInMediaQuery("xl");
   return (
     <Content
       id="technical"
       hug
-      className="pt-10 flex flex-col justify-start items-center gap-14 bg-grey-4"
+      className="pt-10 flex flex-col justify-start items-center gap-14 bg-grey-4 xl:gap-40"
     >
-      <div className="mx-4 flex flex-col justify-start items-center gap-4">
-        <Typography variant="titleXlBold" className="text-center text-grey-1">
+      <div className="mx-4 flex flex-col justify-start items-center gap-4 xl:max-w-4xl">
+        <Typography
+          variant={isXl ? "headlineL" : "titleXlBold"}
+          className="text-center text-grey-1"
+        >
           {t("home_section_technical_expertise_title")}
         </Typography>
         <Typography
-          variant="mobileLongTextRegular"
+          variant={isXl ? "longTextRegular" : "mobileLongTextRegular"}
           className="text-center text-grey-1"
         >
           {t("home_section_technical_expertise_subtitle")}
@@ -115,13 +142,13 @@ export const HomeTechnical: FC = () => {
       <Swiper
         spaceBetween={16}
         slidesPerView="auto"
-        className="w-full"
+        className="w-full xl:w-[60%]"
         grabCursor
         modules={[Navigation, Mousewheel, Keyboard]}
         navigation
         mousewheel
         keyboard={{
-          onlyInViewport: false,
+          onlyInViewport: true,
         }}
       >
         {slides.map((props, i) => (
