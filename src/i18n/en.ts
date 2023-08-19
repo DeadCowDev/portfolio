@@ -5,9 +5,9 @@ const en = {
   header_link_home: "Homepage",
   header_link_about: "About",
   header_link_contact: "Contacts",
-  home_meta_title: "Caravel | We bring your ideas to life",
+  home_meta_title: "Caravel: Navigating Your IT Journey",
   home_meta_description:
-    "Caravela: Navigating Your IT Journey. Your trusted partner for comprehensive IT consulting solutions. From strategy to implementation, we guide your business with expertise in technology, innovation, and efficiency. Discover smoother seas in the digital world with Caravela.",
+    "Caravel: Navigating Your IT Journey. Your trusted partner for comprehensive IT consulting solutions. From strategy to implementation, we guide your business with expertise in technology, innovation, and efficiency. Discover smoother seas in the digital world with Caravela.",
   home_section_welcome_title: "We bring your ideas to life",
   home_section_welcome_subtitle:
     "Need help to succeed in the digital age? We offer tailored solutions to enhance your business, including website, app, security, and back-end development. Our expert team will deliver customized results for your specific needs",
