@@ -5,9 +5,16 @@ import ContactUs from "@/components/form";
 import { useI18n } from "@/i18n";
 
 const FrontendDevelopment = () => {
-  const { locale } = useI18n();
+  const { locale, t } = useI18n();
   return (
     <main>
+      <head>
+        <title>{t("services_frontend_meta_title")}</title>
+        <meta
+          name="description"
+          content={t("services_frontend_meta_description")}
+        ></meta>
+      </head>
       <Header cb={`/${locale}/services/application-development`} />
       <ServiceMainSection
         gradient="bg-gradient-2"

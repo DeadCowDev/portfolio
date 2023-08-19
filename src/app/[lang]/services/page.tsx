@@ -14,6 +14,13 @@ export default function Services() {
   const isXl = useInMediaQuery("xl");
   return (
     <main>
+      <head>
+        <title>{t("services_meta_title")}</title>
+        <meta
+          name="description"
+          content={t("services_meta_description")}
+        ></meta>
+      </head>
       {isXl ? (
         <Header lightOnDesktop cb={`/${locale}/services`} />
       ) : (
