@@ -44,7 +44,7 @@ export const HomeMembers: FC = () => {
         {t("home_section_members_title")}
       </Typography>
       <Swiper
-        className="w-full xl:w-[60%]"
+        className="w-full 2xl:w-[60%]"
         grabCursor
         modules={[Pagination, Navigation]}
         mousewheel
@@ -80,7 +80,7 @@ const Member = ({ member }: { member: (typeof members)[0] }) => {
   const { t } = useI18n();
   const isXl = useInMediaQuery("xl");
   return (
-    <div className="flex flex-col justify-start items-center gap-4 xl:flex-row xl:gap-20">
+    <div className="flex px-1 flex-col justify-start items-center gap-4 xl:flex-row xl:gap-20">
       <Image
         src={member.image}
         alt={t(member.alt as any)}
@@ -109,7 +109,7 @@ const Member = ({ member }: { member: (typeof members)[0] }) => {
         </Link>
         <Typography
           variant={isXl ? "mediumTextRegular" : "mobileLongTextRegular"}
-          className="text-center 2xl:w-[700px] xl:block mt-4 xl:text-left"
+          className="text-center 2xl:max-w-[700px] mt-4 xl:text-left block"
         >
           {t(member.description as any)}
         </Typography>

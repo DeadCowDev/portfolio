@@ -52,7 +52,7 @@ export const HomeCreativity: FC = () => {
     <Content
       innerRef={containerRef}
       className={htmlClass(
-        "h-24 py-14 px-4 flex flex-col relative transition-all duration-[4.5s] delay-300 xl:justify-center xl:items-center",
+        "h-24 py-14 px-4 flex flex-col relative transition-[background-color] duration-[4.5s] delay-300 xl:justify-center xl:items-center",
         movementStarted ? "bg-green-2" : "bg-blue-2"
       )}
       id="creative-section"
