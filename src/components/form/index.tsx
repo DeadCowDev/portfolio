@@ -8,6 +8,7 @@ import { Input } from "../input";
 import { Button } from "../button";
 import Link from "next/link";
 import Image from "next/image";
+import { sendEmail } from "@/actions/send-email";
 
 var mailformat =
   /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
@@ -127,14 +128,15 @@ const ContactUs: FC<{ link: string }> = ({ link }) => {
   function onSubmit(e: any) {
     e.preventDefault();
     if (!isValid()) return;
-    const formResul = {
+
+    sendEmail({
       name: form.name.value,
       email: form.email.value,
       project: form.project.value,
       type: projectTypes.find((t) => t.text === form.type.value)!.value,
       about: form.about.value,
       date: form.date.value,
-    };
+    });
   }
 
   return (
