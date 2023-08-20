@@ -18,7 +18,13 @@ function isValidEmail(email: string) {
   return email.match(mailformat);
 }
 
-type services = "web" | "mobile" | "web+mobile" | "other";
+type services =
+  | "web"
+  | "mobile"
+  | "web+mobile"
+  | "backend"
+  | "security"
+  | "other";
 
 const ContactUs: FC<{ link: string; lang: string }> = ({ link, lang }) => {
   const { t } = i18N(lang);
@@ -45,6 +51,14 @@ const ContactUs: FC<{ link: string; lang: string }> = ({ link, lang }) => {
     },
     {
       text: t("contact_project_type_option_4"),
+      value: "backend",
+    },
+    {
+      text: t("contact_project_type_option_5"),
+      value: "security",
+    },
+    {
+      text: t("contact_project_type_option_6"),
       value: "other",
     },
   ];

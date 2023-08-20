@@ -9,7 +9,7 @@ const en = {
   home_meta_title:
     "Deadcow Enterprises | Empowering Your Digital Journey, One Solution at a Time",
   home_meta_description:
-    "Deadcow Enterprises: Empowering Your Digital Journey, One Solution at a Time. Your trusted partner for comprehensive IT consulting solutions. From strategy to implementation, we guide your business with expertise in technology, innovation, and efficiency",
+    "Deadcow Enterprises: Empowering Your Digital Journey, One Solution at a Time. From strategy to implementation, we guide your business with expertise in technology, innovation, and efficiency",
   home_section_welcome_title: "We bring your ideas to life",
   home_section_welcome_subtitle:
     "Need help to succeed in the digital age? We offer tailored solutions to enhance your business, including website, app, security, and backend development. Our expert team will deliver customized results for your specific needs",
@@ -27,10 +27,10 @@ const en = {
   home_section_members_title: "Our Team",
   home_section_members_dviana_imageAlt: "Diogo Viana profile image",
   home_section_members_dviana_description:
-    "Experienced Frontend Developer specializing in crafting secure, responsive, and modern web and native applications. With a keen eye for detail and a passion for user-centric design, I create seamless digital experiences that prioritize both aesthetics and functionality.",
+    "Experienced Frontend Developer specializing in crafting secure, responsive, and modern web and native applications. With a keen eye for detail and a passion for user-centric design, I create seamless digital experiences that prioritize both aesthetics and functionality",
   home_section_members_pgracio_imageAlt: "Pedro Grácio profile image",
   home_section_members_pgracio_description:
-    "Seasoned Backend Developer dedicated to building secure and high-performing backend solutions. With a focus on architecting robust APIs and infrastructure, I thrive in creating reliable systems that power applications at scale.",
+    "Seasoned Backend Developer dedicated to building secure and high-performing backend solutions. With a focus on architecting robust APIs and infrastructure, I thrive in creating reliable systems that power applications at scale",
   home_section_members_contactButton: "Let's make magic",
 
   services_meta_title: "Deadcow Enterprises | Services",
@@ -71,7 +71,7 @@ const en = {
 
   services_frontend_steps_2_title: "Planning and analysis",
   services_frontend_steps_2_subtitle:
-    "After the idea has been generated and validated, the next step is to plan and analyze the requirements for the application, including its features, user interface, and functionality",
+    "After the idea has been validated, the next step is to plan and analyze the requirements for the application, including its features, user interface, and functionality",
 
   services_frontend_steps_3_title: "Design",
   services_frontend_steps_3_subtitle:
@@ -114,19 +114,19 @@ const en = {
 
   services_backend_steps_2_title: "Planning and analysis",
   services_backend_steps_2_subtitle:
-    "After the idea has been generated and validated, the next step is to plan and analyze the requirements for the application, including its features, functionality and infrastructure",
+    "After the idea has been generated and validated, the next step is to plan and analyze the requirements, including its features, functionality and infrastructure",
 
   services_backend_steps_3_title: "System Architecture Design",
   services_backend_steps_3_subtitle:
-    "Once the requirements have been analyzed, the next step is to design the high-level architecture of the backend system, focusing on scalability, modularity, and maintainability. Determine the appropriate technologies that suit the project's needs. Create an architecture diagram that outlines components, communication channels and data flows",
+    "Once the requirements have been analyzed, the next step is to design the architecture of the backend system, focusing on scalability, modularity, and maintainability. Determine the appropriate technologies that suit the project's needs. Create an architecture diagram that outlines components, communication channels and data flows",
 
   services_backend_steps_4_title: "Development",
   services_backend_steps_4_subtitle:
-    "Once we have agreed on the design, we'll start building the backend system. This involves writing code in different languages, using special tools to create your infrastructure",
+    "Once we have agreed on the diagrams, we'll start building the backend system. This involves writing code in different languages, using special tools to create your infrastructure",
 
   services_backend_steps_5_title: "Testing",
   services_backend_steps_5_subtitle:
-    "After the development is complete, the next step is to test the application to ensure that it is functioning properly and meets the requirements. This step involves testing for bugs, errors, and compatibility issues",
+    "After the development is complete, the next step is to test the backend to ensure that it is functioning properly and meets the requirements. This step involves testing for bugs, errors, and compatibility issues",
 
   services_backend_steps_6_title: "Deployment",
   services_backend_steps_6_subtitle:
@@ -134,7 +134,7 @@ const en = {
 
   services_backend_steps_7_title: "Maintenance and update",
   services_backend_steps_7_subtitle:
-    "Once the application has been deployed, the final step is to maintain and update it regularly to ensure that it continues to function properly and meets the changing requirements of the users. This step is an extra service",
+    "Once the backend has been deployed, the final step is to maintain and update it regularly to ensure that it continues to function properly and meets the changing requirements of the users. This step is an extra service",
 
   contact_meta_title: "Deadcow Enterprises | Contact",
   contact_meta_description:
@@ -153,7 +153,9 @@ const en = {
   contact_project_type_option_1: "Website",
   contact_project_type_option_2: "Mobile Application",
   contact_project_type_option_3: "Website and Mobile Application",
-  contact_project_type_option_4: "Other",
+  contact_project_type_option_4: "Backend",
+  contact_project_type_option_5: "Security",
+  contact_project_type_option_6: "Other",
   contact_toastSuccess: "Your message was sent",
   contact_toastError: "Something went wrong, please try again",
 };
