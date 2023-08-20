@@ -13,8 +13,10 @@ const icons = [
   "node.svg",
   "dotnet.svg",
   "mongodb.svg",
-  "postgresql.svg",
-  "mssql.svg",
+  "sql.svg",
+  "docker.svg",
+  "k8s.svg",
+  "aws.svg",
 ];
 
 const IconsComponent: FC = () => {
