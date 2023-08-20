@@ -57,7 +57,11 @@ export const ServicesSteps: FC<{
       className="bg-grey-4 flex flex-col items-stretch pt-10 px-4 pb-8 gap-6"
       id={id}
     >
-      <Typography variant="titleXlBold" className="text-center text-grey-1">
+      <Typography
+        variant="titleXlBold"
+        className="text-center text-grey-1"
+        el="h2"
+      >
         {t(title)}
       </Typography>
       <Typography

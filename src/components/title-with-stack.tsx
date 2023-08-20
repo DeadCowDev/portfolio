@@ -26,7 +26,8 @@ export const TitleWithStack: FC<TitleWithStackProps> = ({
         variant="headlineL"
         className={htmlClass("text-center transition-all duration-300")}
         style={{ visibility: "hidden" }}
-        innerRef={textRef}
+        ref={textRef}
+        el="h3"
       >
         <span
           className={htmlClass(
@@ -39,6 +40,7 @@ export const TitleWithStack: FC<TitleWithStackProps> = ({
       </Typography>
       {on && (
         <Typography
+          el="h3"
           style={{
             top: indexSelected ? textRef.current?.offsetTop : "50%",
             left: indexSelected

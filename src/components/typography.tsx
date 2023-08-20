@@ -1,5 +1,5 @@
 import { htmlClass } from "@/utils";
-import { FC } from "react";
+import { FC, forwardRef } from "react";
 
 export const typographyVariants = {
   headlineXl: "font-public font-bold text-[56px]/[64px]",
@@ -63,20 +63,34 @@ export const typographyVariants = {
     "font-public font-bold text-[32px]/[48px] xl:text-[56px]/[64px]",
 };
 
-export const Typography: FC<
+export const Typography = forwardRef<
+  HTMLElement,
   Omit<
     {
       variant: keyof typeof typographyVariants;
-      innerRef?: React.Ref<HTMLElement>;
-    } & React.HTMLProps<HTMLSpanElement>,
+      el?: "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+    } & React.HTMLProps<HTMLElement>,
     "ref"
   >
-> = ({ variant, innerRef, className, ...props }) => {
-  return (
-    <span
-      {...props}
-      ref={innerRef}
-      className={htmlClass(className ?? "", typographyVariants[variant])}
-    />
-  );
-};
+>(({ variant, el, className, ...props }, ref) => {
+  const klass = htmlClass(className ?? "", typographyVariants[variant]);
+  switch (el) {
+    case "h1":
+      return <h1 {...props} ref={ref as any} className={klass} />;
+    case "h2":
+      return <h2 {...props} ref={ref as any} className={klass} />;
+    case "h3":
+      return <h3 {...props} ref={ref as any} className={klass} />;
+    case "h4":
+      return <h4 {...props} ref={ref as any} className={klass} />;
+    case "h5":
+      return <h5 {...props} ref={ref as any} className={klass} />;
+    case "h6":
+      return <h6 {...props} ref={ref as any} className={klass} />;
+    case "span":
+    default:
+      return <span {...props} ref={ref} className={klass} />;
+  }
+});
+
+Typography.displayName = "Typography";

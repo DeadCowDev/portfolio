@@ -184,7 +184,11 @@ const ContactUs: FC<{ link: string; lang: string }> = ({ link, lang }) => {
         <Image src="/icons/close-dark.svg" width={24} height={24} alt="" />
       </Link>
       <Content className="bg-grey-4 pt-6 pb-10 px-4 flex flex-col justify-start items-center xl:shadow-card xl:rounded-xl xl:bg-white xl:min-h-[unset]">
-        <Typography variant="titleLBold" className="text-grey-1 text-center">
+        <Typography
+          variant="titleLBold"
+          className="text-grey-1 text-center"
+          el="h1"
+        >
           {t("contact_title")}
         </Typography>
 

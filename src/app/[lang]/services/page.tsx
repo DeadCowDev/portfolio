@@ -48,7 +48,7 @@ export default function Services({
       />
 
       <Content className="bg-grey-4 py-9 px-6 flex flex-col justify-start items-center gap-8 xl:gap-16">
-        <Typography variant="headlineS" className="text-grey-1">
+        <Typography variant="headlineS" className="text-grey-1" el="h1">
           {t("services_header_title")}
         </Typography>
         <div className="flex flex-col gap-4 justify-start items-stretch w-full xl:flex-row xl:justify-center xl:gap-28">
@@ -62,6 +62,7 @@ export default function Services({
             <Typography
               variant="titleLBoldXlTitleXlBold"
               className="text-grey-1 text-center"
+              el="h2"
             >
               {t("services_card_frontend_title")}
             </Typography>
@@ -95,6 +96,7 @@ export default function Services({
             <Typography
               variant="titleLBoldXlTitleXlBold"
               className="text-grey-1 text-center"
+              el="h2"
             >
               {t("services_card_backend_title")}
             </Typography>

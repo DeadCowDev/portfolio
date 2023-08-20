@@ -5,8 +5,7 @@ const pt = {
   header_link_home: "Página Inicial",
   header_link_about: "Sobre",
   header_link_contact: "Contactos",
-  home_meta_title:
-    "Deadcow Enterprises | Capacitando a sua jornada digital, uma solução de cada vez",
+  home_meta_title: "Deadcow Enterprises",
   home_meta_description:
     "Deadcow Enterprises: Capacitando a sua jornada digital, uma solução de cada vez. Da estratégia à implementação, orientamos a sua empresa com perícia em tecnologia, inovação e eficiência",
   home_section_welcome_title: "Damos vida às suas ideias",

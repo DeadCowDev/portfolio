@@ -15,6 +15,7 @@ export const HomeWelcome: FC<{ lang: string }> = ({ lang }) => {
         <Typography
           variant="headlineSXlHeadlineXl"
           className="text-blue-1 text-center xl:text-left max-w-3xl"
+          el="h1"
         >
           {t("home_section_welcome_title")}
         </Typography>

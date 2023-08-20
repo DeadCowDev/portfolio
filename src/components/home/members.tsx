@@ -37,7 +37,7 @@ export const HomeMembers: FC<{ lang: string }> = ({ lang }) => {
       className="pt-14 pb-4 px-4 bg-grey-4 flex flex-col justify-start items-center gap-10 xl:px-48 xl:relative xl:pb-14 xl:pt-44"
       id="about"
     >
-      <Typography variant="titleXlBoldXlHeadlineS">
+      <Typography variant="titleXlBoldXlHeadlineS" el="h2">
         {t("home_section_members_title")}
       </Typography>
       <Swiper

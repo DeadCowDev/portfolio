@@ -5,10 +5,9 @@ import { i18N } from "@/i18n";
 import { htmlClass } from "@/utils";
 import { FC, useEffect, useMemo, useState } from "react";
 import { Content } from "../content";
+import { ScrollLink } from "../link-with-scroll";
 import { TitleWithStack } from "../title-with-stack";
 import { Typography } from "../typography";
-import Link from "next/link";
-import { ScrollLink } from "../link-with-scroll";
 
 export const HomeCreativity: FC<{ lang: string }> = ({ lang }) => {
   const { t } = i18N(lang);

@@ -37,6 +37,7 @@ export const ServiceMainSection: FC<ServiceMainSectionProps> = ({
         <Typography
           variant="headlineSXlHeadlineXl"
           className="text-white px-4 text-center xl:text-left"
+          el="h1"
         >
           {t(title)}
         </Typography>

@@ -127,6 +127,7 @@ export const HomeTechnical: FC<{ lang: string }> = ({ lang }) => {
         <Typography
           variant="titleXlBoldXlHeadlineL"
           className="text-center text-grey-1"
+          el="h2"
         >
           {t("home_section_technical_expertise_title")}
         </Typography>
