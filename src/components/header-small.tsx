@@ -1,21 +1,30 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { Typography } from "./typography";
+import { htmlClass } from "@/utils";
 
 interface HeaderSmallProps {
   closeLink: string | (() => void);
   closeAltText: string;
   text: string;
+  className?: string;
 }
 
 export const HeaderSmall: FC<HeaderSmallProps> = ({
   closeLink,
   text,
   closeAltText,
+  className,
 }) => {
   return (
-    <div className="z-10 h-[60px] bg-grey-1 sticky top-0 flex justify-start items-center px-4 gap-4">
+    <div
+      className={htmlClass(
+        "z-10 h-[60px] bg-grey-1 sticky top-0 flex justify-start items-center px-4 gap-4",
+        className ?? ""
+      )}
+    >
       <Link
         href={closeLink instanceof Function ? "" : closeLink}
         className="w-6 h-6"

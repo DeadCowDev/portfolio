@@ -1,31 +1,41 @@
-"use client";
-
 import { Header, ServiceMainSection, ServicesSteps } from "@/components";
-import ContactUs from "@/components/form";
-import { useI18n } from "@/i18n";
+import { i18N } from "@/i18n";
+import { LanguageParams } from "@/models";
+import { getMetadataTitle } from "@/utils";
+import { Metadata } from "next";
 
-const FrontendDevelopment = () => {
-  const { locale, t } = useI18n();
+export function generateMetadata({
+  params,
+}: {
+  params: LanguageParams;
+}): Metadata {
+  return getMetadataTitle(
+    "services_frontend_meta_title",
+    "services_frontend_meta_description",
+    params.lang
+  );
+}
+
+const FrontendDevelopment = ({ params }: { params: LanguageParams }) => {
+  const { locale } = i18N(params.lang);
   return (
     <main>
-      <head>
-        <title>{t("services_frontend_meta_title")}</title>
-        <meta
-          name="description"
-          content={t("services_frontend_meta_description")}
-        ></meta>
-      </head>
-      <Header cb={`/${locale}/services/application-development`} />
+      <Header
+        cb={`/${locale}/services/application-development`}
+        lang={params.lang}
+      />
       <ServiceMainSection
         gradient="bg-gradient-2"
         image="/images/web-app.svg"
-        link="#steps-section"
+        link="#frontend-steps-section"
         title="services_frontend_title"
         subtitle="services_frontend_subtitle"
         imageAlt="services_frontend_image_alt"
         button="services_frontend_button"
+        lang={locale}
       />
       <ServicesSteps
+        id="frontend-steps-section"
         lang={locale}
         title="services_frontend_steps_title"
         subtitle="services_frontend_steps_subtitle"

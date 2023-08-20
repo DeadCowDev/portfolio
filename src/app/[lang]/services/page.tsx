@@ -1,35 +1,48 @@
-"use client";
-
 import { Button, Card, Header, Typography } from "@/components";
-import { useI18n } from "@/i18n";
-import Link from "next/link";
-import { FC } from "react";
-import Image from "next/image";
 import { Content } from "@/components/content";
 import { HeaderSmall } from "@/components/header-small";
-import { useInMediaQuery } from "@/hooks";
+import { i18N } from "@/i18n";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Services() {
-  const { t, locale } = useI18n();
-  const isXl = useInMediaQuery("xl");
+import backendServices from "/public/images/backend.svg";
+import frontendServices from "/public/images/web-app.svg";
+import { LanguageParams } from "@/models";
+import { getMetadataTitle } from "@/utils";
+import { Metadata } from "next";
+
+export function generateMetadata({
+  params,
+}: {
+  params: LanguageParams;
+}): Metadata {
+  return getMetadataTitle(
+    "services_meta_title",
+    "services_meta_description",
+    params.lang
+  );
+}
+
+export default function Services({
+  params: { lang },
+}: {
+  params: LanguageParams;
+}) {
+  const { t, locale } = i18N(lang);
   return (
     <main>
-      <head>
-        <title>{t("services_meta_title")}</title>
-        <meta
-          name="description"
-          content={t("services_meta_description")}
-        ></meta>
-      </head>
-      {isXl ? (
-        <Header lightOnDesktop cb={`/${locale}/services`} />
-      ) : (
-        <HeaderSmall
-          closeAltText={t("services_header_title_button")}
-          closeLink={`/${locale}`}
-          text={t("services_header_title")}
-        />
-      )}
+      <Header
+        lightOnDesktop
+        cb={`/${locale}/services`}
+        className="max-xl:hidden"
+        lang={lang}
+      />
+      <HeaderSmall
+        closeAltText={t("services_header_title_button")}
+        closeLink={`/${locale}`}
+        text={t("services_header_title")}
+        className="xl:hidden"
+      />
 
       <Content className="bg-grey-4 py-9 px-6 flex flex-col justify-start items-center gap-8 xl:gap-16">
         <Typography variant="headlineS" className="text-grey-1">
@@ -38,20 +51,18 @@ export default function Services() {
         <div className="flex flex-col gap-4 justify-start items-stretch w-full xl:flex-row xl:justify-center xl:gap-28">
           <Card className="gap-6 xl:w-[500px]">
             <Image
-              src="/images/web-app.svg"
+              src={frontendServices}
               alt={t("services_card_frontend_image_alt")}
-              width={isXl ? 229 : 184}
-              height={isXl ? 200 : 160}
-              className="mb-4"
+              className="mb-4 w-[184px] h-[160px] xl:w-[229px] xl:h-[200px]"
             />
             <Typography
-              variant={isXl ? "titleXlBold" : "titleLBold"}
+              variant="titleLBoldXlTitleXlBold"
               className="text-grey-1 text-center"
             >
               {t("services_card_frontend_title")}
             </Typography>
             <Typography
-              variant={isXl ? "mediumTextRegular" : "mobileLongTextRegular"}
+              variant="mobileLongTextRegularXlMediumTextRegular"
               className="text-grey-1 text-center"
             >
               {t("services_card_frontend_description")}
@@ -62,7 +73,7 @@ export default function Services() {
               className="mt-4 w-full xl:mt-auto xl:max-w-[293px]"
             >
               <Button
-                buttonSize={isXl ? "normal" : "small"}
+                buttonSize="smallXlNormal"
                 color="blue"
                 className="w-full"
               >
@@ -72,20 +83,18 @@ export default function Services() {
           </Card>
           <Card className="gap-6 xl:w-[500px]">
             <Image
-              src="/images/backend.svg"
+              src={backendServices}
               alt={t("services_card_backend_image_alt")}
-              width={isXl ? 227 : 184}
-              height={isXl ? 200 : 160}
-              className="mb-4"
+              className="mb-4 w-[184px] h-[160px] xl:w-[227px] xl:h-[200px]"
             />
             <Typography
-              variant={isXl ? "titleXlBold" : "titleLBold"}
+              variant="titleLBoldXlTitleXlBold"
               className="text-grey-1 text-center"
             >
               {t("services_card_backend_title")}
             </Typography>
             <Typography
-              variant={isXl ? "mediumTextRegular" : "mobileLongTextRegular"}
+              variant="mobileLongTextRegularXlMediumTextRegular"
               className="text-grey-1 text-center"
             >
               {t("services_card_backend_description")}
@@ -96,7 +105,7 @@ export default function Services() {
               className="mt-4 w-full xl:mt-auto xl:max-w-[293px]"
             >
               <Button
-                buttonSize={isXl ? "normal" : "small"}
+                buttonSize="smallXlNormal"
                 color="blue"
                 className="w-full"
               >

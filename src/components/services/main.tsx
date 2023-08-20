@@ -1,12 +1,12 @@
-import { TranslationKeys, useI18n } from "@/i18n";
-import { FC } from "react";
-import { Content } from "../content";
-import { Typography } from "../typography";
+import { TranslationKeys, i18N } from "@/i18n";
+import { htmlClass } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { FC } from "react";
 import { Button } from "../button";
-import { htmlClass } from "@/utils";
-import { useInMediaQuery, useScrollLinkSmooth } from "@/hooks";
+import { Content } from "../content";
+import { Typography } from "../typography";
+import { ScrollLink } from "../link-with-scroll";
 
 interface ServiceMainSectionProps {
   image: string;
@@ -16,6 +16,7 @@ interface ServiceMainSectionProps {
   button: TranslationKeys;
   link: string;
   gradient: string;
+  lang: string;
 }
 
 export const ServiceMainSection: FC<ServiceMainSectionProps> = ({
@@ -26,31 +27,28 @@ export const ServiceMainSection: FC<ServiceMainSectionProps> = ({
   link,
   subtitle,
   title,
+  lang,
 }) => {
-  const { t } = useI18n();
-  const btnRef = useScrollLinkSmooth();
-  const btnRefDesktop = useScrollLinkSmooth();
+  const { t } = i18N(lang);
 
-  const isXl = useInMediaQuery("xl");
   return (
     <Content className="bg-grey-1 pt-4 flex flex-col justify-start items-center gap-4 xl:flex-row xl:pt-0 xl:items-stretch">
       <div className="bg-grey-1 pt-4 flex flex-col justify-start items-center gap-4 xl:my-auto xl:flex-[3] xl:items-start xl:pl-20">
         <Typography
-          variant={isXl ? "headlineXl" : "headlineS"}
+          variant="headlineSXlHeadlineXl"
           className="text-white px-4 text-center xl:text-left"
         >
           {t(title)}
         </Typography>
         <Typography
-          variant={isXl ? "longTextRegular" : "mobileLongTextRegular"}
+          variant="mobileLongTextRegularXlLongTextRegular"
           className="text-grey-6 text-center px-4 xl:text-left max-w-3xl"
         >
           {t(subtitle)}
         </Typography>
-        <Link
+        <ScrollLink
           href={link}
-          className="w-full mt-10 max-w-[293px] hidden ml-40 xl:block "
-          ref={btnRefDesktop}
+          className="w-full mt-10 max-w-[293px] hidden ml-40 xl:inline "
           scroll
         >
           <Button
@@ -60,7 +58,7 @@ export const ServiceMainSection: FC<ServiceMainSectionProps> = ({
           >
             {t(button)}
           </Button>
-        </Link>
+        </ScrollLink>
       </div>
       <div className="relative mt-auto p-[68px_16px_24px] flex flex-col justify-start items-center gap-6 isolate w-full xl:m-0 xl:flex-[2] xl:justify-center">
         <div
@@ -93,10 +91,9 @@ export const ServiceMainSection: FC<ServiceMainSectionProps> = ({
           height={207}
           className="ml-auto xl:ml-0 xl:scale-[1.6] 2xl:scale-[2.3]"
         />
-        <Link
+        <ScrollLink
           href={link}
           className="w-full max-w-[293px] xl:hidden"
-          ref={btnRef}
           scroll
         >
           <Button
@@ -106,7 +103,7 @@ export const ServiceMainSection: FC<ServiceMainSectionProps> = ({
           >
             {t(button)}
           </Button>
-        </Link>
+        </ScrollLink>
       </div>
     </Content>
   );

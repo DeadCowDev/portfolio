@@ -1,13 +1,16 @@
-import { FC, useEffect, useMemo, useRef, useState } from "react";
-import { Content } from "../content";
-import { Typography } from "../typography";
+"use client";
+import { useInView } from "@/hooks";
+import { i18N } from "@/i18n";
 import { htmlClass } from "@/utils";
+import { FC, useEffect, useMemo, useState } from "react";
+import { Content } from "../content";
 import { TitleWithStack } from "../title-with-stack";
-import { useI18n } from "@/i18n";
-import { useInMediaQuery, useInView } from "@/hooks";
+import { Typography } from "../typography";
+import Link from "next/link";
+import { ScrollLink } from "../link-with-scroll";
 
-export const HomeCreativity: FC = () => {
-  const { t } = useI18n();
+export const HomeCreativity: FC<{ lang: string }> = ({ lang }) => {
+  const { t } = i18N(lang);
   const [state, setState] = useState({
     titleIndex: -1,
     animate: false,
@@ -16,8 +19,6 @@ export const HomeCreativity: FC = () => {
     showScrollBubble: false,
   });
   const movementStarted = useMemo(() => state.titleIndex >= 0, [state]);
-
-  const isXl = useInMediaQuery("xl");
 
   const setNext = (switchText?: boolean) => {
     setState((s) => ({
@@ -70,14 +71,12 @@ export const HomeCreativity: FC = () => {
           {t("home_section_creativity_title1")}
         </TitleWithStack>
 
-        {isXl && (
-          <div
-            className={htmlClass(
-              "w-7 aspect-square rounded-full bg-grey-3 transition-all duration-700 delay-500",
-              state.finished ? "opacity-40" : "opacity-0"
-            )}
-          ></div>
-        )}
+        <div
+          className={htmlClass(
+            "w-7 aspect-square rounded-full bg-grey-3 transition-all duration-700 delay-500 hidden xl:block",
+            state.finished ? "opacity-40" : "opacity-0"
+          )}
+        ></div>
 
         <TitleWithStack
           on={state.animate}
@@ -91,14 +90,12 @@ export const HomeCreativity: FC = () => {
           {t("home_section_creativity_title2")}
         </TitleWithStack>
 
-        {isXl && (
-          <div
-            className={htmlClass(
-              "w-7 aspect-square rounded-full bg-grey-3 transition-all duration-700 delay-500",
-              state.finished ? "opacity-40" : "opacity-0"
-            )}
-          ></div>
-        )}
+        <div
+          className={htmlClass(
+            "w-7 aspect-square rounded-full bg-grey-3 transition-all duration-700 delay-500 hidden xl:block",
+            state.finished ? "opacity-40" : "opacity-0"
+          )}
+        ></div>
 
         <TitleWithStack
           on={state.animate}
@@ -123,19 +120,17 @@ export const HomeCreativity: FC = () => {
         {t("home_section_creativity_description")}
       </Typography>
       <div className="absolute left-0 bottom-0 w-full z-[1] overflow-y-hidden h-24 flex justify-center items-start">
-        <button
+        <ScrollLink
+          href="#technical"
           aria-label={t("home_section_creativity_button")}
           onClick={() => {
-            document.querySelector("#technical")?.scrollIntoView({
-              behavior: "smooth",
-            });
             setState((s) => ({ ...s, showScrollBubble: false }));
           }}
           className={htmlClass(
             "w-10 aspect-square rounded-full bg-grey-3 opacity-40 transition-all duration-700 delay-500 ease-[cubic-bezier(0.29,0.21,0.68,1.49)]",
             state.showScrollBubble ? "mt-6" : "mt-44"
           )}
-        ></button>
+        ></ScrollLink>
       </div>
     </Content>
   );

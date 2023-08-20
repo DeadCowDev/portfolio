@@ -1,18 +1,19 @@
 "use client";
+import { usePreventScrollOnFlag } from "@/hooks";
+import { i18N } from "@/i18n";
 import { htmlClass } from "@/utils";
-import { FC, useEffect, useState } from "react";
-import { Typography } from "./typography";
-import { useI18n } from "@/i18n";
-import { Button } from "./button";
-import { useInMediaQuery, useLocale, usePreventScrollOnFlag } from "@/hooks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FC, useState } from "react";
+import { Button } from "./button";
+import { Typography } from "./typography";
 
 const MenuIcon: FC<{
   open: boolean;
   onClick: () => void;
-}> = ({ onClick, open }) => {
-  const { t } = useI18n();
+  lang: string;
+}> = ({ onClick, open, lang }) => {
+  const { t } = i18N(lang);
   return (
     <button
       aria-label={t("header_burger_alt")}
@@ -41,17 +42,16 @@ const MenuIcon: FC<{
   );
 };
 
-export const Header: FC<{ lightOnDesktop?: boolean; cb: string }> = ({
-  lightOnDesktop,
-  cb,
-}) => {
+export const Header: FC<{
+  lightOnDesktop?: boolean;
+  cb: string;
+  className?: string;
+  lang: string;
+}> = ({ lightOnDesktop, cb, className, lang }) => {
   const [open, setOpen] = useState(false);
-  const { t, locale, locales } = useI18n();
+  const { t, locale, locales } = i18N(lang);
   usePreventScrollOnFlag(open, "lg");
   const path = usePathname();
-
-  const isXl = useInMediaQuery("xl");
-
   const links = [
     {
       href: `/${locale}`,
@@ -86,18 +86,20 @@ export const Header: FC<{ lightOnDesktop?: boolean; cb: string }> = ({
     <div
       className={htmlClass(
         "z-10 h-[60px] bg-grey-1 sticky top-0 flex justify-start items-center px-[16px] gap-4 xl:sticky xl:h-[unset] xl:w-full xl:py-6 xl:px-10 xl:justify-between",
-        lightOnDesktop ? "xl:bg-grey-4 xl:shadow-card" : ""
+        lightOnDesktop ? "xl:bg-grey-4 xl:shadow-card" : "",
+        className ?? ""
       )}
     >
       <MenuIcon
         open={open}
+        lang={lang}
         onClick={() => {
           setOpen((o) => !o);
         }}
       />
       <Link href={`/${locale}`}>
         <Typography
-          variant={isXl ? "titleLBold" : "smallTextLBold"}
+          variant="smallTextLBoldXlTitleXlBold"
           className={htmlClass(
             "text-white",
             lightOnDesktop ? "xl:text-grey-1" : ""

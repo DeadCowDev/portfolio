@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Content } from "../content";
 import { Button } from "../button";
-import { TranslationKeys, useI18n } from "@/i18n";
+import { TranslationKeys, i18N } from "@/i18n";
 import { Typography } from "../typography";
 import { Card } from "../card";
 import Image from "next/image";
@@ -38,6 +38,7 @@ const Connector: FC<{ direction: "left" | "right"; color: string }> = ({
 };
 
 export const ServicesSteps: FC<{
+  id: string;
   steps: {
     title: TranslationKeys;
     subtitle: TranslationKeys;
@@ -49,12 +50,12 @@ export const ServicesSteps: FC<{
   button: TranslationKeys;
   lang: string;
   cb: string;
-}> = ({ button, footer, steps, subtitle, title, lang, cb }) => {
-  const { t } = useI18n();
+}> = ({ id, button, footer, steps, subtitle, title, lang, cb }) => {
+  const { t } = i18N(lang);
   return (
     <Content
       className="bg-grey-4 flex flex-col items-stretch pt-10 px-4 pb-8 gap-6"
-      id="steps-section"
+      id={id}
     >
       <Typography variant="titleXlBold" className="text-center text-grey-1">
         {t(title)}

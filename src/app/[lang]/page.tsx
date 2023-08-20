@@ -1,4 +1,3 @@
-"use client";
 import {
   Header,
   HomeCreativity,
@@ -6,28 +5,32 @@ import {
   HomeTechnical,
   HomeWelcome,
 } from "@/components";
-import ContactUs from "@/components/form";
-import { useI18n } from "@/i18n";
+import { LanguageParams } from "@/models";
+import { getMetadataTitle } from "@/utils";
+import { Metadata } from "next";
 
 import "swiper/css";
 
-export default function Home({
-  params: { lang },
+export function generateMetadata({
+  params,
 }: {
-  params: { lang: string };
-}) {
-  const { t } = useI18n();
+  params: LanguageParams;
+}): Metadata {
+  return getMetadataTitle(
+    "home_meta_title",
+    "home_meta_description",
+    params.lang
+  );
+}
+
+export default function Home({ params }: { params: LanguageParams }) {
   return (
     <main>
-      <head>
-        <title>{t("home_meta_title")}</title>
-        <meta name="description" content={t("home_meta_description")}></meta>
-      </head>
-      <Header lightOnDesktop cb={`/${lang}`} />
-      <HomeWelcome />
-      <HomeCreativity />
-      <HomeTechnical />
-      <HomeMembers />
+      <Header lightOnDesktop cb={`/${params.lang}`} lang={params.lang} />
+      <HomeWelcome lang={params.lang} />
+      <HomeCreativity lang={params.lang} />
+      <HomeTechnical lang={params.lang} />
+      <HomeMembers lang={params.lang} />
     </main>
   );
 }

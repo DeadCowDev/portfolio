@@ -1,5 +1,5 @@
-import "./globals.css";
 import { Inter } from "next/font/google";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({
@@ -10,7 +10,7 @@ export default function RootLayout({
   params: { lang: string };
 }) {
   return (
-    <html lang={lang}>
+    <html lang={lang} className="!scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

@@ -1,6 +1,10 @@
-import { MouseEvent, MouseEventHandler, useEffect, useRef } from "react";
+"use client";
+import Link from "next/link";
+import { FC, forwardRef, useEffect, useRef } from "react";
 
-export function useScrollLinkSmooth() {
+export const ScrollLink: FC<Omit<React.ComponentProps<typeof Link>, "ref">> = (
+  props
+) => {
   const elemRef = useRef<HTMLAnchorElement | null>(null);
 
   useEffect(() => {
@@ -28,5 +32,5 @@ export function useScrollLinkSmooth() {
     return () => elem.removeEventListener("click", handler);
   }, [elemRef]);
 
-  return elemRef;
-}
+  return <Link {...props} ref={elemRef} />;
+};
