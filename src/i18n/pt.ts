@@ -20,8 +20,8 @@ const pt = {
   home_section_creativity_description:
     "Com um histórico de entrega de resultados excecionais para os nossos clientes, estamos aqui para ajudar a dar vida às suas ideias, e esses são os valores-chave que melhor nos definem",
   home_section_creativity_button: "Ir para a Perícia Técnica",
-  home_section_technical_perícia_title: "Perícia Técnica",
-  home_section_technical_perícia_subtitle:
+  home_section_technical_expertise_title: "Perícia Técnica",
+  home_section_technical_expertise_subtitle:
     "Somos especialistas nas últimas tecnologias e podemos ajudar a realizar os seus objetivos com a máxima segurança. Entendemos que cada projeto é diferente, por isso oferecemos soluções personalizadas que se adaptam ao seu orçamento específico sem comprometer a qualidade",
   home_section_members_title: "A nossa Equipa",
   home_section_members_dviana_imageAlt: "Imagem de perfil de Diogo Viana",
