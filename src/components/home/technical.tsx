@@ -4,7 +4,6 @@ import { htmlClass } from "@/utils";
 import Image from "next/image";
 import { FC } from "react";
 import { Keyboard, Mousewheel, Navigation } from "swiper";
-import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Content } from "../content";
 import { Typography } from "../typography";

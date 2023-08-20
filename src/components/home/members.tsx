@@ -7,8 +7,6 @@ import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Content } from "../content";
 import { Typography } from "../typography";
-
-import "swiper/css/pagination";
 import { Button } from "../button";
 import dgImage from "/public/images/dv-img.jpg";
 import pgImage from "/public/images/pg-img.jpg";
