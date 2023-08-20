@@ -5,7 +5,7 @@ Disallow: /*?*
 
 
 # Host
-Host: https://portfolio-git-main-deadcowdev.vercel.app/
+Host: https://http://deadcow.enterprises/
 
-sitemap: https://portfolio-git-main-deadcowdev.vercel.app/sitemap-en.xml
-sitemap: https://portfolio-git-main-deadcowdev.vercel.app/sitemap-pt.xml
+sitemap: https://http://deadcow.enterprises/sitemap-en.xml
+sitemap: https://http://deadcow.enterprises/sitemap-pt.xml
