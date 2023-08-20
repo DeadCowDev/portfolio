@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { useInView } from "@/hooks";
 import { i18N } from "@/i18n";
