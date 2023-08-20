@@ -1,7 +1,6 @@
+import i18nConfig from "./config";
 import en from "./en";
 import pt from "./pt";
-
-import { useLocale } from "@/hooks";
 
 export type TranslationKeys = keyof typeof en | keyof typeof pt;
 
@@ -23,8 +22,9 @@ const translations: I18nResult["translations"] = {
   en,
 };
 
-export function useI18n() {
-  const { defaultLocale, locale, locales } = useLocale();
+export function i18N(locale: string) {
+  const defaultLocale = i18nConfig.defaultLocale;
+  const locales = i18nConfig.locales;
 
   const t = (key: TranslationKeys, params?: { [key: string]: any }) => {
     if (!locale) {

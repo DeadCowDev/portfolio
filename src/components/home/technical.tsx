@@ -1,5 +1,5 @@
-import { useInMediaQuery } from "@/hooks";
-import { useI18n } from "@/i18n";
+"use client";
+import { i18N } from "@/i18n";
 import { htmlClass } from "@/utils";
 import Image from "next/image";
 import { FC } from "react";
@@ -116,9 +116,8 @@ const SwiperElement = ({ img, text, imgAlt, centerImage }: SlideType) => {
   );
 };
 
-export const HomeTechnical: FC = () => {
-  const { t } = useI18n();
-  const isXl = useInMediaQuery("xl");
+export const HomeTechnical: FC<{ lang: string }> = ({ lang }) => {
+  const { t } = i18N(lang);
   return (
     <Content
       id="technical"
@@ -127,13 +126,13 @@ export const HomeTechnical: FC = () => {
     >
       <div className="mx-4 flex flex-col justify-start items-center gap-4 xl:max-w-4xl">
         <Typography
-          variant={isXl ? "headlineL" : "titleXlBold"}
+          variant="titleXlBoldXlHeadlineL"
           className="text-center text-grey-1"
         >
           {t("home_section_technical_expertise_title")}
         </Typography>
         <Typography
-          variant={isXl ? "longTextRegular" : "mobileLongTextRegular"}
+          variant="mobileLongTextRegularXlLongTextRegular"
           className="text-center text-grey-1"
         >
           {t("home_section_technical_expertise_subtitle")}

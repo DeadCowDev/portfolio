@@ -6,3 +6,5 @@ export type Contact = {
   about: string;
   date: string;
 };
+
+export type LanguageParams = { lang: string };

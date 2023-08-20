@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { htmlClass } from "@/utils";
 import { FC, useEffect } from "react";
 import { Typography } from "./typography";

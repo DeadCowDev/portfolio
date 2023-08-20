@@ -36,6 +36,31 @@ export const typographyVariants = {
   mobileLongTextBold: "font-public font-bold text-[16px]/[32px]",
   mobileLongTextMedium: "font-public font-medium text-[16px]/[32px]",
   mobileLongTextRegular: "font-public font-normal text-[16px]/[32px]",
+
+  //responsive
+  titleLBoldXlTitleXlBold:
+    "font-public font-bold text-[24px]/[32px] xl:text-[28px]/[32px]",
+
+  mobileLongTextRegularXlMediumTextRegular:
+    "font-public font-normal text-[16px]/[32px] xl:text-[20px]/[32px]",
+
+  smallTextLBoldXlTitleXlBold:
+    "font-public font-bold text-[16px]/[24px] xl:text-[28px]/[32px]",
+
+  titleXlBoldXlHeadlineS:
+    "font-public font-bold text-[28px]/[32px] xl:text-[32px]/[48px]",
+
+  smallTextXlBoldXlTitleLBold:
+    "font-public font-bold text-[20px]/[24px] xl:text-[24px]/[32px]",
+
+  titleXlBoldXlHeadlineL:
+    "font-public font-bold text-[28px]/[32px] xl:text-[40px]/[48px]",
+
+  mobileLongTextRegularXlLongTextRegular:
+    "font-public font-normal text-[16px]/[32px] xl:text-[24px]/[48px]",
+
+  headlineSXlHeadlineXl:
+    "font-public font-bold text-[32px]/[48px] xl:text-[56px]/[64px]",
 };
 
 export const Typography: FC<

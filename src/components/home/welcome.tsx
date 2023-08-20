@@ -1,45 +1,39 @@
-"use client";
-import { FC } from "react";
-import { Content } from "../content";
-import { Typography } from "../typography";
-import { useI18n } from "@/i18n";
+import { i18N } from "@/i18n";
 import Image from "next/image";
 import Link from "next/link";
+import { FC } from "react";
 import { Button } from "../button";
-import { useInMediaQuery, useScrollLinkSmooth } from "@/hooks";
+import { Content } from "../content";
+import { Typography } from "../typography";
+import { ScrollLink } from "../link-with-scroll";
 
-export const HomeWelcome: FC = () => {
-  const { t } = useI18n();
-  const btnRef = useScrollLinkSmooth();
-  const btnRefDesktop = useScrollLinkSmooth();
-
-  const isXl = useInMediaQuery("xl");
+export const HomeWelcome: FC<{ lang: string }> = ({ lang }) => {
+  const { t } = i18N(lang);
   return (
     <Content className="flex flex-col  xl:flex-row xl:pt-0 xl:items-stretch">
       <div className="p-4 flex flex-col justify-start items-center gap-4 xl:my-auto xl:flex-[3] xl:items-start xl:pl-20">
         <Typography
-          variant={isXl ? "headlineXl" : "headlineS"}
+          variant="headlineSXlHeadlineXl"
           className="text-blue-1 text-center xl:text-left max-w-3xl"
         >
           {t("home_section_welcome_title")}
         </Typography>
         <Typography
-          variant={isXl ? "longTextRegular" : "mobileLongTextRegular"}
+          variant="mobileLongTextRegularXlLongTextRegular"
           className="text-grey-2 text-center xl:text-left max-w-3xl"
         >
           {t("home_section_welcome_subtitle")}
         </Typography>
 
-        <Link
+        <ScrollLink
           href="#creative-section"
           className="w-[293px] hidden ml-40 xl:block"
-          ref={btnRefDesktop}
           scroll
         >
           <Button color="blue" buttonSize="normal" className="w-full">
             {t("home_section_welcome_button")}
           </Button>
-        </Link>
+        </ScrollLink>
       </div>
       <div className="relative mt-auto p-[68px_16px_24px] flex flex-col justify-start items-center gap-6 xl:m-0 xl:flex-[2] xl:justify-center">
         <div
@@ -69,16 +63,15 @@ export const HomeWelcome: FC = () => {
           height={207}
           className=" xl:scale-[1.6] 2xl:scale-[2.3] xl:mr-10 xl:mb-28"
         />
-        <Link
+        <ScrollLink
           href="#creative-section"
           className="w-full xl:hidden"
-          ref={btnRef}
           scroll
         >
           <Button color="blue" buttonSize="small" className="w-full">
             {t("home_section_welcome_button")}
           </Button>
-        </Link>
+        </ScrollLink>
       </div>
     </Content>
   );

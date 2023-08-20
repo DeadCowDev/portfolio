@@ -2,10 +2,10 @@ import { htmlClass } from "@/utils";
 import { FC } from "react";
 import { typographyVariants } from "./typography";
 
-type ButtonSizeType = "normal" | "small" | "xSmall";
+type ButtonSizeType = "normal" | "small" | "xSmall" | "smallXlNormal";
 
 type ButtonProps = {
-  buttonSize: ButtonSizeType;
+  buttonSize?: ButtonSizeType;
   color: "blue" | "pink";
   innerRef?: React.Ref<HTMLButtonElement>;
 } & React.HTMLProps<HTMLButtonElement> &
@@ -35,7 +35,12 @@ export const Button: FC<ButtonProps> = ({
       typographyVariants.xSmallTextLMedium,
       "h-[28px] rounded-[12px] px-[8px]",
     ],
+    smallXlNormal: [
+      typographyVariants.smallTextLMedium,
+      "h-[48px] rounded-[16px] px-[24px] xl:h-[64px] xl:text-[24px]/[32px]",
+    ],
   };
+
   const klass = htmlClass(
     className ?? "",
     ...buttonSizeMap[buttonSize],
