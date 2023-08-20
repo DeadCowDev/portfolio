@@ -51,6 +51,7 @@ export default function Services({
         <div className="flex flex-col gap-4 justify-start items-stretch w-full xl:flex-row xl:justify-center xl:gap-28">
           <Card className="gap-6 xl:w-[500px]">
             <Image
+              priority
               src={frontendServices}
               alt={t("services_card_frontend_image_alt")}
               className="mb-4 w-[184px] h-[160px] xl:w-[229px] xl:h-[200px]"
@@ -83,6 +84,7 @@ export default function Services({
           </Card>
           <Card className="gap-6 xl:w-[500px]">
             <Image
+              priority
               src={backendServices}
               alt={t("services_card_backend_image_alt")}
               className="mb-4 w-[184px] h-[160px] xl:w-[227px] xl:h-[200px]"
