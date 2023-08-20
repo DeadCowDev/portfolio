@@ -1,4 +1,6 @@
-import { Header, ServiceMainSection, ServicesSteps } from "@/components";
+import { Header } from "@/components/header";
+import { ServiceMainSection } from "@/components/services/main";
+import { ServicesSteps } from "@/components/services/steps";
 import { i18N } from "@/i18n";
 import { LanguageParams } from "@/models";
 import { getMetadataTitle } from "@/utils";

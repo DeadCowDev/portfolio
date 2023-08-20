@@ -2,7 +2,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Image from "next/image";
 import { FC } from "react";
-import { Button, Card as CardComponent, Typography } from "@/components";
+import { Card as CardComponent } from "@/components/card";
+import { Typography } from "@/components/typography";
+import { Button } from "@/components/button";
 
 const meta: Meta<typeof CardComponent> = {
   title: "Card",

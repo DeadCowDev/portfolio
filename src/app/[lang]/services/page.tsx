@@ -1,4 +1,3 @@
-import { Button, Card, Header, Typography } from "@/components";
 import { Content } from "@/components/content";
 import { HeaderSmall } from "@/components/header-small";
 import { i18N } from "@/i18n";
@@ -10,6 +9,10 @@ import frontendServices from "/public/images/web-app.svg";
 import { LanguageParams } from "@/models";
 import { getMetadataTitle } from "@/utils";
 import { Metadata } from "next";
+import { Header } from "@/components/header";
+import { Button } from "@/components/button";
+import { Card } from "@/components/card";
+import { Typography } from "@/components/typography";
 
 export function generateMetadata({
   params,
