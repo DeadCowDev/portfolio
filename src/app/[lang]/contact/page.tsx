@@ -1,5 +1,5 @@
 import ContactUs from "@/components/form";
-import { GlobalForLanguage, LanguageParams } from "@/models";
+import { LanguageParams } from "@/models";
 import { getMetadataTitle } from "@/utils";
 import { Metadata } from "next";
 
@@ -22,11 +22,6 @@ function Contact({
   params: LanguageParams;
   searchParams: { cb?: string };
 }) {
-  return (
-    <ContactUs
-      link={cb || `/${GlobalForLanguage.language}`}
-      lang={params.lang}
-    />
-  );
+  return <ContactUs link={cb || `/${params.lang}`} lang={params.lang} />;
 }
 export default Contact;

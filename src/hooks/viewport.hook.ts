@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config.js";
 import { useEffect, useRef, useState } from "react";
