@@ -3,7 +3,7 @@ import { i18N } from "@/i18n";
 import { htmlClass } from "@/utils";
 import Image from "next/image";
 import { FC } from "react";
-import { Keyboard, Navigation, Pagination } from "swiper";
+import { Autoplay, Keyboard, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Content } from "../content";
 import { Typography } from "../typography";
@@ -143,13 +143,12 @@ export const HomeTechnical: FC<{ lang: string }> = ({ lang }) => {
         slidesPerView="auto"
         className="w-full xl:w-[60%]"
         grabCursor
-        modules={[Navigation, Keyboard, Pagination]}
+        modules={[Navigation, Keyboard, Autoplay]}
         navigation
-        pagination={{
-          clickable: true,
-          renderBullet: function (index, className) {
-            return `<div class="${className}"></div>`;
-          },
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
         keyboard={{
           onlyInViewport: true,
