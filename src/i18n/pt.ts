@@ -5,7 +5,7 @@ const pt = {
   header_link_home: "Página Inicial",
   header_link_about: "Sobre",
   header_link_contact: "Contactos",
-  home_meta_title: "Deadcow Enterprises | Soluções de IT",
+  home_meta_title: "Deadcow | Soluções de IT",
   home_meta_description:
     "Capacitando a sua jornada digital, uma solução de cada vez. Da estratégia à implementação, orientamos a sua empresa com perícia em tecnologia",
   home_section_welcome_title: "Damos vida às suas ideias",
@@ -31,7 +31,7 @@ const pt = {
     "Backend developer experiente, dedicado à construção de soluções backend seguras e de alto desempenho. Com foco na arquitetura de APIs robustas e infraestrutura, prospero na criação de sistemas confiáveis que alimentam aplicações em escala",
   home_section_members_contactButton: "Vamos criar algo incrível",
 
-  services_meta_title: "Deadcow Enterprises | Serviços",
+  services_meta_title: "Deadcow | Serviços",
   services_meta_description:
     "Oferecemos soluções sob medida para aprimorar o seu negócio, incluindo desenvolvimento de sites, aplicações, segurança e backend. A nossa equipa de especialistas entrega resultados personalizados para as suas necessidades específicas",
   services_header_title: "Os nossos Serviços",
@@ -48,7 +48,7 @@ const pt = {
     "Ideal para quem deseja criar, melhorar ou manter os serviços de segurança e backend de um projeto",
   services_card_backend_button: "Saber mais",
 
-  services_frontend_meta_title: "Deadcow Enterprises | Serviços Frontend",
+  services_frontend_meta_title: "Deadcow | Serviços de Frontend",
   services_frontend_meta_description:
     "Somos especialistas em criar aplicações web ou nativas complexas e versáteis, adaptadas para dar resposta aos requisitos das empresas",
   services_frontend_title: "Eleve sua presença digital",
@@ -92,7 +92,7 @@ const pt = {
   services_frontend_steps_7_subtitle:
     "Assim que a aplicação tenha sido hospedada, o último passo é mantê-la e atualizá-la regularmente para garantir que continua a funcionar corretamente e atende às necessidades em constante mudança dos utilizadores. Este passo é um serviço adicional",
 
-  services_backend_meta_title: "Deadcow Enterprises | Serviços de Backend",
+  services_backend_meta_title: "Deadcow | Serviços de Backend",
   services_backend_meta_description:
     "Somos especialistas em fornecer serviços de backend de alta qualidade adaptados para atender aos requisitos específicos das empresas",
   services_backend_title: "Fortaleça a segurança e os serviços do seu produto",
@@ -135,7 +135,7 @@ const pt = {
   services_backend_steps_7_subtitle:
     "Assim que o backend tenha sido hospedado, o último passo é mantê-lo e atualizá-lo regularmente para garantir que continua a funcionar corretamente e atende às necessidades em constante mudança dos utilizadores. Este passo é um serviço adicional",
 
-  contact_meta_title: "Deadcow Enterprises | Contacto",
+  contact_meta_title: "Deadcow | Contacto",
   contact_meta_description:
     "Quer saber mais sobre como podemos ajudá-lo? Entre em contacto e iremos responder o mais rápido possível",
   contact_header: "Entre em contacto",

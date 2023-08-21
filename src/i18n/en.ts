@@ -6,7 +6,7 @@ const en = {
   header_link_about: "About",
   header_link_contact: "Contacts",
 
-  home_meta_title: "Deadcow Enterprises | IT Solutions",
+  home_meta_title: "Deadcow | IT Solutions",
   home_meta_description:
     "Empowering Your Digital Journey, One Solution at a Time. From strategy to implementation, we guide your business with expertise in technology",
   home_section_welcome_title: "We bring your ideas to life",
@@ -32,7 +32,7 @@ const en = {
     "Seasoned Backend Developer dedicated to building secure and high-performing backend solutions. With a focus on architecting robust APIs and infrastructure, I thrive in creating reliable systems that power applications at scale",
   home_section_members_contactButton: "Let's make magic",
 
-  services_meta_title: "Deadcow Enterprises | Services",
+  services_meta_title: "Deadcow | Services",
   services_meta_description:
     "We offer tailored solutions to enhance your business, including website, app, security, and backend development. Our expert team will deliver customized results for your specific needs",
 
@@ -49,7 +49,7 @@ const en = {
     "Ideal for someone that is looking to create, improve or maintain the security and backend services of a project",
   services_card_backend_button: "Learn more",
 
-  services_frontend_meta_title: "Deadcow Enterprises | Frontend Services",
+  services_frontend_meta_title: "Deadcow | Frontend Services",
   services_frontend_meta_description:
     "We specialize in creating intricate and versatile web or native applications that are tailored to meet the specific requirements of businesses",
   services_frontend_title: "Elevate your digital presence",
@@ -92,7 +92,7 @@ const en = {
   services_frontend_steps_7_subtitle:
     "Once the application has been deployed, the final step is to maintain and update it regularly to ensure that it continues to function properly and meets the changing requirements of the users. This step is an extra service",
 
-  services_backend_meta_title: "Deadcow Enterprises | Backend Services",
+  services_backend_meta_title: "Deadcow | Backend Services",
   services_backend_meta_description:
     "We specialize in delivering high-quality backend services that are tailored to meet the specific requirements of businesses",
   services_backend_title: "Boost your product’s security and services",
@@ -135,7 +135,7 @@ const en = {
   services_backend_steps_7_subtitle:
     "Once the backend has been deployed, the final step is to maintain and update it regularly to ensure that it continues to function properly and meets the changing requirements of the users. This step is an extra service",
 
-  contact_meta_title: "Deadcow Enterprises | Contact",
+  contact_meta_title: "Deadcow | Contact",
   contact_meta_description:
     "Want to know more about how we can help you? Contact us and we will get back to you as soon as possible",
   contact_header: "Contact us",
