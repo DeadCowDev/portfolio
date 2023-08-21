@@ -7,7 +7,7 @@ const pt = {
   header_link_contact: "Contactos",
   home_meta_title: "Deadcow Enterprises | Soluções de IT",
   home_meta_description:
-    "Capacitando a sua jornada digital, uma solução de cada vez. Da estratégia à implementação, orientamos a sua empresa com perícia em tecnologia, inovação e eficiência",
+    "Capacitando a sua jornada digital, uma solução de cada vez. Da estratégia à implementação, orientamos a sua empresa com perícia em tecnologia",
   home_section_welcome_title: "Damos vida às suas ideias",
   home_section_welcome_subtitle:
     "Precisa de ajuda para ter sucesso na era digital? Oferecemos soluções à medida para aprimorar o seu negócio, incluindo desenvolvimento de sites, aplicações, segurança e backend. A nossa equipa de especialistas entrega resultados personalizados para as suas necessidades específicas",
