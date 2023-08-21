@@ -99,7 +99,7 @@ export const ServicesSteps: FC<{
               </Typography>
               <Typography
                 variant="inputContent"
-                className="text-grey-1 text-center"
+                className="text-grey-3 text-center"
               >
                 {t(step.subtitle)}
               </Typography>
