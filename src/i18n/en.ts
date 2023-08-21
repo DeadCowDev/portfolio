@@ -6,9 +6,9 @@ const en = {
   header_link_about: "About",
   header_link_contact: "Contacts",
 
-  home_meta_title: "Deadcow Enterprises",
+  home_meta_title: "Deadcow Enterprises | IT Solutions",
   home_meta_description:
-    "Deadcow Enterprises: Empowering Your Digital Journey, One Solution at a Time. From strategy to implementation, we guide your business with expertise in technology, innovation, and efficiency",
+    "Empowering Your Digital Journey, One Solution at a Time. From strategy to implementation, we guide your business with expertise in technology, innovation, and efficiency",
   home_section_welcome_title: "We bring your ideas to life",
   home_section_welcome_subtitle:
     "Need help to succeed in the digital age? We offer tailored solutions to enhance your business, including website, app, security, and backend development. Our expert team will deliver customized results for your specific needs",
