@@ -86,7 +86,7 @@ const Member = ({
       <Image
         src={member.image}
         alt={t(member.alt as any)}
-        className="rounded-full mb-2 shrink-0 w-[167px] xl:w-[400px] aspect-square"
+        className="rounded-full mb-2 shrink-0 w-[167px] xl:w-[400px] aspect-square object-cover"
       />
       <div>
         <div className="flex flex-col items-center justify-start shrink-0 xl:items-start">
