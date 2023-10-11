@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Content } from "../content";
 import { Typography } from "../typography";
 import { Button } from "../button";
-import dgImage from "/public/images/dv-img.jpg";
+import dgImage from "/public/images/dv-img.png";
 import pgImage from "/public/images/pg-img.jpg";
 const members = [
   {
