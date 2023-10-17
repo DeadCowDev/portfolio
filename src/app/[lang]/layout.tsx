@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import i18nConfig from "@/i18n/config";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({
@@ -23,4 +24,8 @@ export default function RootLayout({
       <body className={inter.className}>{children}</body>
     </html>
   );
+}
+
+export async function generateStaticParams() {
+  return i18nConfig.locales.map((lang) => ({ lang }));
 }
