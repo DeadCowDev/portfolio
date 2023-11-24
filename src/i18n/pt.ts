@@ -25,7 +25,7 @@ const pt = {
   home_section_members_title: "A nossa Equipa",
   home_section_members_dviana_imageAlt: "Imagem de perfil de Diogo Viana",
   home_section_members_dviana_description:
-    "Frontend developer experiente, especializado na criação de aplicações web e mobile seguras, com design responsivo e modernas. Com olhar atento aos detalhes e paixão pelo design centrado no usuário, crio experiências digitais perfeitas que priorizam a estética e a funcionalidade",
+    "Frontend developer experiente, especializado na criação de aplicações web e mobile seguras, com design responsivo e modernas. Com olhar atento aos detalhes e paixão pelo design centrado no utilizador, crio experiências digitais perfeitas que priorizam a estética e a funcionalidade",
   home_section_members_pgracio_imageAlt: "Imagem de perfil de Pedro Grácio",
   home_section_members_pgracio_description:
     "Backend developer experiente, dedicado à construção de soluções backend seguras e de alto desempenho. Com foco na arquitetura de APIs robustas e infraestrutura, prospero na criação de sistemas confiáveis que alimentam aplicações em escala",
