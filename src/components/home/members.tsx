@@ -3,7 +3,7 @@ import { i18N } from "@/i18n";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Content } from "../content";
 import { Typography } from "../typography";
