@@ -1,3 +1,5 @@
+import { fontFamily } from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,7 +10,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      public: ["Public Sans", "sans-serif"],
+      public: ["var(--font-sans)", ...fontFamily.sans],
     },
     colors: {
       transparent: "transparent",

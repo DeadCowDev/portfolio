@@ -3,7 +3,7 @@ import { i18N } from "@/i18n";
 import { htmlClass } from "@/utils";
 import Image from "next/image";
 import { FC } from "react";
-import { Autoplay, Keyboard, Navigation, Pagination } from "swiper";
+import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Content } from "../content";
 import { Typography } from "../typography";

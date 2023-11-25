@@ -1,25 +1,18 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config.js";
 import { useEffect, useRef, useState } from "react";
 
 export type MediaQueries = "2xl" | "xl" | "lg" | "md" | "sm" | undefined;
 
 export function useInMediaQuery(value: MediaQueries) {
-  const [sizes] = useState(
-    resolveConfig(tailwindConfig).theme?.screens as {
-      [key: string]: string;
-    }
-  );
   const [active, setActive] = useState<boolean>(false);
 
   const handleSizeChange = () => {
     const width = window.innerWidth;
-    const width2Xl = parseInt(sizes?.["2xl"]!.replace("px", ""));
-    const widthXl = parseInt(sizes?.["xl"]!.replace("px", ""));
-    const widthLg = parseInt(sizes?.["lg"]!.replace("px", ""));
-    const widthMd = parseInt(sizes?.["md"]!.replace("px", ""));
-    const widthSm = parseInt(sizes?.["sm"]!.replace("px", ""));
+    const width2Xl = 1536;
+    const widthXl = 1280;
+    const widthLg = 1024;
+    const widthMd = 768;
+    const widthSm = 640;
 
     let active = [];
 
@@ -42,7 +35,7 @@ export function useInMediaQuery(value: MediaQueries) {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [sizes, value]);
+  }, [value]);
 
   useEffect(() => {
     handleSizeChange();

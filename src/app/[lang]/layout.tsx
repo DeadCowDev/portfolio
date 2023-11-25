@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Inter, Public_Sans } from "next/font/google";
 import "./globals.css";
 import i18nConfig from "@/i18n/config";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Public_Sans({ subsets: ["latin"], variable: "--font-sans" });
 export default function RootLayout({
   children,
   params: { lang },
@@ -13,12 +13,6 @@ export default function RootLayout({
   return (
     <html lang={lang} className="!scroll-smooth">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>{children}</body>
