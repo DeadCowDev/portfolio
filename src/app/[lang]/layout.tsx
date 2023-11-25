@@ -1,6 +1,7 @@
-import { Inter, Public_Sans } from "next/font/google";
-import "./globals.css";
 import i18nConfig from "@/i18n/config";
+import { Public_Sans } from "next/font/google";
+import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Public_Sans({ subsets: ["latin"], variable: "--font-sans" });
 export default function RootLayout({
@@ -15,7 +16,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
