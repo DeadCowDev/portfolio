@@ -7,7 +7,7 @@ import { Button } from "../button";
 import { Carousel } from "../carousel";
 import { Content } from "../content";
 import { Typography } from "../typography";
-import dgImage from "/public/images/dv-img.png";
+import dgImage from "/public/images/dv-img.jpg";
 import pgImage from "/public/images/pg-img.jpg";
 const members = [
   {
