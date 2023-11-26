@@ -7,5 +7,5 @@ Disallow: /*?*
 # Host
 Host: https://www.deadcow.enterprises/
 
-sitemap: https://deadcow.enterprises/sitemap-en.xml
-sitemap: https://deadcow.enterprises/sitemap-pt.xml
+sitemap: https://www.deadcow.enterprises/sitemap-en.xml
+sitemap: https://www.deadcow.enterprises/sitemap-pt.xml
