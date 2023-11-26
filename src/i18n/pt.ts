@@ -33,7 +33,7 @@ const pt = {
 
   services_meta_title: "Deadcow | Serviços",
   services_meta_description:
-    "Oferecemos soluções sob medida para aprimorar o seu negócio, incluindo desenvolvimento de sites, aplicações, segurança e backend. A nossa equipa de especialistas entrega resultados personalizados para as suas necessidades específicas",
+    "Oferecemos soluções à medida para o seu negócio, incluindo desenvolvimento de sites, aplicações, segurança e backend",
   services_header_title: "Os nossos Serviços",
   services_header_title_button: "Fechar",
   services_card_frontend_image_alt:

@@ -34,7 +34,7 @@ const en = {
 
   services_meta_title: "Deadcow | Services",
   services_meta_description:
-    "We offer tailored solutions to enhance your business, including website, app, security, and backend development. Our expert team will deliver customized results for your specific needs",
+    "We offer tailored solutions for your business, including website, app, security, and backend development",
 
   services_header_title: "Our services",
   services_header_title_button: "Close",
