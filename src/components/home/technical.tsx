@@ -2,9 +2,8 @@
 import { i18N } from "@/i18n";
 import { htmlClass } from "@/utils";
 import Image from "next/image";
-import { FC } from "react";
-import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { FC, forwardRef, useEffect, useRef, useState } from "react";
+import { Carousel } from "../carousel";
 import { Content } from "../content";
 import { Typography } from "../typography";
 
@@ -13,6 +12,7 @@ type SlideType = {
   img: string;
   imgAlt: string;
   centerImage?: boolean;
+  className?: string;
 };
 
 const slides: SlideType[] = [
@@ -95,25 +95,34 @@ const slides: SlideType[] = [
   },
 ];
 
-const SwiperElement = ({ img, text, imgAlt, centerImage }: SlideType) => {
-  return (
-    <div className="w-[132px] h-[148px] bg-white border-grey-6 rounded-[12px] border-[1px] py-2 px-6 flex flex-col justify-between items-center gap-6">
-      <Image
-        alt={imgAlt}
-        src={img}
-        width={85}
-        height={85}
-        className={centerImage ? "my-auto" : ""}
-      />
-      <Typography
-        variant="smallTextXlMedium"
-        className="text-grey-1 text-center"
+const Card = forwardRef<HTMLDivElement, SlideType>(
+  ({ img, text, imgAlt, centerImage, className }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={htmlClass(
+          "w-[132px] h-[148px] bg-white border-grey-6 rounded-[12px] border-[1px] py-2 px-6 flex flex-col justify-between items-center gap-6",
+          className ?? ""
+        )}
       >
-        {text}
-      </Typography>
-    </div>
-  );
-};
+        <Image
+          alt={imgAlt}
+          src={img}
+          width={85}
+          height={85}
+          className={centerImage ? "my-auto" : ""}
+        />
+        <Typography
+          variant="smallTextXlMedium"
+          className="text-grey-1 text-center"
+        >
+          {text}
+        </Typography>
+      </div>
+    );
+  }
+);
+Card.displayName = "SwiperElement";
 
 export const HomeTechnical: FC<{ lang: string }> = ({ lang }) => {
   const { t } = i18N(lang);
@@ -138,35 +147,24 @@ export const HomeTechnical: FC<{ lang: string }> = ({ lang }) => {
           {t("home_section_technical_expertise_subtitle")}
         </Typography>
       </div>
-      <Swiper
-        spaceBetween={16}
-        slidesPerView="auto"
+      <Carousel
+        elemCount={slides.length}
+        autoPlay
+        autoPlayDurationMs={1750}
         className="w-full xl:w-[60%]"
-        grabCursor
-        modules={[Navigation, Keyboard, Autoplay]}
-        navigation
-        autoplay={{
-          delay: 1500,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        keyboard={{
-          onlyInViewport: true,
-        }}
       >
         {slides.map((props, i) => (
-          <SwiperSlide
+          <Card
+            {...props}
             key={props.text}
             className={htmlClass(
               "w-[132px_!important]",
-              i === 0 ? "ml-4" : "",
-              i === slides.length - 1 ? "mr-[66px]" : ""
+              i === 0 ? "" : "",
+              i === slides.length - 1 ? "" : ""
             )}
-          >
-            <SwiperElement {...props} />
-          </SwiperSlide>
+          />
         ))}
-      </Swiper>
+      </Carousel>
     </Content>
   );
 };
