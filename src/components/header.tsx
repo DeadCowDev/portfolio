@@ -133,7 +133,14 @@ export const Header: FC<{
         </div>
         <div className="flex justify-center items-center gap-2">
           {locales.map((l) => (
-            <Link href={path.replace(locale, l)} key={l}>
+            <Link
+              href={
+                path.startsWith(locale) || path.startsWith(`/${locale}`)
+                  ? path.replace(locale, l)
+                  : `/${l}${path}`
+              }
+              key={l}
+            >
               <Typography
                 variant="smallTextLMedium"
                 className={htmlClass(
