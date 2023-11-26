@@ -6,27 +6,27 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.deadcow.enterprises/pt</loc>
-  <lastmod>2023-08-19T21:01:31+00:00</lastmod>
+  <lastmod>2023-11-26T21:01:31+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.deadcow.enterprises/pt/services</loc>
-  <lastmod>2023-08-19T21:01:31+00:00</lastmod>
+  <lastmod>2023-11-26T21:01:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.deadcow.enterprises/pt/services/application-development</loc>
-  <lastmod>2023-08-19T21:01:31+00:00</lastmod>
+  <lastmod>2023-11-26T21:01:31+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.deadcow.enterprises/pt/services/backend-development</loc>
-  <lastmod>2023-08-19T21:01:31+00:00</lastmod>
+  <lastmod>2023-11-26T21:01:31+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.deadcow.enterprises/pt/contact</loc>
-  <lastmod>2023-08-19T21:01:31+00:00</lastmod>
+  <lastmod>2023-11-26T21:01:31+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 </urlset>
