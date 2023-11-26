@@ -1,3 +1,4 @@
+import { CurrentPageProvider } from "@/components/current-page.provider";
 import ContactUs from "@/components/form";
 import { LanguageParams } from "@/models";
 import { getMetadataTitle } from "@/utils";
@@ -15,13 +16,11 @@ export function generateMetadata({
   );
 }
 
-function Contact({
-  searchParams: { cb },
-  params,
-}: {
-  params: LanguageParams;
-  searchParams: { cb?: string };
-}) {
-  return <ContactUs link={cb || `/${params.lang}`} lang={params.lang} />;
+function Contact({ params }: { params: LanguageParams }) {
+  return (
+    <CurrentPageProvider>
+      <ContactUs lang={params.lang} />
+    </CurrentPageProvider>
+  );
 }
 export default Contact;

@@ -3,13 +3,14 @@ import { sendEmail } from "@/actions/send-email";
 import { i18N } from "@/i18n";
 import Image from "next/image";
 import Link from "next/link";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Button } from "../button";
 import { Content } from "../content";
 import { HeaderSmall } from "../header-small";
 import { Input } from "../input";
 import { Toast } from "../toast";
 import { Typography } from "../typography";
+import { PREVIOUS_PAGE_KEY } from "@/constants";
 
 var mailformat =
   /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
@@ -26,9 +27,17 @@ type services =
   | "security"
   | "other";
 
-const ContactUs: FC<{ link: string; lang: string }> = ({ link, lang }) => {
+const ContactUs: FC<{ lang: string }> = ({ lang }) => {
   const { t } = i18N(lang);
   const [sending, setSending] = useState(false);
+  const [closeLink, setCloseLink] = useState(`/${lang}`);
+
+  useEffect(() => {
+    const prevPage = sessionStorage.getItem(PREVIOUS_PAGE_KEY);
+    if (prevPage) {
+      setCloseLink(prevPage);
+    }
+  }, []);
 
   const [toastState, setToastState] = useState({
     visible: false,
@@ -172,14 +181,14 @@ const ContactUs: FC<{ link: string; lang: string }> = ({ link, lang }) => {
     <main className="w-full h-[100dvh] xl:flex xl:justify-center xl:items-center xl:p-8 xl:bg-grey-1 xl:relative">
       <HeaderSmall
         closeAltText={t("contact_header")}
-        closeLink={link}
+        closeLink={closeLink}
         text="Contact us"
         className="xl:hidden"
       />
 
       <Link
         className="w-10 aspect-square  items-center justify-center rounded-full bg-white shadow-card absolute top-8 right-12 z-10 hidden xl:flex"
-        href={link}
+        href={closeLink}
       >
         <Image src="/icons/close-dark.svg" width={24} height={24} alt="" />
       </Link>

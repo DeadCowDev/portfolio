@@ -1,3 +1,4 @@
+import { CurrentPageProvider } from "@/components/current-page.provider";
 import { Header } from "@/components/header";
 import { HomeCreativity } from "@/components/home/creativity";
 import { HomeMembers } from "@/components/home/members";
@@ -21,12 +22,14 @@ export function generateMetadata({
 
 export default function Home({ params }: { params: LanguageParams }) {
   return (
-    <main>
-      <Header lightOnDesktop cb={`/${params.lang}`} lang={params.lang} />
-      <HomeWelcome lang={params.lang} />
-      <HomeCreativity lang={params.lang} />
-      <HomeTechnical lang={params.lang} />
-      <HomeMembers lang={params.lang} />
-    </main>
+    <CurrentPageProvider>
+      <main>
+        <Header lightOnDesktop lang={params.lang} />
+        <HomeWelcome lang={params.lang} />
+        <HomeCreativity lang={params.lang} />
+        <HomeTechnical lang={params.lang} />
+        <HomeMembers lang={params.lang} />
+      </main>
+    </CurrentPageProvider>
   );
 }

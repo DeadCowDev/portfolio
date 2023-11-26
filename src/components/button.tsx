@@ -1,6 +1,7 @@
 import { htmlClass } from "@/utils";
 import { FC } from "react";
 import { typographyVariants } from "./typography";
+import Link from "next/link";
 
 type ButtonSizeType = "normal" | "small" | "xSmall" | "smallXlNormal";
 
@@ -54,7 +55,7 @@ export const Button: FC<ButtonProps> = ({
     backgroundSize: "200%",
   };
   if (props.href) {
-    return <a style={elemStyle} className={klass} {...(props as any)} />;
+    return <Link style={elemStyle} className={klass} {...(props as any)} />;
   }
   return <button style={elemStyle} className={klass} {...props} />;
 };

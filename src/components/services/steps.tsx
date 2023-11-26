@@ -49,8 +49,7 @@ export const ServicesSteps: FC<{
   footer: TranslationKeys;
   button: TranslationKeys;
   lang: string;
-  cb: string;
-}> = ({ id, button, footer, steps, subtitle, title, lang, cb }) => {
+}> = ({ id, button, footer, steps, subtitle, title, lang }) => {
   const { t } = i18N(lang);
   return (
     <Content
@@ -117,7 +116,7 @@ export const ServicesSteps: FC<{
         color="blue"
         buttonSize="small"
         className="max-w-[255px] w-full mx-auto xl:mt-16"
-        href={`/${lang}/contact?cb=${cb}`}
+        href={`/${lang}/contact`}
       >
         {t(button)}
       </Button>

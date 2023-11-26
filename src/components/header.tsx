@@ -44,10 +44,9 @@ const MenuIcon: FC<{
 
 export const Header: FC<{
   lightOnDesktop?: boolean;
-  cb: string;
   className?: string;
   lang: string;
-}> = ({ lightOnDesktop, cb, className, lang }) => {
+}> = ({ lightOnDesktop, className, lang }) => {
   const [open, setOpen] = useState(false);
   const { t, locale, locales } = i18N(lang);
   usePreventScrollOnFlag(open, "lg");
@@ -62,7 +61,7 @@ export const Header: FC<{
       label: t("header_link_about"),
     },
     {
-      href: `/${locale}/contact?cb=${cb}`,
+      href: `/${locale}/contact`,
       label: t("header_link_contact"),
     },
   ];
@@ -77,7 +76,7 @@ export const Header: FC<{
       label: t("header_services"),
     },
     {
-      href: `/${locale}/contact?cb=${cb}`,
+      href: `/${locale}/contact`,
       label: t("header_link_contact"),
     },
   ];
