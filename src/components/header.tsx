@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { FC, useState } from "react";
 import { Button } from "./button";
 import { Typography } from "./typography";
+import i18nConfig from "@/i18n/config";
 
 const MenuIcon: FC<{
   open: boolean;
@@ -53,7 +54,7 @@ export const Header: FC<{
   const path = usePathname();
   const links = [
     {
-      href: `/${locale}`,
+      href: `/${locale === i18nConfig.defaultLocale ? "" : locale}`,
       label: t("header_link_home"),
     },
     {
@@ -96,7 +97,7 @@ export const Header: FC<{
           setOpen((o) => !o);
         }}
       />
-      <Link href={`/${locale}`}>
+      <Link href={`/${locale === i18nConfig.defaultLocale ? "" : locale}`}>
         <Typography
           variant="smallTextLBoldXlTitleXlBold"
           className={htmlClass(
