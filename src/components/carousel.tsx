@@ -1,6 +1,5 @@
 import { htmlClass } from "@/utils";
 import { FC, useEffect, useRef, useState } from "react";
-import "./carousel.css";
 interface CarouselProps {
   centered?: boolean;
   elemCount: number;

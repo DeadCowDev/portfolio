@@ -122,7 +122,7 @@ const Card = forwardRef<HTMLDivElement, SlideType>(
     );
   }
 );
-Card.displayName = "SwiperElement";
+Card.displayName = "Card";
 
 export const HomeTechnical: FC<{ lang: string }> = ({ lang }) => {
   const { t } = i18N(lang);
