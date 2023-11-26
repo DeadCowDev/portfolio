@@ -190,7 +190,12 @@ const ContactUs: FC<{ lang: string }> = ({ lang }) => {
         className="w-10 aspect-square  items-center justify-center rounded-full bg-white shadow-card absolute top-8 right-12 z-10 hidden xl:flex"
         href={closeLink}
       >
-        <Image src="/icons/close-dark.svg" width={24} height={24} alt="" />
+        <Image
+          src="/icons/close-dark.svg"
+          width={24}
+          height={24}
+          alt={t("contact_close")}
+        />
       </Link>
       <Content className="bg-grey-4 pt-6 pb-10 px-4 flex flex-col justify-start items-center xl:shadow-card xl:rounded-xl xl:bg-white xl:min-h-[unset]">
         <Typography

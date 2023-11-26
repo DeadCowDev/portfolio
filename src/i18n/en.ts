@@ -139,6 +139,7 @@ const en = {
   contact_meta_description:
     "Want to know more about how we can help you? Contact us and we will get back to you as soon as possible",
   contact_header: "Contact us",
+  contact_close: "Close",
   contact_title: "Tell us more about what you are looking for",
   contact_subtitle:
     "This information will help us have a better understanding of your goals before we set up a formal meeting",

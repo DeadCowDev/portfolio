@@ -139,6 +139,7 @@ const pt = {
   contact_meta_description:
     "Quer saber mais sobre como podemos ajudá-lo? Entre em contacto e iremos responder o mais rápido possível",
   contact_header: "Entre em contacto",
+  contact_close: "Fechar",
   contact_title: "Conte-nos mais sobre o que está à procura",
   contact_subtitle:
     "Estes dados vão ajudar-nos a compreender melhor os seus objetivos antes de marcarmos uma reunião",
