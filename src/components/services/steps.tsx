@@ -5,7 +5,7 @@ import { TranslationKeys, i18N } from "@/i18n";
 import { Typography } from "../typography";
 import { Card } from "../card";
 import Image from "next/image";
-import { htmlClass } from "@/utils";
+import { getLanguageSubpath, htmlClass } from "@/utils";
 
 const Connector: FC<{ direction: "left" | "right"; color: string }> = ({
   color,
@@ -116,7 +116,7 @@ export const ServicesSteps: FC<{
         color="blue"
         buttonSize="small"
         className="max-w-[255px] w-full mx-auto xl:mt-16"
-        href={`/${lang}/contact`}
+        href={`${getLanguageSubpath(lang)}contact`}
       >
         {t(button)}
       </Button>
