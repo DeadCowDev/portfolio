@@ -5,32 +5,32 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://deadcow.enterprises</loc>
+  <loc>https://www.deadcow.enterprises</loc>
   <lastmod>2023-08-19T21:01:31+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://deadcow.enterprises/en</loc>
+  <loc>https://www.deadcow.enterprises/en</loc>
   <lastmod>2023-08-19T21:01:31+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://deadcow.enterprises/en/services</loc>
+  <loc>https://www.deadcow.enterprises/en/services</loc>
   <lastmod>2023-08-19T21:01:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://deadcow.enterprises/en/services/application-development</loc>
+  <loc>https://www.deadcow.enterprises/en/services/application-development</loc>
   <lastmod>2023-08-19T21:01:31+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://deadcow.enterprises/en/services/backend-development</loc>
+  <loc>https://www.deadcow.enterprises/en/services/backend-development</loc>
   <lastmod>2023-08-19T21:01:31+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://deadcow.enterprises/en/contact</loc>
+  <loc>https://www.deadcow.enterprises/en/contact</loc>
   <lastmod>2023-08-19T21:01:31+00:00</lastmod>
   <priority>0.51</priority>
 </url>
