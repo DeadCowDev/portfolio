@@ -7,8 +7,6 @@ import { LanguageParams } from "@/models";
 import { getMetadataTitle } from "@/utils";
 import { Metadata } from "next";
 
-import "swiper/css";
-
 export function generateMetadata({
   params,
 }: {

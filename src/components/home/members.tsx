@@ -3,11 +3,10 @@ import { i18N } from "@/i18n";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Button } from "../button";
+import { Carousel } from "../carousel";
 import { Content } from "../content";
 import { Typography } from "../typography";
-import { Button } from "../button";
 import dgImage from "/public/images/dv-img.png";
 import pgImage from "/public/images/pg-img.jpg";
 const members = [
@@ -40,26 +39,21 @@ export const HomeMembers: FC<{ lang: string }> = ({ lang }) => {
       <Typography variant="titleXlBoldXlHeadlineS" el="h2">
         {t("home_section_members_title")}
       </Typography>
-      <Swiper
+      <Carousel
         className="w-full 2xl:w-[60%]"
-        grabCursor
-        modules={[Pagination, Navigation]}
-        mousewheel
-        keyboard
-        centeredSlides
-        pagination={{
-          clickable: true,
-          renderBullet: function (index, className) {
-            return `<div class="${className}"></div>`;
-          },
+        elemCount={members.length}
+        bullets
+        centered
+        renderBullet={function (index, className, onClick) {
+          return (
+            <div key={index} className={className} onClick={onClick}></div>
+          );
         }}
       >
         {members.map((member) => (
-          <SwiperSlide key={member.linkedinLink}>
-            <Member member={member} lang={lang} />
-          </SwiperSlide>
+          <Member key={member.linkedinLink} member={member} lang={lang} />
         ))}
-      </Swiper>
+      </Carousel>
 
       <Link
         href={`/${locale}/services`}

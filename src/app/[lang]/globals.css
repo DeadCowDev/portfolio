@@ -2,13 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.carousel {
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Chrome */
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-.swiper-pagination {
+.carousel-pagination {
   position: initial !important;
   height: 6px;
   margin-top: 24px;
@@ -18,15 +23,17 @@
   gap: 8px;
 }
 
-.swiper-pagination-bullet {
-  width: 24px !important;
-  height: 6px !important;
-  border-radius: 8px !important;
-  background: #e0e0e0 !important;
-  transition: all 0.3s ease-in-out !important;
-  opacity: 1 !important;
+.carousel-pagination-bullet {
+  width: 24px;
+  height: 6px;
+  border-radius: 8px;
+  background: #e0e0e0;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  cursor: pointer;
 }
-.swiper-pagination-bullet-active {
-  width: 48px !important;
-  background: #828282 !important;
+.carousel-pagination-bullet-active {
+  width: 48px;
+  background: #828282;
+  cursor: initial;
 }
