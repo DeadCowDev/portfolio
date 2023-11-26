@@ -14,6 +14,7 @@ import { Button } from "@/components/button";
 import { Card } from "@/components/card";
 import { Typography } from "@/components/typography";
 import { CurrentPageProvider } from "@/components/current-page.provider";
+import i18nConfig from "@/i18n/config";
 
 export function generateMetadata({
   params,
@@ -39,7 +40,7 @@ export default function Services({
         <Header lightOnDesktop className="max-xl:hidden" lang={lang} />
         <HeaderSmall
           closeAltText={t("services_header_title_button")}
-          closeLink={`/${locale}`}
+          closeLink={`/${locale === i18nConfig.defaultLocale ? "" : locale}`}
           text={t("services_header_title")}
           className="xl:hidden"
         />
