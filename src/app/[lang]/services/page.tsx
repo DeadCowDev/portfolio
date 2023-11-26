@@ -7,7 +7,7 @@ import Link from "next/link";
 import backendServices from "/public/images/backend.svg";
 import frontendServices from "/public/images/web-app.svg";
 import { LanguageParams } from "@/models";
-import { getLanguageSubpath, getMetadataTitle } from "@/utils";
+import { getMetadataTitle } from "@/utils";
 import { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Button } from "@/components/button";
@@ -39,7 +39,7 @@ export default function Services({
         <Header lightOnDesktop className="max-xl:hidden" lang={lang} />
         <HeaderSmall
           closeAltText={t("services_header_title_button")}
-          closeLink={`${getLanguageSubpath(locale)}`}
+          closeLink={`/${locale}`}
           text={t("services_header_title")}
           className="xl:hidden"
         />
@@ -71,9 +71,7 @@ export default function Services({
               </Typography>
 
               <Link
-                href={`${getLanguageSubpath(
-                  locale
-                )}services/application-development`}
+                href={`/${locale}/services/application-development`}
                 className="mt-4 w-full xl:mt-auto xl:max-w-[293px]"
               >
                 <Button
@@ -107,9 +105,7 @@ export default function Services({
               </Typography>
 
               <Link
-                href={`${getLanguageSubpath(
-                  locale
-                )}services/backend-development`}
+                href={`/${locale}/services/backend-development`}
                 className="mt-4 w-full xl:mt-auto xl:max-w-[293px]"
               >
                 <Button

@@ -9,7 +9,6 @@ import { Content } from "../content";
 import { Typography } from "../typography";
 import dgImage from "/public/images/dv-img.png";
 import pgImage from "/public/images/pg-img.jpg";
-import { getLanguageSubpath } from "@/utils";
 const members = [
   {
     name: "Diogo Viana",
@@ -57,7 +56,7 @@ export const HomeMembers: FC<{ lang: string }> = ({ lang }) => {
       </Carousel>
 
       <Link
-        href={`${getLanguageSubpath(locale)}services`}
+        href={`/${locale}/services`}
         className="xl:absolute xl:bottom-10 xl:right-10"
       >
         <Button color="pink" buttonSize="smallXlNormal">

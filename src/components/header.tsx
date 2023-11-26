@@ -1,7 +1,7 @@
 "use client";
 import { usePreventScrollOnFlag } from "@/hooks";
 import { i18N } from "@/i18n";
-import { getLanguageSubpath, htmlClass } from "@/utils";
+import { htmlClass } from "@/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FC, useState } from "react";
@@ -53,30 +53,30 @@ export const Header: FC<{
   const path = usePathname();
   const links = [
     {
-      href: `${getLanguageSubpath(locale)}`,
+      href: `/${locale}`,
       label: t("header_link_home"),
     },
     {
-      href: `${getLanguageSubpath(locale)}#about`,
+      href: `/${locale}#about`,
       label: t("header_link_about"),
     },
     {
-      href: `${getLanguageSubpath(locale)}contact`,
+      href: `/${locale}/contact`,
       label: t("header_link_contact"),
     },
   ];
 
   const desktopLinks = [
     {
-      href: `${getLanguageSubpath(locale)}#about`,
+      href: `/${locale}#about`,
       label: t("header_link_about"),
     },
     {
-      href: `${getLanguageSubpath(locale)}services`,
+      href: `/${locale}/services`,
       label: t("header_services"),
     },
     {
-      href: `${getLanguageSubpath(locale)}contact`,
+      href: `/${locale}/contact`,
       label: t("header_link_contact"),
     },
   ];
@@ -96,7 +96,7 @@ export const Header: FC<{
           setOpen((o) => !o);
         }}
       />
-      <Link href={getLanguageSubpath(locale)}>
+      <Link href={`/${locale}`}>
         <Typography
           variant="smallTextLBoldXlTitleXlBold"
           className={htmlClass(
@@ -108,10 +108,7 @@ export const Header: FC<{
         </Typography>
       </Link>
 
-      <Link
-        href={`${getLanguageSubpath(locale)}services`}
-        className="ml-auto xl:hidden"
-      >
+      <Link href={`/${locale}/services`} className="ml-auto xl:hidden">
         <Button color="blue" buttonSize="xSmall">
           {t("header_services")}
         </Button>

@@ -21,7 +21,3 @@ export function getMetadataTitle(
     description: t(description),
   };
 }
-
-export function getLanguageSubpath(lang: string) {
-  return lang === i18nConfig.defaultLocale ? "/" : `/${lang}/`;
-}
