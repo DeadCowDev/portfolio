@@ -28,7 +28,7 @@ const members = [
     description: "home_section_members_pgracio_description",
   },
   {
-    name: "Bruno serrano",
+    name: "Bruno Serrano",
     image: bsImage,
     alt: "home_section_members_bserrano_imageAlt",
     role: "Project Manager",
