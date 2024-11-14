@@ -8,6 +8,7 @@ import { Carousel } from "../carousel";
 import { Content } from "../content";
 import { Typography } from "../typography";
 import bsImage from "/public/images/bs-img.jpg";
+import ccImage from "/public/images/cc-img.png";
 import dgImage from "/public/images/dv-img.jpg";
 import pgImage from "/public/images/pg-img.jpg";
 const members = [
@@ -26,6 +27,14 @@ const members = [
     role: "Backend Developer",
     linkedinLink: "https://www.linkedin.com/in/pedro-gr%C3%A1cio-8ab572120",
     description: "home_section_members_pgracio_description",
+  },
+  {
+    name: "The Enigmatic Full Stack Adventurer",
+    image: ccImage,
+    alt: "home_section_members_ccastaneda_imageAlt",
+    role: "Full Stack Developer",
+    linkedinLink: "https://www.linkedin.com/company/deadcow-enterprises",
+    description: "home_section_members_ccastaneda_description",
   },
   {
     name: "Bruno Serrano",

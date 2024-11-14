@@ -30,6 +30,9 @@ const en = {
   home_section_members_pgracio_imageAlt: "Pedro Grácio profile image",
   home_section_members_pgracio_description:
     "Seasoned Backend Developer dedicated to building secure and high-performing backend solutions. With a focus on architecting robust APIs and infrastructure, I thrive in creating reliable systems that power applications at scale",
+  home_section_members_ccastaneda_imageAlt: "Enigmatic Developer profile image",
+  home_section_members_ccastaneda_description:
+    "Hailing from a faraway land known for breathtaking landscapes and volcanic energy, this full stack virtuoso channels the spirit of innovation and resilience into every line of code. A true master of both frontend flair and backend brilliance, he is as skilled in crafting seamless solutions as they are in keeping you guessing where their story began.",
   home_section_members_bserrano_imageAlt: "Bruno Serrano profile image",
   home_section_members_bserrano_description:
     "Visionary managing director and project manager known for his strategic thinking, clear communication, and organizational skills. He unites teams, anticipates challenges, and drives growth through high-quality results. Bruno’s proactive and positive leadership consistently shapes the organization’s success and future.",

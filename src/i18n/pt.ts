@@ -29,6 +29,10 @@ const pt = {
   home_section_members_pgracio_imageAlt: "Imagem de perfil de Pedro Grácio",
   home_section_members_pgracio_description:
     "Backend developer experiente, dedicado à construção de soluções backend seguras e de alto desempenho. Com foco na arquitetura de APIs robustas e infraestrutura, prospero na criação de sistemas confiáveis que alimentam aplicações em escala",
+  home_section_members_ccastaneda_imageAlt:
+    "Imagem de perfil de Enigmatic Developer",
+  home_section_members_ccastaneda_description:
+    "Vindo de uma terra distante conhecida por paisagens deslumbrantes e energia vulcânica, este virtuoso full stack canaliza o espírito de inovação e resiliência em cada linha de código. Um verdadeiro mestre tanto do estilo no frontend quanto da genialidade no backend, ele é tão habilidoso em criar soluções perfeitas quanto em deixar-te a adivinhar onde sua história começou.",
   home_section_members_bserrano_imageAlt: "Imagem de perfil de Bruno Serrano",
   home_section_members_bserrano_description:
     "Diretor-geral visionário e gestor de projetos, é reconhecido pelo seu pensamento estratégico, comunicação clara e competências organizacionais. Une equipas, antecipa desafios e impulsiona o crescimento com resultados de alta qualidade. A sua liderança proativa e positiva molda continuamente o sucesso e o futuro da organização.",
