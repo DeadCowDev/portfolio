@@ -31,7 +31,7 @@ const members = [
     name: "Bruno Serrano",
     image: bsImage,
     alt: "home_section_members_bserrano_imageAlt",
-    role: "Project Manager",
+    role: "Managing Director & Project Manager",
     linkedinLink: "https://www.linkedin.com/in/brunojdserrano",
     description: "home_section_members_bserrano_description",
   },
