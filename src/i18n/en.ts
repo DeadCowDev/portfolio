@@ -30,6 +30,9 @@ const en = {
   home_section_members_pgracio_imageAlt: "Pedro Grácio profile image",
   home_section_members_pgracio_description:
     "Seasoned Backend Developer dedicated to building secure and high-performing backend solutions. With a focus on architecting robust APIs and infrastructure, I thrive in creating reliable systems that power applications at scale",
+  home_section_members_bserrano_imageAlt: "Bruno Serrano profile image",
+  home_section_members_bserrano_description:
+    "Visionary managing director and project manager known for his strategic thinking, clear communication, and organizational skills. He unites teams, anticipates challenges, and drives growth through high-quality results. Bruno’s proactive and positive leadership consistently shapes the organization’s success and future.",
   home_section_members_contactButton: "Let's make magic",
 
   services_meta_title: "Deadcow | Services",

@@ -29,6 +29,9 @@ const pt = {
   home_section_members_pgracio_imageAlt: "Imagem de perfil de Pedro Grácio",
   home_section_members_pgracio_description:
     "Backend developer experiente, dedicado à construção de soluções backend seguras e de alto desempenho. Com foco na arquitetura de APIs robustas e infraestrutura, prospero na criação de sistemas confiáveis que alimentam aplicações em escala",
+  home_section_members_bserrano_imageAlt: "Imagem de perfil de Bruno Serrano",
+  home_section_members_bserrano_description:
+    "Diretor-geral visionário e gestor de projetos, é reconhecido pelo seu pensamento estratégico, comunicação clara e competências organizacionais. Une equipas, antecipa desafios e impulsiona o crescimento com resultados de alta qualidade. A sua liderança proativa e positiva molda continuamente o sucesso e o futuro da organização.",
   home_section_members_contactButton: "Vamos criar algo incrível",
 
   services_meta_title: "Deadcow | Serviços",
