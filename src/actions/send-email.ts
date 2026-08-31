@@ -1,15 +1,23 @@
 "use server";
 
 import ContactFormEmail from "@/email/contact";
+import { rateLimit } from "@/lib/ratelimit";
 import { Contact } from "@/models";
 import { render } from "@react-email/components";
 import nodemailer from "nodemailer";
 import React from "react";
+import { headers } from "next/headers";
 
 const emails = process.env.EMAILS?.split(",") ?? [];
 
 export async function sendEmail(info: Contact) {
   try {
+    const ip = headers().get("x-forwarded-for") ?? "unknown";
+    const isRateLimited = rateLimit(ip);
+    if (isRateLimited) {
+      console.log(`Rate limit exceeded for IP: ${ip}`);
+      return true;
+    }
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
