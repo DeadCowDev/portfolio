@@ -6,16 +6,16 @@ import { Typography } from "../typography";
 
 const projects = [
   {
-    name: "home_section_our_work_tourmanager_name",
-    description: "home_section_our_work_tourmanager_description",
-    image: "/images/tourmanager-preview.png",
-    url: "https://tourmanager.pro",
-  },
-  {
     name: "home_section_our_work_siesta_name",
     description: "home_section_our_work_siesta_description",
     image: "/images/siesta-campers-preview.png",
     url: "https://siestacampers.com",
+  },
+  {
+    name: "home_section_our_work_tourmanager_name",
+    description: "home_section_our_work_tourmanager_description",
+    image: "/images/tourmanager-preview.png",
+    url: "https://tourmanager.pro",
   },
 ] as const;
 
