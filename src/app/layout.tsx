@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 import "./[lang]/globals.css";
-import { Analytics } from "@vercel/analytics/react";
 
 const inter = localFont({
   src: "../../public/fonts/GFSDidot-Regular.woff2",
@@ -19,7 +18,6 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {children}
-        <Analytics />
       </body>
     </html>
   );

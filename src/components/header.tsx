@@ -8,6 +8,7 @@ import { FC, useState } from "react";
 import { Button } from "./button";
 import { Typography } from "./typography";
 import i18nConfig from "@/i18n/config";
+import { useContactModal } from "./contact-modal/context";
 
 const MenuIcon: FC<{
   open: boolean;
@@ -50,6 +51,7 @@ export const Header: FC<{
 }> = ({ lightOnDesktop, className, lang }) => {
   const [open, setOpen] = useState(false);
   const { t, locale, locales } = i18N(lang);
+  const contactModal = useContactModal();
   usePreventScrollOnFlag(open, "lg");
   const path = usePathname();
   const links = [
@@ -60,10 +62,6 @@ export const Header: FC<{
     {
       href: `/${locale}#about`,
       label: t("header_link_about"),
-    },
-    {
-      href: `/${locale}/contact`,
-      label: t("header_link_contact"),
     },
   ];
 
@@ -76,11 +74,13 @@ export const Header: FC<{
       href: `/${locale}/services`,
       label: t("header_services"),
     },
-    {
-      href: `/${locale}/contact`,
-      label: t("header_link_contact"),
-    },
   ];
+
+  const contactLabel = t("header_link_contact");
+  function openContact() {
+    setOpen(false);
+    contactModal.setOpen(true);
+  }
 
   return (
     <div
@@ -130,6 +130,14 @@ export const Header: FC<{
               </Typography>
             </Link>
           ))}
+          <button onClick={openContact}>
+            <Typography
+              variant="mediumTextMedium"
+              className={lightOnDesktop ? "text-blue-5" : "text-white"}
+            >
+              {contactLabel}
+            </Typography>
+          </button>
         </div>
         <div className="flex justify-center items-center gap-2">
           {locales.map((l) => (
@@ -183,6 +191,11 @@ export const Header: FC<{
               </Typography>
             </Link>
           ))}
+          <button onClick={openContact}>
+            <Typography variant="titleLMedium" className="text-white">
+              {contactLabel}
+            </Typography>
+          </button>
           <div className="mt-auto flex justify-center items-center gap-6">
             {locales.map((l) => (
               <Link

@@ -12,6 +12,14 @@ import ccImage from "/public/images/cc-img.png";
 import pgImage from "/public/images/pg-img.jpg";
 const members = [
   {
+    name: "Bruno Serrano",
+    image: bsImage,
+    alt: "home_section_members_bserrano_imageAlt",
+    role: "Managing Director & Project Manager",
+    linkedinLink: "https://www.linkedin.com/in/brunojdserrano",
+    description: "home_section_members_bserrano_description",
+  },
+  {
     name: "Pedro Grácio",
     image: pgImage,
     alt: "home_section_members_pgracio_imageAlt",
@@ -26,14 +34,6 @@ const members = [
     role: "Full Stack Developer",
     linkedinLink: "https://www.linkedin.com/company/deadcow-enterprises",
     description: "home_section_members_ccastaneda_description",
-  },
-  {
-    name: "Bruno Serrano",
-    image: bsImage,
-    alt: "home_section_members_bserrano_imageAlt",
-    role: "Managing Director & Project Manager",
-    linkedinLink: "https://www.linkedin.com/in/brunojdserrano",
-    description: "home_section_members_bserrano_description",
   },
 ];
 

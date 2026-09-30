@@ -1,15 +1,17 @@
 "use client";
 import { i18N } from "@/i18n";
-import Image from "next/image";
-import Link from "next/link";
-import { FC, useEffect, useState } from "react";
-import { Content } from "../content";
-import { HeaderSmall } from "../header-small";
+import { useRouter } from "next/navigation";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
 import { Typography } from "../typography";
 import { PREVIOUS_PAGE_KEY } from "@/constants";
 
+const EMAIL = "members@deadcow.enterprises";
+
 const ContactUs: FC<{ lang: string }> = ({ lang }) => {
   const { t } = i18N(lang);
+  const router = useRouter();
+  const cardRef = useRef<HTMLDivElement>(null);
   const [closeLink, setCloseLink] = useState(`/${lang}`);
 
   useEffect(() => {
@@ -19,27 +21,33 @@ const ContactUs: FC<{ lang: string }> = ({ lang }) => {
     }
   }, []);
 
-  return (
-    <main className="w-full h-[100dvh] xl:flex xl:justify-center xl:items-center xl:p-8 xl:bg-grey-1 xl:relative">
-      <HeaderSmall
-        closeAltText={t("contact_header")}
-        closeLink={closeLink}
-        text="Contact us"
-        className="xl:hidden"
-      />
+  const dismiss = useCallback(() => {
+    router.push(closeLink);
+  }, [router, closeLink]);
 
-      <Link
-        className="w-10 aspect-square  items-center justify-center rounded-full bg-white shadow-card absolute top-8 right-12 z-10 hidden xl:flex"
-        href={closeLink}
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (cardRef.current && !cardRef.current.contains(e.target as Node)) {
+        dismiss();
+      }
+    }
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "Escape") dismiss();
+    }
+    document.addEventListener("mousedown", handleClick);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [dismiss]);
+
+  return (
+    <main className="w-full h-[100dvh] flex justify-center items-center p-4 bg-transparent">
+      <div
+        ref={cardRef}
+        className="bg-white p-10 flex flex-col items-center gap-6 max-w-[360px] w-full shadow-[0_8px_40px_rgba(0,0,0,0.15)]"
       >
-        <Image
-          src="/icons/close-dark.svg"
-          width={24}
-          height={24}
-          alt={t("contact_close")}
-        />
-      </Link>
-      <Content className="bg-grey-4 pt-6 pb-10 px-4 flex flex-col justify-start items-center xl:shadow-card xl:rounded-xl xl:bg-white xl:min-h-[unset]">
         <Typography
           variant="titleLBold"
           className="text-grey-1 text-center"
@@ -50,18 +58,26 @@ const ContactUs: FC<{ lang: string }> = ({ lang }) => {
 
         <Typography
           variant="mobileLongTextRegular"
-          className="text-grey-3 text-center mt-4"
+          className="text-grey-3 text-center"
         >
           {t("contact_subtitle")}
         </Typography>
 
+        <div className="p-4">
+          <QRCodeSVG
+            value={`mailto:${EMAIL}`}
+            size={160}
+            level="M"
+          />
+        </div>
+
         <a
-          href="mailto:members@deadcow.enterprises"
-          className="mt-8 text-blue-5 underline text-lg hover:opacity-80 transition-opacity"
+          href={`mailto:${EMAIL}`}
+          className="text-blue-5 text-sm hover:opacity-70 transition-opacity"
         >
-          members@deadcow.enterprises
+          {EMAIL}
         </a>
-      </Content>
+      </div>
     </main>
   );
 };

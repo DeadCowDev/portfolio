@@ -1,3 +1,4 @@
+"use client";
 import { FC } from "react";
 import { Content } from "../content";
 import { Button } from "../button";
@@ -6,6 +7,7 @@ import { Typography } from "../typography";
 import { Card } from "../card";
 import Image from "next/image";
 import { htmlClass } from "@/utils";
+import { useContactModal } from "../contact-modal/context";
 
 const Connector: FC<{ direction: "left" | "right"; color: string }> = ({
   color,
@@ -51,6 +53,7 @@ export const ServicesSteps: FC<{
   lang: string;
 }> = ({ id, button, footer, steps, subtitle, title, lang }) => {
   const { t } = i18N(lang);
+  const contactModal = useContactModal();
   return (
     <Content
       className="bg-grey-4 flex flex-col items-stretch pt-10 px-4 pb-8 gap-6"
@@ -116,7 +119,7 @@ export const ServicesSteps: FC<{
         color="blue"
         buttonSize="small"
         className="max-w-[255px] w-full mx-auto xl:mt-16"
-        href={`/${lang}/contact`}
+        onClick={() => contactModal.setOpen(true)}
       >
         {t(button)}
       </Button>

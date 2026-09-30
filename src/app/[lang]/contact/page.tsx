@@ -1,26 +1,17 @@
-import { CurrentPageProvider } from "@/components/current-page.provider";
-import ContactUs from "@/components/form";
-import { LanguageParams } from "@/models";
-import { getMetadataTitle } from "@/utils";
-import { Metadata } from "next";
+"use client";
 
-export function generateMetadata({
-  params,
-}: {
-  params: LanguageParams;
-}): Metadata {
-  return getMetadataTitle(
-    "contact_meta_title",
-    "contact_meta_description",
-    params.lang
-  );
-}
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useContactModal } from "@/components/contact-modal/context";
 
-async function Contact({ params }: { params: LanguageParams }) {
-  return (
-    <CurrentPageProvider>
-      <ContactUs lang={params.lang} />
-    </CurrentPageProvider>
-  );
+export default function Contact({ params }: { params: { lang: string } }) {
+  const router = useRouter();
+  const { setOpen } = useContactModal();
+
+  useEffect(() => {
+    setOpen(true);
+    router.replace(`/${params.lang}`);
+  }, [router, params.lang, setOpen]);
+
+  return null;
 }
-export default Contact;

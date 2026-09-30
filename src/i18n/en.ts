@@ -251,9 +251,9 @@ const en = {
     "Want to know more about how we can help you? Contact us and we will get back to you as soon as possible",
   contact_header: "Contact us",
   contact_close: "Close",
-  contact_title: "Tell us more about what you are looking for",
+  contact_title: "Let's work together",
   contact_subtitle:
-    "This information will help us have a better understanding of your goals before we set up a formal meeting",
+    "Have a project in mind? Drop us a line and we'll get back to you",
 };
 
 export default en;

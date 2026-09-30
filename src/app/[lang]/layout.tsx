@@ -1,4 +1,6 @@
 import i18nConfig from "@/i18n/config";
+import { ContactModalProvider } from "@/components/contact-modal/context";
+import { ContactModal } from "@/components/contact-modal";
 
 export default function LangLayout({
   children,
@@ -7,7 +9,14 @@ export default function LangLayout({
   children: React.ReactNode;
   params: { lang: string };
 }) {
-  return <div lang={lang}>{children}</div>;
+  return (
+    <ContactModalProvider>
+      <div lang={lang}>
+        {children}
+        <ContactModal lang={lang} />
+      </div>
+    </ContactModalProvider>
+  );
 }
 
 export async function generateStaticParams() {
