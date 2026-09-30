@@ -16,7 +16,7 @@ export function generateMetadata({
   );
 }
 
-function Contact({ params }: { params: LanguageParams }) {
+async function Contact({ params }: { params: LanguageParams }) {
   return (
     <CurrentPageProvider>
       <ContactUs lang={params.lang} />

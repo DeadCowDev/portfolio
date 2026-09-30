@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npx next *)",
+      "Bash(npm install *)",
+      "Bash(mkdir -p /home/pedro/repos/portfolio/src/app/\\\\[lang\\\\]/services/platform-devops)",
+      "Bash(mkdir -p /home/pedro/repos/portfolio/src/app/\\\\[lang\\\\]/services/ai-automations)",
+      "Bash(xargs ls *)",
+      "Bash(ls -la /home/pedro/repos/portfolio/src/app/[lang]/)",
+      "Bash(npm ls *)",
+      "Bash(npm view *)",
+      "Bash(ls /home/pedro/repos/portfolio/.env*)",
+      "Bash(curl -L -o /home/pedro/repos/portfolio/public/fonts/GFSDidot-Regular.woff2 \"https://fonts.gstatic.com/s/gfsdidot/v18/Jqzh5TybZ9vZMWFssvwSEO3HNyOWAQ.woff2\")",
+      "Bash(npm run *)",
+      "WebFetch(domain:altcha.org)",
+      "WebFetch(domain:developers.cloudflare.com)",
+      "Bash(npm uninstall *)",
+      "Bash(git -C /home/pedro/repos/portfolio remote get-url origin)",
+      "Bash(gh secret *)",
+      "Bash(curl -L --retry 3 -o /home/pedro/repos/portfolio/public/fonts/GFSDidot-Regular.woff2 \"https://fonts.gstatic.com/s/gfsdidot/v18/Jqzh5TybZ9vZMWFssvwSEO3HNyOWAQ.woff2\")",
+      "Bash(python3 -c ' *)",
+      "Bash(aws --profile deadcow sts get-caller-identity)",
+      "Bash(aws --profile deadcow ses get-account-sending-enabled --region eu-west-1)",
+      "Bash(aws --profile deadcow iam create-user --user-name portfolio-ses-sender)",
+      "Bash(aws --profile deadcow iam put-user-policy --user-name portfolio-ses-sender --policy-name SES-SendEmail --policy-document '{ *)",
+      "Bash(aws --profile deadcow iam create-access-key --user-name portfolio-ses-sender)",
+      "Bash(aws --profile deadcow ses list-identities --region eu-west-1)",
+      "Bash(aws --profile deadcow ses list-identities --region us-east-1)",
+      "Bash(aws --profile deadcow ses verify-email-identity --email-address pedrogracio@deadcow.enterprises --region eu-west-1)",
+      "Bash(aws --profile deadcow ses get-identity-verification-attributes --identities pedrogracio@deadcow.enterprises --region eu-west-1)",
+      "Bash(aws logs *)"
+    ],
+    "additionalDirectories": [
+      "/home/pedro/.aws"
+    ]
+  }
+}

@@ -2,6 +2,7 @@ import { CurrentPageProvider } from "@/components/current-page.provider";
 import { Header } from "@/components/header";
 import { HomeCreativity } from "@/components/home/creativity";
 import { HomeMembers } from "@/components/home/members";
+import { HomeOurWork } from "@/components/home/our-work";
 import { HomeTechnical } from "@/components/home/technical";
 import { HomeWelcome } from "@/components/home/welcome";
 import { LanguageParams } from "@/models";
@@ -28,6 +29,7 @@ export default function Home({ params }: { params: LanguageParams }) {
         <HomeWelcome lang={params.lang} />
         <HomeCreativity lang={params.lang} />
         <HomeTechnical lang={params.lang} />
+        <HomeOurWork lang={params.lang} />
         <HomeMembers lang={params.lang} />
       </main>
     </CurrentPageProvider>

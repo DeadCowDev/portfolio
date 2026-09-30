@@ -1,9 +1,12 @@
 import i18nConfig from "@/i18n/config";
 import { Analytics } from "@vercel/analytics/react";
-import { Public_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Public_Sans({ subsets: ["latin"], variable: "--font-sans" });
+const inter = localFont({
+  src: "../../../public/fonts/GFSDidot-Regular.woff2",
+  variable: "--font-sans",
+});
 export default function RootLayout({
   children,
   params: { lang },

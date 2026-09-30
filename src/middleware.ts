@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 import i18n from "./i18n/config";
+import { ALLOWED_GEO_COUNTRIES } from "./constants";
 
 import { match as matchLocale } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
@@ -25,6 +26,14 @@ function getLocale(request: NextRequest): string | undefined {
   }
 }
 
+function setCaptchaCookie(response: NextResponse, request: NextRequest) {
+  const country = request.headers.get("x-vercel-ip-country");
+  const captchaRequired =
+    !country || !ALLOWED_GEO_COUNTRIES.has(country) ? "1" : "0";
+  response.cookies.set("captcha-required", captchaRequired, { path: "/" });
+  return response;
+}
+
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
@@ -37,8 +46,14 @@ export function middleware(request: NextRequest) {
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request);
 
-    return NextResponse.rewrite(new URL(`/${locale}${pathname}`, request.url));
+    const response = NextResponse.rewrite(
+      new URL(`/${locale}${pathname}`, request.url)
+    );
+    return setCaptchaCookie(response, request);
   }
+
+  const response = NextResponse.next();
+  return setCaptchaCookie(response, request);
 }
 
 export const config = {

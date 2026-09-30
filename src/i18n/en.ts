@@ -24,9 +24,6 @@ const en = {
   home_section_technical_expertise_subtitle:
     "We're experts in the latest technologies and can help bring your goals to life with maximum security. We understand that every project is different, which is why we offer tailored solutions that can adapt to your specific budget without compromising quality",
   home_section_members_title: "Our Team",
-  home_section_members_dviana_imageAlt: "Diogo Viana profile image",
-  home_section_members_dviana_description:
-    "Experienced Frontend Developer specializing in crafting secure, responsive, and modern web and native applications. With a keen eye for detail and a passion for user-centric design, I create seamless digital experiences that prioritize both aesthetics and functionality",
   home_section_members_pgracio_imageAlt: "Pedro Grácio profile image",
   home_section_members_pgracio_description:
     "Seasoned Backend Developer dedicated to building secure and high-performing backend solutions. With a focus on architecting robust APIs and infrastructure, I thrive in creating reliable systems that power applications at scale",
@@ -54,6 +51,18 @@ const en = {
   services_card_backend_description:
     "Ideal for someone that is looking to create, improve or maintain the security and backend services of a project",
   services_card_backend_button: "Learn more",
+
+  services_card_devops_image_alt: "Platform and DevOps Image",
+  services_card_devops_title: "Platform & DevOps",
+  services_card_devops_description:
+    "Ideal for teams looking to streamline their infrastructure, automate deployments, and build reliable, scalable cloud platforms",
+  services_card_devops_button: "Learn more",
+
+  services_card_ai_image_alt: "AI and Intelligent Automations Image",
+  services_card_ai_title: "AI & Intelligent Automations",
+  services_card_ai_description:
+    "Ideal for businesses looking to leverage AI and automation to streamline operations, reduce manual work, and unlock new capabilities",
+  services_card_ai_button: "Learn more",
 
   services_frontend_meta_title: "Deadcow | Frontend Services",
   services_frontend_meta_description:
@@ -141,6 +150,102 @@ const en = {
   services_backend_steps_7_subtitle:
     "Once the backend has been deployed, the final step is to maintain and update it regularly to ensure that it continues to function properly and meets the changing requirements of the users. This step is an extra service",
 
+  services_devops_meta_title: "Deadcow | DevOps Services",
+  services_devops_meta_description:
+    "We specialize in building and maintaining cloud infrastructure, CI/CD pipelines, and platform engineering solutions",
+  services_devops_title: "Reliable infrastructure, automated delivery",
+  services_devops_subtitle:
+    "Our team specializes in building and maintaining cloud infrastructure, CI/CD pipelines, and platform engineering solutions. We help you ship faster, scale confidently, and operate with peace of mind using modern DevOps practices and tools like Kubernetes, Terraform, ArgoCD, and Crossplane",
+  services_devops_image_alt: "Platform and DevOps Image",
+  services_devops_button: "Learn more",
+
+  services_devops_steps_title: "How we like to get things done",
+  services_devops_steps_footer: "Let's build something amazing together",
+  services_devops_steps_button: "Contact us",
+  services_devops_steps_subtitle:
+    "From assessment to automation: Audit your infrastructure, design resilient architectures, implement CI/CD, deploy with confidence, monitor continuously",
+
+  services_devops_steps_1_title: "Infrastructure audit",
+  services_devops_steps_1_subtitle:
+    "First, we assess your current infrastructure, deployment processes, and pain points. This helps us understand your operational needs and design a roadmap for improvement",
+
+  services_devops_steps_2_title: "Architecture design",
+  services_devops_steps_2_subtitle:
+    "We design a cloud-native architecture tailored to your needs — choosing the right services, networking topology, and security boundaries for scalability and reliability",
+
+  services_devops_steps_3_title: "Infrastructure as Code",
+  services_devops_steps_3_subtitle:
+    "We implement your infrastructure using IaC tools like Terraform and Crossplane, ensuring every resource is version-controlled, reproducible, and auditable",
+
+  services_devops_steps_4_title: "CI/CD pipelines",
+  services_devops_steps_4_subtitle:
+    "We build automated pipelines with GitHub Actions, ArgoCD, and other tools to ensure your code goes from commit to production safely and quickly",
+
+  services_devops_steps_5_title: "Observability setup",
+  services_devops_steps_5_subtitle:
+    "We set up comprehensive monitoring, logging, and alerting so you always know what is happening in your systems — with tools like Prometheus, Grafana, and Datadog",
+
+  services_devops_steps_6_title: "Security hardening",
+  services_devops_steps_6_subtitle:
+    "We apply security best practices across your infrastructure — secrets management, network policies, IAM, vulnerability scanning, and compliance checks",
+
+  services_devops_steps_7_title: "Ongoing support",
+  services_devops_steps_7_subtitle:
+    "We provide ongoing maintenance, incident response, and platform evolution to ensure your infrastructure remains healthy, secure, and cost-efficient as your product grows",
+
+  services_ai_meta_title: "Deadcow | AI & Automations",
+  services_ai_meta_description:
+    "We build AI-powered solutions and intelligent automations that transform how your business operates",
+  services_ai_title: "Smarter systems, less manual work",
+  services_ai_subtitle:
+    "We build AI-powered solutions and intelligent automations that transform how your business operates. From workflow automation and data pipelines to custom AI integrations and predictive analytics, we help you do more with less",
+  services_ai_image_alt: "AI and Intelligent Automations Image",
+  services_ai_button: "Learn more",
+
+  services_ai_steps_title: "How we like to get things done",
+  services_ai_steps_footer: "Let's build something amazing together",
+  services_ai_steps_button: "Contact us",
+  services_ai_steps_subtitle:
+    "From discovery to deployment: Identify automation opportunities, design intelligent workflows, build AI models, integrate seamlessly, measure impact",
+
+  services_ai_steps_1_title: "Process discovery",
+  services_ai_steps_1_subtitle:
+    "We analyze your existing workflows, identify repetitive tasks and bottlenecks, and map out the highest-impact automation opportunities for your business",
+
+  services_ai_steps_2_title: "Solution architecture",
+  services_ai_steps_2_subtitle:
+    "We design the right mix of AI models, automation tools, and integration points — choosing between rule-based automation, machine learning, or LLM-powered solutions based on your needs",
+
+  services_ai_steps_3_title: "Data preparation",
+  services_ai_steps_3_subtitle:
+    "We clean, structure, and prepare your data for AI consumption — building ETL pipelines, data lakes, and training datasets that power accurate and reliable models",
+
+  services_ai_steps_4_title: "Build & train",
+  services_ai_steps_4_subtitle:
+    "We develop custom AI models, configure automation workflows, and integrate with your existing tools — from chatbots and recommendation engines to document processing and predictive analytics",
+
+  services_ai_steps_5_title: "Testing & validation",
+  services_ai_steps_5_subtitle:
+    "We rigorously test AI accuracy, automation reliability, and edge cases. Every solution is validated against real-world scenarios before going live",
+
+  services_ai_steps_6_title: "Deployment & integration",
+  services_ai_steps_6_subtitle:
+    "We deploy your AI and automation solutions into production, integrating seamlessly with your existing systems, APIs, and business processes with zero disruption",
+
+  services_ai_steps_7_title: "Monitoring & optimization",
+  services_ai_steps_7_subtitle:
+    "We continuously monitor model performance, automation accuracy, and business impact — retraining models and optimizing workflows as your data and needs evolve",
+
+  home_section_our_work_title: "Our Work",
+  home_section_our_work_description:
+    "Here are some of the projects we've built for our clients. We take pride in delivering high-quality solutions that drive real results",
+  home_section_our_work_tourmanager_name: "Tour Manager Pro",
+  home_section_our_work_tourmanager_description:
+    "A comprehensive tour management platform for planning, organizing, and tracking all aspects of tour operations — from itinerary creation and rental management to customer bookings\n",
+  home_section_our_work_siesta_name: "Siesta Campers",
+  home_section_our_work_siesta_description:
+    "A campervan rental platform for exploring Portugal. Featuring an intuitive booking system, fleet management, and a beautiful travel-focused interface that converts visitors into adventurers \n",
+
   contact_meta_title: "Deadcow | Contact",
   contact_meta_description:
     "Want to know more about how we can help you? Contact us and we will get back to you as soon as possible",
@@ -164,6 +269,7 @@ const en = {
   contact_project_type_option_6: "Other",
   contact_toastSuccess: "Your message was sent",
   contact_toastError: "Something went wrong, please try again",
+  contact_captchaRequired: "Please complete the captcha verification",
 };
 
 export default en;

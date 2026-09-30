@@ -9,17 +9,8 @@ import { Content } from "../content";
 import { Typography } from "../typography";
 import bsImage from "/public/images/bs-img.jpg";
 import ccImage from "/public/images/cc-img.png";
-import dgImage from "/public/images/dv-img.jpg";
 import pgImage from "/public/images/pg-img.jpg";
 const members = [
-  {
-    name: "Diogo Viana",
-    image: dgImage,
-    alt: "home_section_members_dviana_imageAlt",
-    role: "Frontend Developer",
-    linkedinLink: "https://www.linkedin.com/in/diogo-viana-7a973390",
-    description: "home_section_members_dviana_description",
-  },
   {
     name: "Pedro Grácio",
     image: pgImage,

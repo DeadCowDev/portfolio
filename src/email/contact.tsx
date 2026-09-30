@@ -26,6 +26,7 @@ export default function ContactFormEmail({
     <Html>
       <Head />
       <Preview>New message from portfolio site</Preview>
+      {/* @ts-expect-error Tailwind types incompatible with React 18.2 */}
       <Tailwind>
         <Body className="bg-gray-100 text-black">
           <Container>

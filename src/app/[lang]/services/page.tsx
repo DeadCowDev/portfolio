@@ -49,8 +49,8 @@ export default function Services({
           <Typography variant="headlineS" className="text-grey-1" el="h1">
             {t("services_header_title")}
           </Typography>
-          <div className="flex flex-col gap-4 justify-start items-stretch w-full xl:flex-row xl:justify-center xl:gap-28">
-            <Card className="gap-6 xl:w-[500px]">
+          <div className="flex flex-col gap-4 justify-start items-stretch w-full xl:grid xl:grid-cols-2 xl:justify-center xl:gap-12 xl:max-w-[1100px]">
+            <Card className="gap-6 xl:w-full">
               <Image
                 priority
                 src={frontendServices}
@@ -84,7 +84,7 @@ export default function Services({
                 </Button>
               </Link>
             </Card>
-            <Card className="gap-6 xl:w-[500px]">
+            <Card className="gap-6 xl:w-full">
               <Image
                 priority
                 src={backendServices}
@@ -115,6 +115,74 @@ export default function Services({
                   className="w-full"
                 >
                   {t("services_card_backend_button")}
+                </Button>
+              </Link>
+            </Card>
+            <Card className="gap-6 xl:w-full">
+              <Image
+                priority
+                src={backendServices}
+                alt={t("services_card_devops_image_alt")}
+                className="mb-4 w-[184px] h-[160px] xl:w-[227px] xl:h-[200px] -scale-x-100"
+              />
+              <Typography
+                variant="titleLBoldXlTitleXlBold"
+                className="text-grey-1 text-center"
+                el="h2"
+              >
+                {t("services_card_devops_title")}
+              </Typography>
+              <Typography
+                variant="mobileLongTextRegularXlMediumTextRegular"
+                className="text-grey-1 text-center"
+              >
+                {t("services_card_devops_description")}
+              </Typography>
+
+              <Link
+                href={`/${locale}/services/platform-devops`}
+                className="mt-4 w-full xl:mt-auto xl:max-w-[293px]"
+              >
+                <Button
+                  buttonSize="smallXlNormal"
+                  color="blue"
+                  className="w-full"
+                >
+                  {t("services_card_devops_button")}
+                </Button>
+              </Link>
+            </Card>
+            <Card className="gap-6 xl:w-full">
+              <Image
+                priority
+                src={frontendServices}
+                alt={t("services_card_ai_image_alt")}
+                className="mb-4 w-[184px] h-[160px] xl:w-[229px] xl:h-[200px] -scale-x-100"
+              />
+              <Typography
+                variant="titleLBoldXlTitleXlBold"
+                className="text-grey-1 text-center"
+                el="h2"
+              >
+                {t("services_card_ai_title")}
+              </Typography>
+              <Typography
+                variant="mobileLongTextRegularXlMediumTextRegular"
+                className="text-grey-1 text-center"
+              >
+                {t("services_card_ai_description")}
+              </Typography>
+
+              <Link
+                href={`/${locale}/services/ai-automations`}
+                className="mt-4 w-full xl:mt-auto xl:max-w-[293px]"
+              >
+                <Button
+                  buttonSize="smallXlNormal"
+                  color="blue"
+                  className="w-full"
+                >
+                  {t("services_card_ai_button")}
                 </Button>
               </Link>
             </Card>

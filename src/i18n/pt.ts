@@ -23,9 +23,6 @@ const pt = {
   home_section_technical_expertise_subtitle:
     "Somos especialistas nas últimas tecnologias e podemos ajudar a realizar os seus objetivos com a máxima segurança. Entendemos que cada projeto é diferente, por isso oferecemos soluções personalizadas que se adaptam ao seu orçamento específico sem comprometer a qualidade",
   home_section_members_title: "A nossa Equipa",
-  home_section_members_dviana_imageAlt: "Imagem de perfil de Diogo Viana",
-  home_section_members_dviana_description:
-    "Frontend developer experiente, especializado na criação de aplicações web e mobile seguras, com design responsivo e modernas. Com olhar atento aos detalhes e paixão pelo design centrado no utilizador, crio experiências digitais perfeitas que priorizam a estética e a funcionalidade",
   home_section_members_pgracio_imageAlt: "Imagem de perfil de Pedro Grácio",
   home_section_members_pgracio_description:
     "Backend developer experiente, dedicado à construção de soluções backend seguras e de alto desempenho. Com foco na arquitetura de APIs robustas e infraestrutura, prospero na criação de sistemas confiáveis que alimentam aplicações em escala",
@@ -54,6 +51,18 @@ const pt = {
   services_card_backend_description:
     "Ideal para quem deseja criar, melhorar ou manter os serviços de segurança e backend de um projeto",
   services_card_backend_button: "Saber mais",
+
+  services_card_devops_image_alt: "Imagem de Plataforma e DevOps",
+  services_card_devops_title: "Plataforma & DevOps",
+  services_card_devops_description:
+    "Ideal para equipas que procuram otimizar a sua infraestrutura, automatizar implementações e construir plataformas cloud fiáveis e escaláveis",
+  services_card_devops_button: "Saber mais",
+
+  services_card_ai_image_alt: "Imagem de IA e Automações Inteligentes",
+  services_card_ai_title: "IA & Automações Inteligentes",
+  services_card_ai_description:
+    "Ideal para empresas que procuram utilizar IA e automação para otimizar operações, reduzir trabalho manual e desbloquear novas capacidades",
+  services_card_ai_button: "Saber mais",
 
   services_frontend_meta_title: "Deadcow | Serviços de Frontend",
   services_frontend_meta_description:
@@ -142,6 +151,102 @@ const pt = {
   services_backend_steps_7_subtitle:
     "Assim que o backend tenha sido hospedado, o último passo é mantê-lo e atualizá-lo regularmente para garantir que continua a funcionar corretamente e atende às necessidades em constante mudança dos utilizadores. Este passo é um serviço adicional",
 
+  services_devops_meta_title: "Deadcow | Serviços de DevOps",
+  services_devops_meta_description:
+    "Somos especialistas na construção e manutenção de infraestrutura cloud, pipelines CI/CD e soluções de engenharia de plataforma",
+  services_devops_title: "Infraestrutura fiável, entrega automatizada",
+  services_devops_subtitle:
+    "A nossa equipa especializa-se na construção e manutenção de infraestrutura cloud, pipelines CI/CD e soluções de engenharia de plataforma. Ajudamos-o a entregar mais rápido, escalar com confiança e operar com tranquilidade usando práticas e ferramentas DevOps modernas como Kubernetes, Terraform, ArgoCD e Crossplane",
+  services_devops_image_alt: "Imagem de Plataforma e DevOps",
+  services_devops_button: "Saber mais",
+
+  services_devops_steps_title: "Como gostamos de trabalhar",
+  services_devops_steps_footer: "Vamos construir algo incrível juntos",
+  services_devops_steps_button: "Entre em contacto",
+  services_devops_steps_subtitle:
+    "Da avaliação à automação: Auditar infraestrutura, projetar arquiteturas resilientes, implementar CI/CD, implantar com confiança, monitorizar continuamente",
+
+  services_devops_steps_1_title: "Auditoria de infraestrutura",
+  services_devops_steps_1_subtitle:
+    "Primeiro, avaliamos a sua infraestrutura atual, processos de implantação e pontos problemáticos. Isto ajuda-nos a compreender as suas necessidades operacionais e a desenhar um roadmap de melhoria",
+
+  services_devops_steps_2_title: "Design de arquitetura",
+  services_devops_steps_2_subtitle:
+    "Desenhamos uma arquitetura cloud-native adaptada às suas necessidades — escolhendo os serviços certos, topologia de rede e fronteiras de segurança para escalabilidade e fiabilidade",
+
+  services_devops_steps_3_title: "Infraestrutura como Código",
+  services_devops_steps_3_subtitle:
+    "Implementamos a sua infraestrutura usando ferramentas IaC como Terraform e Crossplane, garantindo que cada recurso é versionado, reproduzível e auditável",
+
+  services_devops_steps_4_title: "Pipelines CI/CD",
+  services_devops_steps_4_subtitle:
+    "Construímos pipelines automatizados com GitHub Actions, ArgoCD e outras ferramentas para garantir que o seu código vai do commit à produção de forma segura e rápida",
+
+  services_devops_steps_5_title: "Configuração de observabilidade",
+  services_devops_steps_5_subtitle:
+    "Configuramos monitorização, logging e alertas abrangentes para que saiba sempre o que está a acontecer nos seus sistemas — com ferramentas como Prometheus, Grafana e Datadog",
+
+  services_devops_steps_6_title: "Reforço de segurança",
+  services_devops_steps_6_subtitle:
+    "Aplicamos as melhores práticas de segurança em toda a sua infraestrutura — gestão de segredos, políticas de rede, IAM, análise de vulnerabilidades e verificações de conformidade",
+
+  services_devops_steps_7_title: "Suporte contínuo",
+  services_devops_steps_7_subtitle:
+    "Fornecemos manutenção contínua, resposta a incidentes e evolução da plataforma para garantir que a sua infraestrutura permanece saudável, segura e eficiente em custos à medida que o seu produto cresce",
+
+  services_ai_meta_title: "Deadcow | IA & Automações",
+  services_ai_meta_description:
+    "Construímos soluções baseadas em IA e automações inteligentes que transformam a forma como o seu negócio opera",
+  services_ai_title: "Sistemas mais inteligentes, menos trabalho manual",
+  services_ai_subtitle:
+    "Construímos soluções baseadas em IA e automações inteligentes que transformam a forma como o seu negócio opera. De automação de workflows e pipelines de dados a integrações de IA personalizadas e análise preditiva, ajudamos-o a fazer mais com menos",
+  services_ai_image_alt: "Imagem de IA e Automações Inteligentes",
+  services_ai_button: "Saber mais",
+
+  services_ai_steps_title: "Como gostamos de trabalhar",
+  services_ai_steps_footer: "Vamos construir algo incrível juntos",
+  services_ai_steps_button: "Entre em contacto",
+  services_ai_steps_subtitle:
+    "Da descoberta à implementação: Identificar oportunidades de automação, desenhar workflows inteligentes, construir modelos de IA, integrar sem fricção, medir impacto",
+
+  services_ai_steps_1_title: "Descoberta de processos",
+  services_ai_steps_1_subtitle:
+    "Analisamos os seus workflows existentes, identificamos tarefas repetitivas e estrangulamentos, e mapeamos as oportunidades de automação com maior impacto para o seu negócio",
+
+  services_ai_steps_2_title: "Arquitetura da solução",
+  services_ai_steps_2_subtitle:
+    "Desenhamos a combinação certa de modelos de IA, ferramentas de automação e pontos de integração — escolhendo entre automação baseada em regras, machine learning ou soluções com LLMs de acordo com as suas necessidades",
+
+  services_ai_steps_3_title: "Preparação de dados",
+  services_ai_steps_3_subtitle:
+    "Limpamos, estruturamos e preparamos os seus dados para consumo de IA — construindo pipelines ETL, data lakes e conjuntos de dados de treino que alimentam modelos precisos e fiáveis",
+
+  services_ai_steps_4_title: "Construção e treino",
+  services_ai_steps_4_subtitle:
+    "Desenvolvemos modelos de IA personalizados, configuramos workflows de automação e integramos com as suas ferramentas existentes — desde chatbots e motores de recomendação até processamento de documentos e análise preditiva",
+
+  services_ai_steps_5_title: "Testes e validação",
+  services_ai_steps_5_subtitle:
+    "Testamos rigorosamente a precisão da IA, a fiabilidade da automação e casos extremos. Cada solução é validada contra cenários reais antes de entrar em produção",
+
+  services_ai_steps_6_title: "Implementação e integração",
+  services_ai_steps_6_subtitle:
+    "Implementamos as suas soluções de IA e automação em produção, integrando-as nos seus sistemas, APIs e processos de negócio existentes sem qualquer disrupção",
+
+  services_ai_steps_7_title: "Monitorização e otimização",
+  services_ai_steps_7_subtitle:
+    "Monitorizamos continuamente o desempenho dos modelos, a precisão da automação e o impacto no negócio — retreinando modelos e otimizando workflows à medida que os seus dados e necessidades evoluem",
+
+  home_section_our_work_title: "O Nosso Trabalho",
+  home_section_our_work_description:
+    "Estes são alguns dos projetos que construímos para os nossos clientes. Orgulhamo-nos de entregar soluções de alta qualidade que geram resultados reais",
+  home_section_our_work_tourmanager_name: "Tour Manager Pro",
+  home_section_our_work_tourmanager_description:
+    "Uma plataforma completa de gestão de tours para planear, organizar e acompanhar todos os aspetos das operações turísticas — desde a criação de itinerários e gestão de alugueres até às reservas de clientes\n",
+  home_section_our_work_siesta_name: "Siesta Campers",
+  home_section_our_work_siesta_description:
+    "Uma plataforma de aluguer de campervans para explorar Portugal. Com um sistema de reservas intuitivo, gestão de frota e uma interface focada em viagens que converte visitantes em aventureiros \n",
+
   contact_meta_title: "Deadcow | Contacto",
   contact_meta_description:
     "Quer saber mais sobre como podemos ajudá-lo? Entre em contacto e iremos responder o mais rápido possível",
@@ -165,6 +270,7 @@ const pt = {
   contact_project_type_option_6: "Outro",
   contact_toastSuccess: "A sua mensagem foi enviada",
   contact_toastError: "Ocorreu um erro, por favor, tente novamente",
+  contact_captchaRequired: "Por favor, complete a verificação captcha",
 };
 
 export default pt;
