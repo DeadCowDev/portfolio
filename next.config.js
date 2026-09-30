@@ -1,13 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+  output: "export",
+  basePath: "/portfolio",
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "media.licdn.com",
-      },
-    ],
+    unoptimized: true,
   },
 };
 

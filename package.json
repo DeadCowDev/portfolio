@@ -9,16 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.2.32",
     "@vercel/analytics": "^1.1.1",
-    "negotiator": "^0.6.3",
     "next": "^14.2.35",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sharp": "^0.32.6"
   },
   "devDependencies": {
-    "@types/negotiator": "^0.6.1",
     "@types/node": "20.1.0",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
