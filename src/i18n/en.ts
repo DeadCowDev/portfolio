@@ -254,22 +254,6 @@ const en = {
   contact_title: "Tell us more about what you are looking for",
   contact_subtitle:
     "This information will help us have a better understanding of your goals before we set up a formal meeting",
-  contact_name: "Name",
-  contact_email: "Email",
-  contact_project_name: "Project Name",
-  contact_project_type: "What type of product are you looking for?",
-  contact_about: "Tell us about your project",
-  contact_time: "When will you be available for a formal meeting? (optional)",
-  contact_submit: "Send details",
-  contact_project_type_option_1: "Website",
-  contact_project_type_option_2: "Mobile Application",
-  contact_project_type_option_3: "Website and Mobile Application",
-  contact_project_type_option_4: "Backend",
-  contact_project_type_option_5: "Security",
-  contact_project_type_option_6: "Other",
-  contact_toastSuccess: "Your message was sent",
-  contact_toastError: "Something went wrong, please try again",
-  contact_captchaRequired: "Please complete the captcha verification",
 };
 
 export default en;

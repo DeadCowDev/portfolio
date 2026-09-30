@@ -255,22 +255,6 @@ const pt = {
   contact_title: "Conte-nos mais sobre o que está à procura",
   contact_subtitle:
     "Estes dados vão ajudar-nos a compreender melhor os seus objetivos antes de marcarmos uma reunião",
-  contact_name: "Nome",
-  contact_email: "Email",
-  contact_project_name: "Nome do projeto",
-  contact_project_type: "Que tipo de produto está à procura?",
-  contact_about: "Conte-nos mais sobre o seu projeto",
-  contact_time: "Quando estará disponível para uma reunião? (opcional)",
-  contact_submit: "Enviar detalhes",
-  contact_project_type_option_1: "Site",
-  contact_project_type_option_2: "Aplicação móvel",
-  contact_project_type_option_3: "Site e aplicação móvel",
-  contact_project_type_option_4: "Backend",
-  contact_project_type_option_5: "Segurança",
-  contact_project_type_option_6: "Outro",
-  contact_toastSuccess: "A sua mensagem foi enviada",
-  contact_toastError: "Ocorreu um erro, por favor, tente novamente",
-  contact_captchaRequired: "Por favor, complete a verificação captcha",
 };
 
 export default pt;
